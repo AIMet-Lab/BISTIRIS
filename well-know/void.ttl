@@ -1,0 +1,17 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <#> .
+
+:dataset a void:Dataset ;
+    dcterms:title "BISTIRIS Dataset" ;
+    dcterms:description "Ontology and RDF data about traditional Sardinian costumes." ;
+    dcterms:creator [
+        a foaf:Organization ;
+        foaf:name "AIMET Lab, Università di Sassari"
+    ] ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    void:uriSpace "https://aimet-lab.github.io/BISTIRIS/" ;
+    void:triples 26769 ;
+    void:vocabulary <https://aimet-lab.github.io/BISTIRIS/bistiris.owl> ;
+    void:dataDump <https://aimet-lab.github.io/BISTIRIS/bistiris-data.ttl> .
