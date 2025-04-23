@@ -20,9 +20,9 @@ The BISTÌRIS Ontology is designed to describe the various components of Sardini
 
 ## 📂 Resources
 - 🌐 [Ontology landing page](https://aimet-lab.github.io/BISTIRIS/)
-- 📄 [Download ontology file in OWL format](https://aimet-lab.github.io/BISTIRIS/bistiris.owl)
-- 📄 [Download data in Turtle format](https://aimet-lab.github.io/BISTIRIS/bistiris_data.ttl)
-- 📄 [Download VOID metadata file](https://aimet-lab.github.io/BISTIRIS/well-known/void.ttl)
+- 📄 [Ontology file in OWL format](https://aimet-lab.github.io/BISTIRIS/bistiris.owl)
+- 📄 [Data in Turtle format](https://aimet-lab.github.io/BISTIRIS/bistiris_data.ttl)
+- 📄 [VOID metadata file](https://aimet-lab.github.io/BISTIRIS/well-known/void.ttl)
 
 ## 🧪 Example IRI
 To refer to a class or concept:
