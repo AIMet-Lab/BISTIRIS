@@ -1,0 +1,1799 @@
+<https://aimet-lab.github.io/BISTIRIS#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://aimet-lab.github.io/BISTIRIS#> <http://www.w3.org/2002/07/owl#versionIRI> <https://aimet-lab.github.io/BISTIRIS/bistiris.owl> .
+<https://aimet-lab.github.io/BISTIRIS#> <http://purl.org/dc/terms/creator> "G. Corona, D. Guidotti, L. Pandolfo, L. Pulina" .
+<https://aimet-lab.github.io/BISTIRIS#> <http://purl.org/dc/terms/description> "BISTIRIS is an ontology for analytically describing Sardinian traditional costumes."@en .
+<https://aimet-lab.github.io/BISTIRIS#> <http://purl.org/dc/terms/issued> "2025.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://aimet-lab.github.io/BISTIRIS#> <http://www.w3.org/2000/01/rdf-schema#label> "BISTIRIS ontology"@en .
+<https://aimet-lab.github.io/BISTIRIS#> <http://www.w3.org/2002/07/owl#versionInfo> "2.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2003/11/swrl#isRuleEnabled
+<http://www.w3.org/2003/11/swrl#isRuleEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/arco/ontology/clothing-description/Costume> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#range> <https://aimet-lab.github.io/BISTIRIS#Source> .
+# 
+# http://www.essepuntato.it/2008/12/pattern#isContainedBy
+<http://www.essepuntato.it/2008/12/pattern#isContainedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.essepuntato.it/2008/12/pattern#isContainedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/doco/Figure> .
+<http://www.essepuntato.it/2008/12/pattern#isContainedBy> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/bibo/Periodical> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/bibo/Book> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2002/07/owl#topObjectProperty
+<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ReflexiveProperty> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#colourThroughTransparency
+<https://aimet-lab.github.io/BISTIRIS#colourThroughTransparency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://aimet-lab.github.io/BISTIRIS#colourThroughTransparency> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://aimet-lab.github.io/BISTIRIS#colourThroughTransparency> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Costume> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#colourThroughTransparency> <http://www.w3.org/2000/01/rdf-schema#range> <https://dbpedia.org/ontology/Colour> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#coveredBy
+<https://aimet-lab.github.io/BISTIRIS#coveredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://aimet-lab.github.io/BISTIRIS#coveredBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://aimet-lab.github.io/BISTIRIS#coveredBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://aimet-lab.github.io/BISTIRIS#covers> .
+<https://aimet-lab.github.io/BISTIRIS#coveredBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+<https://aimet-lab.github.io/BISTIRIS#coveredBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#coveredByTransparency
+<https://aimet-lab.github.io/BISTIRIS#coveredByTransparency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://aimet-lab.github.io/BISTIRIS#coveredByTransparency> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://aimet-lab.github.io/BISTIRIS#coveredByTransparency> <http://www.w3.org/2002/07/owl#inverseOf> <https://aimet-lab.github.io/BISTIRIS#coversWithTransparency> .
+<https://aimet-lab.github.io/BISTIRIS#coveredByTransparency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+<https://aimet-lab.github.io/BISTIRIS#coveredByTransparency> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Veil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Shoulder_veil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Curly_apron> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#coveredColour
+<https://aimet-lab.github.io/BISTIRIS#coveredColour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://aimet-lab.github.io/BISTIRIS#coveredColour> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://aimet-lab.github.io/BISTIRIS#coveredColour> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/arco/ontology/clothing-description/Costume> .
+<https://aimet-lab.github.io/BISTIRIS#coveredColour> <http://www.w3.org/2000/01/rdf-schema#range> <https://dbpedia.org/ontology/Colour> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#covers
+<https://aimet-lab.github.io/BISTIRIS#covers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://aimet-lab.github.io/BISTIRIS#covers> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://aimet-lab.github.io/BISTIRIS#covers> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+<https://aimet-lab.github.io/BISTIRIS#covers> <http://www.w3.org/2000/01/rdf-schema#range> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#coversWithTransparency
+<https://aimet-lab.github.io/BISTIRIS#coversWithTransparency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://aimet-lab.github.io/BISTIRIS#coversWithTransparency> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://aimet-lab.github.io/BISTIRIS#coversWithTransparency> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Veil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Shoulder_veil> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Curly_apron> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#coversWithTransparency> <http://www.w3.org/2000/01/rdf-schema#range> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#sewn_togheter
+<https://aimet-lab.github.io/BISTIRIS#sewn_togheter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://aimet-lab.github.io/BISTIRIS#sewn_togheter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://aimet-lab.github.io/BISTIRIS#sewn_togheter> <http://www.w3.org/2002/07/owl#inverseOf> <https://aimet-lab.github.io/BISTIRIS#sewn_togheter> .
+<https://aimet-lab.github.io/BISTIRIS#sewn_togheter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://aimet-lab.github.io/BISTIRIS#sewn_togheter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+<https://aimet-lab.github.io/BISTIRIS#sewn_togheter> <http://www.w3.org/2000/01/rdf-schema#range> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+# 
+# https://dbpedia.org/ontology/neighboringMunicipality
+<https://dbpedia.org/ontology/neighboringMunicipality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://dbpedia.org/ontology/neighboringMunicipality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://yago-knowledge.org/resource/Comune> .
+<https://dbpedia.org/ontology/neighboringMunicipality> <http://www.w3.org/2000/01/rdf-schema#range> <http://yago-knowledge.org/resource/Comune> .
+# 
+# https://schema.org/fromLocation
+<https://schema.org/fromLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/fromLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://schema.org/fromLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.org/fromLocation> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#unionOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/arco/ontology/clothing-description/Costume> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/fromLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/Place> .
+<https://schema.org/fromLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Traditional of" .
+# 
+# https://schema.org/hasPart
+<https://schema.org/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/hasPart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://schema.org/hasPart> <http://www.w3.org/2002/07/owl#inverseOf> <https://schema.org/isPartOf> .
+<https://schema.org/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<https://schema.org/hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/arco/ontology/clothing-description/Costume> .
+<https://schema.org/hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+# 
+# https://schema.org/isPartOf
+<https://schema.org/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/isPartOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://schema.org/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.org/isPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+<https://schema.org/isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/arco/ontology/clothing-description/Costume> .
+# 
+# https://schema.org/location
+<https://schema.org/location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/location> <http://www.w3.org/2000/01/rdf-schema#domain> <http://yago-knowledge.org/resource/Comune> .
+<https://schema.org/location> <http://www.w3.org/2000/01/rdf-schema#range> <http://yago-knowledge.org/resource/Provinces_of_Italy> .
+# 
+# https://w3id.org/arco/ontology/arco-lite/hasColour
+<https://w3id.org/arco/ontology/arco-lite/hasColour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/arco/ontology/arco-lite/hasColour> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#unionOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/arco/ontology/clothing-description/Costume> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/arco/ontology/arco-lite/hasColour> <http://www.w3.org/2000/01/rdf-schema#range> <https://dbpedia.org/ontology/Colour> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/ontology/elevation
+<http://dbpedia.org/ontology/elevation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dbpedia.org/ontology/elevation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Place> .
+<http://dbpedia.org/ontology/elevation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://dbpedia.org/property/name
+<http://dbpedia.org/property/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dbpedia.org/property/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/property/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#unionOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/bibo/Periodical> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/bibo/Book> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Place> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Place> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#BW
+<https://aimet-lab.github.io/BISTIRIS#BW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#BW> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#Source> .
+<https://aimet-lab.github.io/BISTIRIS#BW> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#bow
+<https://aimet-lab.github.io/BISTIRIS#bow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#bow> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#bow> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+<https://aimet-lab.github.io/BISTIRIS#bow> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#checkered_panel
+<https://aimet-lab.github.io/BISTIRIS#checkered_panel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#checkered_panel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#skirt_panel> .
+<https://aimet-lab.github.io/BISTIRIS#checkered_panel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#Long_skirt> .
+<https://aimet-lab.github.io/BISTIRIS#checkered_panel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#curly
+<https://aimet-lab.github.io/BISTIRIS#curly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#curly> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#curly> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#unionOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Skirt_trousers> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Long_skirt> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Giacchino> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Curly_apron> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#curly> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#drawing
+<https://aimet-lab.github.io/BISTIRIS#drawing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#drawing> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#Source> .
+<https://aimet-lab.github.io/BISTIRIS#drawing> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#embroideries
+<https://aimet-lab.github.io/BISTIRIS#embroideries> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#embroideries> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#embroideries> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+<https://aimet-lab.github.io/BISTIRIS#embroideries> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#flaps
+<https://aimet-lab.github.io/BISTIRIS#flaps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#flaps> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#flaps> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#F-Jacket> .
+<https://aimet-lab.github.io/BISTIRIS#flaps> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#floral_embroideries
+<https://aimet-lab.github.io/BISTIRIS#floral_embroideries> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#floral_embroideries> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#embroideries> .
+<https://aimet-lab.github.io/BISTIRIS#floral_embroideries> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+<https://aimet-lab.github.io/BISTIRIS#floral_embroideries> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#fringes
+<https://aimet-lab.github.io/BISTIRIS#fringes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#fringes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#fringes> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid32 .
+_:genid32 <http://www.w3.org/2002/07/owl#unionOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Shawl> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Head_shawl> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#fringes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#intended_use
+<https://aimet-lab.github.io/BISTIRIS#intended_use> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#intended_use> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/arco/ontology/clothing-description/Costume> .
+<https://aimet-lab.github.io/BISTIRIS#intended_use> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#lace
+<https://aimet-lab.github.io/BISTIRIS#lace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#lace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#lace> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#unionOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Giacchino> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Curly_apron> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#lace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#màsculas
+<https://aimet-lab.github.io/BISTIRIS#màsculas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#màsculas> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#màsculas> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#Gheroni_skirt> .
+<https://aimet-lab.github.io/BISTIRIS#màsculas> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#open_slevees
+<https://aimet-lab.github.io/BISTIRIS#open_slevees> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#open_slevees> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#open_slevees> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid38 .
+_:genid38 <http://www.w3.org/2002/07/owl#unionOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Giubbetto> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Giubbetto> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#open_slevees> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#panel_buttons
+<https://aimet-lab.github.io/BISTIRIS#panel_buttons> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#panel_buttons> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#skirt_panel> .
+<https://aimet-lab.github.io/BISTIRIS#panel_buttons> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#Long_skirt> .
+<https://aimet-lab.github.io/BISTIRIS#panel_buttons> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#pleating
+<https://aimet-lab.github.io/BISTIRIS#pleating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#pleating> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#pleating> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid41 .
+_:genid41 <http://www.w3.org/2002/07/owl#unionOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Skirt> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Apron> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#pleating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#points
+<https://aimet-lab.github.io/BISTIRIS#points> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#points> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#points> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#F-Bodice> .
+<https://aimet-lab.github.io/BISTIRIS#points> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#skirt_panel
+<https://aimet-lab.github.io/BISTIRIS#skirt_panel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#skirt_panel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#skirt_panel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#Long_skirt> .
+<https://aimet-lab.github.io/BISTIRIS#skirt_panel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#sleeve_buttonholes
+<https://aimet-lab.github.io/BISTIRIS#sleeve_buttonholes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#sleeve_buttonholes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#sleeve_buttonholes> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid44 .
+_:genid44 <http://www.w3.org/2002/07/owl#unionOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Jacket> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Jacket> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#sleeve_buttonholes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#sleeve_buttons
+<https://aimet-lab.github.io/BISTIRIS#sleeve_buttons> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#sleeve_buttons> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#sleeve_buttons> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid47 .
+_:genid47 <http://www.w3.org/2002/07/owl#unionOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Jacket> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Jacket> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#sleeve_buttons> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#sleeve_ribbon
+<https://aimet-lab.github.io/BISTIRIS#sleeve_ribbon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#sleeve_ribbon> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#sleeve_ribbon> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#F-Jacket> .
+<https://aimet-lab.github.io/BISTIRIS#sleeve_ribbon> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#striped_panel
+<https://aimet-lab.github.io/BISTIRIS#striped_panel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#striped_panel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#skirt_panel> .
+<https://aimet-lab.github.io/BISTIRIS#striped_panel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#Long_skirt> .
+<https://aimet-lab.github.io/BISTIRIS#striped_panel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#tassels
+<https://aimet-lab.github.io/BISTIRIS#tassels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#tassels> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#tassels> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#F-Headwear> .
+<https://aimet-lab.github.io/BISTIRIS#tassels> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#technical_details
+<https://aimet-lab.github.io/BISTIRIS#technical_details> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#technical_details> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#transparency
+<https://aimet-lab.github.io/BISTIRIS#transparency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#transparency> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#transparency> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid50 .
+_:genid50 <http://www.w3.org/2002/07/owl#unionOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Veil> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Shoulder_veil> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Curly_apron> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#transparency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#wrapping
+<https://aimet-lab.github.io/BISTIRIS#wrapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://aimet-lab.github.io/BISTIRIS#wrapping> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://aimet-lab.github.io/BISTIRIS#technical_details> .
+<https://aimet-lab.github.io/BISTIRIS#wrapping> <http://www.w3.org/2000/01/rdf-schema#domain> <https://aimet-lab.github.io/BISTIRIS#Panel_apron> .
+<https://aimet-lab.github.io/BISTIRIS#wrapping> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://schema.org/author
+<https://schema.org/author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/author> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid54 .
+_:genid54 <http://www.w3.org/2002/07/owl#unionOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/bibo/Periodical> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/bibo/Book> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/author> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://schema.org/dateCreated
+<https://schema.org/dateCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/dateCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.org/dateCreated> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid57 .
+_:genid57 <http://www.w3.org/2002/07/owl#unionOf> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/arco/ontology/clothing-description/Costume> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/dateCreated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://schema.org/dateCreated> <http://www.w3.org/2000/01/rdf-schema#comment> "Extended Date/Time Format (EDTF)." .
+# 
+# https://schema.org/datePublished
+<https://schema.org/datePublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/datePublished> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid60 .
+_:genid60 <http://www.w3.org/2002/07/owl#unionOf> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/bibo/Periodical> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/bibo/Book> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/datePublished> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://schema.org/publisher
+<https://schema.org/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/publisher> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid63 .
+_:genid63 <http://www.w3.org/2002/07/owl#unionOf> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/bibo/Periodical> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/bibo/Book> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/publisher> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/ontology/Place
+<http://dbpedia.org/ontology/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dbpedia.org/ontology/Place> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Place> .
+# 
+# http://purl.org/arkivo/ontology#GlamThing
+<http://purl.org/arkivo/ontology#GlamThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/arkivo/ontology#GlamThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Source> .
+# 
+# http://purl.org/ontology/bibo/Book
+<http://purl.org/ontology/bibo/Book> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/bibo/Book> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Source> .
+# 
+# http://purl.org/ontology/bibo/Periodical
+<http://purl.org/ontology/bibo/Periodical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/bibo/Periodical> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Source> .
+# 
+# http://purl.org/spar/doco/Figure
+<http://purl.org/spar/doco/Figure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/doco/Figure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Source> .
+# 
+# http://yago-knowledge.org/resource/Comune
+<http://yago-knowledge.org/resource/Comune> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://yago-knowledge.org/resource/Comune> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Place> .
+# 
+# http://yago-knowledge.org/resource/Provinces_of_Italy
+<http://yago-knowledge.org/resource/Provinces_of_Italy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://yago-knowledge.org/resource/Provinces_of_Italy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Apron
+<https://aimet-lab.github.io/BISTIRIS#Apron> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Apron> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+<https://aimet-lab.github.io/BISTIRIS#Apron> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Panel_apron> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Fan-shaped_apron> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Curly_apron> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Bell-shaped_trousers
+<https://aimet-lab.github.io/BISTIRIS#Bell-shaped_trousers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Bell-shaped_trousers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Skirt> .
+<https://aimet-lab.github.io/BISTIRIS#Bell-shaped_trousers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Trousers> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Belt
+<https://aimet-lab.github.io/BISTIRIS#Belt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Belt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Garment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Berritta
+<https://aimet-lab.github.io/BISTIRIS#Berritta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Berritta> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Headwear> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Black_category
+<https://aimet-lab.github.io/BISTIRIS#Black_category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Black_category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dbpedia.org/ontology/Colour> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Blue_category
+<https://aimet-lab.github.io/BISTIRIS#Blue_category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Blue_category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dbpedia.org/ontology/Colour> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Bolero
+<https://aimet-lab.github.io/BISTIRIS#Bolero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Bolero> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Jacket> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Brimmed_hat
+<https://aimet-lab.github.io/BISTIRIS#Brimmed_hat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Brimmed_hat> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Headwear> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Brown_category
+<https://aimet-lab.github.io/BISTIRIS#Brown_category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Brown_category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dbpedia.org/ontology/Colour> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Corset_belt
+<https://aimet-lab.github.io/BISTIRIS#Corset_belt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Corset_belt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Bodice> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Curly_apron
+<https://aimet-lab.github.io/BISTIRIS#Curly_apron> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Curly_apron> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Apron> .
+<https://aimet-lab.github.io/BISTIRIS#Curly_apron> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid69 .
+_:genid69 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid69 <http://www.w3.org/2002/07/owl#onProperty> <https://aimet-lab.github.io/BISTIRIS#curly> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#DVV
+<https://aimet-lab.github.io/BISTIRIS#DVV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#DVV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/arkivo/ontology#GlamThing> .
+<https://aimet-lab.github.io/BISTIRIS#DVV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid70 .
+_:genid70 <http://www.w3.org/2002/07/owl#hasValue> "Istituto Superiore Regionale Etnografico" .
+_:genid70 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/publisher> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#F-Bodice
+<https://aimet-lab.github.io/BISTIRIS#F-Bodice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#F-Bodice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+<https://aimet-lab.github.io/BISTIRIS#F-Bodice> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Soft_bodice> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Rigid_bodice> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Corset_belt> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#F-Cap
+<https://aimet-lab.github.io/BISTIRIS#F-Cap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#F-Cap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Headwear> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#F-Costume
+<https://aimet-lab.github.io/BISTIRIS#F-Costume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#F-Costume> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/arco/ontology/clothing-description/Costume> .
+<https://aimet-lab.github.io/BISTIRIS#F-Costume> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid74 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid76 .
+_:genid76 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+_:genid76 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/arco/ontology/clothing-description/Costume> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://aimet-lab.github.io/BISTIRIS#F-Costume> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid78 .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid78 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid81 .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid80 .
+_:genid80 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#F-Headwear> .
+_:genid80 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "3"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid80 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid82 .
+_:genid82 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#F-Headwear> .
+_:genid82 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid82 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://aimet-lab.github.io/BISTIRIS#F-Costume> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid83 .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid83 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid86 .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid85 .
+_:genid85 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#F-Skirt> .
+_:genid85 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid85 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid87 .
+_:genid87 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#F-Skirt> .
+_:genid87 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid87 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://aimet-lab.github.io/BISTIRIS#F-Costume> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid88 .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid88 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid97 .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid95 .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid93 .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid91 .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid89 .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid90 .
+_:genid90 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#F-Overgarment> .
+_:genid90 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid90 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid92 .
+_:genid92 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#F-Shirt> .
+_:genid92 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid92 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid94 .
+_:genid94 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#F-Jacket> .
+_:genid94 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid94 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid96 .
+_:genid96 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#F-Bodice> .
+_:genid96 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid96 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid98 .
+_:genid98 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#Apron> .
+_:genid98 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid98 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://aimet-lab.github.io/BISTIRIS#F-Costume> <http://www.w3.org/2002/07/owl#disjointWith> <https://aimet-lab.github.io/BISTIRIS#M-Costume> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#F-Garment
+<https://aimet-lab.github.io/BISTIRIS#F-Garment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#F-Garment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+<https://aimet-lab.github.io/BISTIRIS#F-Garment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid99 .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid99 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid102 .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid100 .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid101 .
+_:genid101 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#F-Costume> .
+_:genid101 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid101 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/isPartOf> .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://aimet-lab.github.io/BISTIRIS#F-Garment> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid109 .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid108 .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid107 .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid106 .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid105 .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid104 .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid103 .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Skirt> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Shirt> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Overgarment> .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Jacket> .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Headwear> .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Bodice> .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Apron> .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#F-Giubbetto
+<https://aimet-lab.github.io/BISTIRIS#F-Giubbetto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#F-Giubbetto> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Jacket> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#F-Headwear
+<https://aimet-lab.github.io/BISTIRIS#F-Headwear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#F-Headwear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+<https://aimet-lab.github.io/BISTIRIS#F-Headwear> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid116 .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid115 .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid114 .
+_:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid113 .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid112 .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid111 .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid110 .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Veil> .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Manticello> .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Headscarf> .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Head_shawl> .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Head_mantle> .
+_:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Kerchief> .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Cap> .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#F-Jacket
+<https://aimet-lab.github.io/BISTIRIS#F-Jacket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#F-Jacket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+<https://aimet-lab.github.io/BISTIRIS#F-Jacket> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid119 .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid118 .
+_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid117 .
+_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Giacchino> .
+_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Giubbetto> .
+_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Bolero> .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#F-Kerchief
+<https://aimet-lab.github.io/BISTIRIS#F-Kerchief> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#F-Kerchief> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Headwear> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#F-Overgarment
+<https://aimet-lab.github.io/BISTIRIS#F-Overgarment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#F-Overgarment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+<https://aimet-lab.github.io/BISTIRIS#F-Overgarment> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid122 .
+_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid121 .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid120 .
+_:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Shoulder_veil> .
+_:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Shoulder_scarf> .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Shawl> .
+_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#F-Rigid_bodice
+<https://aimet-lab.github.io/BISTIRIS#F-Rigid_bodice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#F-Rigid_bodice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Bodice> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#F-Shirt
+<https://aimet-lab.github.io/BISTIRIS#F-Shirt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#F-Shirt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#F-Skirt
+<https://aimet-lab.github.io/BISTIRIS#F-Skirt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#F-Skirt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+<https://aimet-lab.github.io/BISTIRIS#F-Skirt> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid125 .
+_:genid125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid124 .
+_:genid124 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid123 .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Paperbag_skirt> .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid124 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Long_skirt> .
+_:genid124 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Gheroni_skirt> .
+_:genid125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#F-Soft_bodice
+<https://aimet-lab.github.io/BISTIRIS#F-Soft_bodice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#F-Soft_bodice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Bodice> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Fan-shaped_apron
+<https://aimet-lab.github.io/BISTIRIS#Fan-shaped_apron> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Fan-shaped_apron> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Apron> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Fez
+<https://aimet-lab.github.io/BISTIRIS#Fez> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Fez> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Headwear> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Fur_overcoat
+<https://aimet-lab.github.io/BISTIRIS#Fur_overcoat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Fur_overcoat> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Overgarment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Gaiters
+<https://aimet-lab.github.io/BISTIRIS#Gaiters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Gaiters> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Garment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Garment
+<https://aimet-lab.github.io/BISTIRIS#Garment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Garment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://aimet-lab.github.io/BISTIRIS#Garment> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid127 .
+_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid126 .
+_:genid126 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid126 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Garment> .
+_:genid126 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Gheroni_skirt
+<https://aimet-lab.github.io/BISTIRIS#Gheroni_skirt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Gheroni_skirt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Skirt> .
+<https://aimet-lab.github.io/BISTIRIS#Gheroni_skirt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid128 .
+_:genid128 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid128 <http://www.w3.org/2002/07/owl#onProperty> <https://aimet-lab.github.io/BISTIRIS#màsculas> .
+_:genid128 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Giacchetta
+<https://aimet-lab.github.io/BISTIRIS#Giacchetta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Giacchetta> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Jacket> .
+<https://aimet-lab.github.io/BISTIRIS#Giacchetta> <http://www.w3.org/2002/07/owl#disjointWith> <https://aimet-lab.github.io/BISTIRIS#M-Giubbetto> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Giacchino
+<https://aimet-lab.github.io/BISTIRIS#Giacchino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Giacchino> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Jacket> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Gray_category
+<https://aimet-lab.github.io/BISTIRIS#Gray_category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Gray_category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dbpedia.org/ontology/Colour> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Green_category
+<https://aimet-lab.github.io/BISTIRIS#Green_category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Green_category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dbpedia.org/ontology/Colour> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Head_mantle
+<https://aimet-lab.github.io/BISTIRIS#Head_mantle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Head_mantle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Headwear> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Head_shawl
+<https://aimet-lab.github.io/BISTIRIS#Head_shawl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Head_shawl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Headwear> .
+<https://aimet-lab.github.io/BISTIRIS#Head_shawl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid129 .
+_:genid129 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid129 <http://www.w3.org/2002/07/owl#onProperty> <https://aimet-lab.github.io/BISTIRIS#fringes> .
+_:genid129 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Headscarf
+<https://aimet-lab.github.io/BISTIRIS#Headscarf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Headscarf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Headwear> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#IALZ
+<https://aimet-lab.github.io/BISTIRIS#IALZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#IALZ> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/doco/Figure> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#ICC
+<https://aimet-lab.github.io/BISTIRIS#ICC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#ICC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/arkivo/ontology#GlamThing> .
+<https://aimet-lab.github.io/BISTIRIS#ICC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid130 .
+_:genid130 <http://www.w3.org/2002/07/owl#hasValue> "Istituto Centrale per il Catalogo e la Documentazione" .
+_:genid130 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/publisher> .
+_:genid130 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#ICST
+<https://aimet-lab.github.io/BISTIRIS#ICST> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#ICST> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/doco/Figure> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#IEC1
+<https://aimet-lab.github.io/BISTIRIS#IEC1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#IEC1> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/doco/Figure> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#IRCR
+<https://aimet-lab.github.io/BISTIRIS#IRCR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#IRCR> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/doco/Figure> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Leather_overcoat
+<https://aimet-lab.github.io/BISTIRIS#Leather_overcoat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Leather_overcoat> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Overgarment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Long_coat
+<https://aimet-lab.github.io/BISTIRIS#Long_coat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Long_coat> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Overgarment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Long_skirt
+<https://aimet-lab.github.io/BISTIRIS#Long_skirt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Long_skirt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Skirt> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Loose_trousers
+<https://aimet-lab.github.io/BISTIRIS#Loose_trousers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Loose_trousers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Trousers> .
+<https://aimet-lab.github.io/BISTIRIS#Loose_trousers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid131 .
+_:genid131 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#Gaiters> .
+_:genid131 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid131 <http://www.w3.org/2002/07/owl#onProperty> <https://aimet-lab.github.io/BISTIRIS#coveredBy> .
+_:genid131 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://aimet-lab.github.io/BISTIRIS#Loose_trousers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid132 .
+_:genid132 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#M-Skirt> .
+_:genid132 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid132 <http://www.w3.org/2002/07/owl#onProperty> <https://aimet-lab.github.io/BISTIRIS#coveredBy> .
+_:genid132 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#M-Bodice
+<https://aimet-lab.github.io/BISTIRIS#M-Bodice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#M-Bodice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Garment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#M-Cap
+<https://aimet-lab.github.io/BISTIRIS#M-Cap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#M-Cap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Headwear> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#M-Costume
+<https://aimet-lab.github.io/BISTIRIS#M-Costume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#M-Costume> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/arco/ontology/clothing-description/Costume> .
+<https://aimet-lab.github.io/BISTIRIS#M-Costume> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid133 .
+_:genid133 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid133 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid136 .
+_:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid134 .
+_:genid134 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid134 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid135 .
+_:genid135 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://aimet-lab.github.io/BISTIRIS#M-Garment> .
+_:genid135 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid135 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid134 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/arco/ontology/clothing-description/Costume> .
+_:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://aimet-lab.github.io/BISTIRIS#M-Costume> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid137 .
+_:genid137 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid137 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid140 .
+_:genid140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid138 .
+_:genid138 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid138 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid139 .
+_:genid139 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#M-Headwear> .
+_:genid139 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid139 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid139 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid138 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid141 .
+_:genid141 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#M-Headwear> .
+_:genid141 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid141 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid141 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://aimet-lab.github.io/BISTIRIS#M-Costume> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid142 .
+_:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid142 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid155 .
+_:genid155 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid153 .
+_:genid153 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid151 .
+_:genid151 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid149 .
+_:genid149 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid147 .
+_:genid147 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid145 .
+_:genid145 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid143 .
+_:genid143 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid143 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid144 .
+_:genid144 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#M-Overgarment> .
+_:genid144 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid144 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid144 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid143 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid145 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid146 .
+_:genid146 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#Neckerchief> .
+_:genid146 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid146 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid146 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid145 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid147 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid148 .
+_:genid148 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#M-Soft-bodice> .
+_:genid148 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid148 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid148 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid147 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid149 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid150 .
+_:genid150 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#Gaiters> .
+_:genid150 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid150 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid150 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid149 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid151 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid152 .
+_:genid152 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#Belt> .
+_:genid152 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid152 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid152 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid151 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid153 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid154 .
+_:genid154 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#M-Shirt> .
+_:genid154 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid154 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid154 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid153 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid155 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid156 .
+_:genid156 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#M-Jacket> .
+_:genid156 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid156 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid156 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid155 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://aimet-lab.github.io/BISTIRIS#M-Costume> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid157 .
+_:genid157 <http://www.w3.org/2002/07/owl#unionOf> _:genid160 .
+_:genid160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid158 .
+_:genid158 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid158 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid159 .
+_:genid159 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#Tube_trousers> .
+_:genid159 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid159 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid159 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid158 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid161 .
+_:genid161 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid161 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid164 .
+_:genid164 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid162 .
+_:genid162 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid162 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid163 .
+_:genid163 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#M-Skirt> .
+_:genid163 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid163 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid163 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid162 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid164 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid165 .
+_:genid165 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#Loose_trousers> .
+_:genid165 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid165 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/hasPart> .
+_:genid165 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid164 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid157 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#M-Garment
+<https://aimet-lab.github.io/BISTIRIS#M-Garment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#M-Garment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+<https://aimet-lab.github.io/BISTIRIS#M-Garment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid166 .
+_:genid166 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid166 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid169 .
+_:genid169 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid167 .
+_:genid167 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid167 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid168 .
+_:genid168 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#M-Costume> .
+_:genid168 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid168 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/isPartOf> .
+_:genid168 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid167 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid169 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Garment> .
+_:genid169 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://aimet-lab.github.io/BISTIRIS#M-Garment> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid177 .
+_:genid177 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid176 .
+_:genid176 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid175 .
+_:genid175 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid174 .
+_:genid174 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid173 .
+_:genid173 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid172 .
+_:genid172 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid171 .
+_:genid171 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid170 .
+_:genid170 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid170 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Trousers> .
+_:genid170 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid171 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Soft-bodice> .
+_:genid171 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid172 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Shirt> .
+_:genid172 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid173 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Overgarment> .
+_:genid173 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid174 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Jacket> .
+_:genid174 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid175 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Headwear> .
+_:genid175 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid176 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Gaiters> .
+_:genid176 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid177 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Belt> .
+_:genid177 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#M-Giubbetto
+<https://aimet-lab.github.io/BISTIRIS#M-Giubbetto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#M-Giubbetto> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Jacket> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#M-Headwear
+<https://aimet-lab.github.io/BISTIRIS#M-Headwear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#M-Headwear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Garment> .
+<https://aimet-lab.github.io/BISTIRIS#M-Headwear> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid182 .
+_:genid182 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid181 .
+_:genid181 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid180 .
+_:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid179 .
+_:genid179 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid178 .
+_:genid178 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid178 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Kerchief> .
+_:genid178 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid179 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Cap> .
+_:genid179 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Fez> .
+_:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid181 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Brimmed_hat> .
+_:genid181 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid182 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Berritta> .
+_:genid182 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#M-Jacket
+<https://aimet-lab.github.io/BISTIRIS#M-Jacket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#M-Jacket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Garment> .
+<https://aimet-lab.github.io/BISTIRIS#M-Jacket> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid184 .
+_:genid184 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid183 .
+_:genid183 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid183 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Giubbetto> .
+_:genid183 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid184 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Giacchetta> .
+_:genid184 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#M-Kerchief
+<https://aimet-lab.github.io/BISTIRIS#M-Kerchief> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#M-Kerchief> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Headwear> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#M-Overgarment
+<https://aimet-lab.github.io/BISTIRIS#M-Overgarment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#M-Overgarment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Garment> .
+<https://aimet-lab.github.io/BISTIRIS#M-Overgarment> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid189 .
+_:genid189 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid188 .
+_:genid188 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid187 .
+_:genid187 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid186 .
+_:genid186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid185 .
+_:genid185 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid185 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Short_coat> .
+_:genid185 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Mantle> .
+_:genid186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid187 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Long_coat> .
+_:genid187 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid188 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Leather_overcoat> .
+_:genid188 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid189 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Fur_overcoat> .
+_:genid189 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#M-Rigid_bodice
+<https://aimet-lab.github.io/BISTIRIS#M-Rigid_bodice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#M-Rigid_bodice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Bodice> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#M-Shirt
+<https://aimet-lab.github.io/BISTIRIS#M-Shirt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#M-Shirt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Garment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#M-Skirt
+<https://aimet-lab.github.io/BISTIRIS#M-Skirt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#M-Skirt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Garment> .
+<https://aimet-lab.github.io/BISTIRIS#M-Skirt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid190 .
+_:genid190 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#Loose_trousers> .
+_:genid190 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid190 <http://www.w3.org/2002/07/owl#onProperty> <https://aimet-lab.github.io/BISTIRIS#covers> .
+_:genid190 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#M-Soft-bodice
+<https://aimet-lab.github.io/BISTIRIS#M-Soft-bodice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#M-Soft-bodice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Bodice> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Manticello
+<https://aimet-lab.github.io/BISTIRIS#Manticello> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Manticello> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Headwear> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Mantle
+<https://aimet-lab.github.io/BISTIRIS#Mantle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Mantle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Overgarment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Metallic_category
+<https://aimet-lab.github.io/BISTIRIS#Metallic_category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Metallic_category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dbpedia.org/ontology/Colour> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Neckerchief
+<https://aimet-lab.github.io/BISTIRIS#Neckerchief> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Neckerchief> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Garment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Orange_category
+<https://aimet-lab.github.io/BISTIRIS#Orange_category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Orange_category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dbpedia.org/ontology/Colour> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Panel_apron
+<https://aimet-lab.github.io/BISTIRIS#Panel_apron> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Panel_apron> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Apron> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Paperbag_skirt
+<https://aimet-lab.github.io/BISTIRIS#Paperbag_skirt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Paperbag_skirt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Skirt> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Pink_category
+<https://aimet-lab.github.io/BISTIRIS#Pink_category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Pink_category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dbpedia.org/ontology/Colour> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#PrivateImage
+<https://aimet-lab.github.io/BISTIRIS#PrivateImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#PrivateImage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Source> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Purple_category
+<https://aimet-lab.github.io/BISTIRIS#Purple_category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Purple_category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dbpedia.org/ontology/Colour> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Red_category
+<https://aimet-lab.github.io/BISTIRIS#Red_category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Red_category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dbpedia.org/ontology/Colour> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Shawl
+<https://aimet-lab.github.io/BISTIRIS#Shawl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Shawl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Overgarment> .
+<https://aimet-lab.github.io/BISTIRIS#Shawl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid191 .
+_:genid191 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid191 <http://www.w3.org/2002/07/owl#onProperty> <https://aimet-lab.github.io/BISTIRIS#fringes> .
+_:genid191 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Short_coat
+<https://aimet-lab.github.io/BISTIRIS#Short_coat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Short_coat> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Overgarment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Shoulder_scarf
+<https://aimet-lab.github.io/BISTIRIS#Shoulder_scarf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Shoulder_scarf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Overgarment> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Shoulder_veil
+<https://aimet-lab.github.io/BISTIRIS#Shoulder_veil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Shoulder_veil> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Overgarment> .
+<https://aimet-lab.github.io/BISTIRIS#Shoulder_veil> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid192 .
+_:genid192 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid192 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid195 .
+_:genid195 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid193 .
+_:genid193 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid193 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid194 .
+_:genid194 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+_:genid194 <http://www.w3.org/2002/07/owl#onProperty> <https://aimet-lab.github.io/BISTIRIS#coversWithTransparency> .
+_:genid194 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid193 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid195 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid196 .
+_:genid196 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+_:genid196 <http://www.w3.org/2002/07/owl#onProperty> <https://aimet-lab.github.io/BISTIRIS#coversWithTransparency> .
+_:genid196 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid195 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Skirt_hat
+<https://aimet-lab.github.io/BISTIRIS#Skirt_hat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Skirt_hat> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Headwear> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Skirt_trousers
+<https://aimet-lab.github.io/BISTIRIS#Skirt_trousers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Skirt_trousers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Skirt> .
+<https://aimet-lab.github.io/BISTIRIS#Skirt_trousers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Trousers> .
+<https://aimet-lab.github.io/BISTIRIS#Skirt_trousers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid197 .
+_:genid197 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid197 <http://www.w3.org/2002/07/owl#onProperty> <https://aimet-lab.github.io/BISTIRIS#curly> .
+_:genid197 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Source
+<https://aimet-lab.github.io/BISTIRIS#Source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Source> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Tongue_shaped_apron
+<https://aimet-lab.github.io/BISTIRIS#Tongue_shaped_apron> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Tongue_shaped_apron> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Panel_apron> .
+<https://aimet-lab.github.io/BISTIRIS#Tongue_shaped_apron> <http://www.w3.org/2002/07/owl#disjointWith> <https://aimet-lab.github.io/BISTIRIS#Triangle_shaped_apron> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Triangle_shaped_apron
+<https://aimet-lab.github.io/BISTIRIS#Triangle_shaped_apron> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Triangle_shaped_apron> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Panel_apron> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Trousers
+<https://aimet-lab.github.io/BISTIRIS#Trousers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Trousers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#M-Garment> .
+<https://aimet-lab.github.io/BISTIRIS#Trousers> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid201 .
+_:genid201 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid200 .
+_:genid200 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid199 .
+_:genid199 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid198 .
+_:genid198 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid198 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Tube_trousers> .
+_:genid198 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid199 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Skirt_trousers> .
+_:genid199 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid200 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Loose_trousers> .
+_:genid200 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid201 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Bell-shaped_trousers> .
+_:genid201 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Tube_trousers
+<https://aimet-lab.github.io/BISTIRIS#Tube_trousers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Tube_trousers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Trousers> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Veil
+<https://aimet-lab.github.io/BISTIRIS#Veil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Veil> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#F-Headwear> .
+<https://aimet-lab.github.io/BISTIRIS#Veil> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid202 .
+_:genid202 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid202 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid205 .
+_:genid205 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid203 .
+_:genid203 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid203 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid204 .
+_:genid204 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+_:genid204 <http://www.w3.org/2002/07/owl#onProperty> <https://aimet-lab.github.io/BISTIRIS#coversWithTransparency> .
+_:genid204 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid203 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid205 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid206 .
+_:genid206 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://aimet-lab.github.io/BISTIRIS#F-Garment> .
+_:genid206 <http://www.w3.org/2002/07/owl#onProperty> <https://aimet-lab.github.io/BISTIRIS#coversWithTransparency> .
+_:genid206 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid205 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#White_category
+<https://aimet-lab.github.io/BISTIRIS#White_category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#White_category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dbpedia.org/ontology/Colour> .
+# 
+# https://aimet-lab.github.io/BISTIRIS#Yellow_category
+<https://aimet-lab.github.io/BISTIRIS#Yellow_category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://aimet-lab.github.io/BISTIRIS#Yellow_category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dbpedia.org/ontology/Colour> .
+# 
+# https://dbpedia.org/ontology/Colour
+<https://dbpedia.org/ontology/Colour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dbpedia.org/ontology/Colour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic> .
+# 
+# https://schema.org/Place
+<https://schema.org/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://schema.org/SocialMediaPosting
+<https://schema.org/SocialMediaPosting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/SocialMediaPosting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://aimet-lab.github.io/BISTIRIS#Source> .
+# 
+# https://w3id.org/arco/ontology/clothing-description/Costume
+<https://w3id.org/arco/ontology/clothing-description/Costume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/arco/ontology/clothing-description/Costume> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid207 .
+_:genid207 <http://www.w3.org/2002/07/owl#onClass> <https://aimet-lab.github.io/BISTIRIS#Source> .
+_:genid207 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid207 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/source> .
+_:genid207 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/arco/ontology/clothing-description/Costume> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid208 .
+_:genid208 <http://www.w3.org/2002/07/owl#onClass> <http://dbpedia.org/ontology/Place> .
+_:genid208 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid208 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/fromLocation> .
+_:genid208 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/arco/ontology/clothing-description/Costume> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid209 .
+_:genid209 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid209 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.org/dateCreated> .
+_:genid209 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/arco/ontology/clothing-description/Costume> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid211 .
+_:genid211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid210 .
+_:genid210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Costume> .
+_:genid210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Costume> .
+_:genid211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic
+<https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+_:genid212 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid213 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid214 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid215 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid216 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid217 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid218 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid219 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid220 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid221 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid222 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid223 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid224 <http://www.w3.org/2003/11/swrl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid225 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid226 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid227 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid228 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid229 <http://www.w3.org/2003/11/swrl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid230 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid231 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid232 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid233 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid234 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid235 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid236 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid237 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid238 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid239 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid240 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid241 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid242 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid243 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid244 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid245 <http://www.w3.org/2003/11/swrl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid246 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid247 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid248 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid249 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid250 <http://www.w3.org/2003/11/swrl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid251 <http://www.w3.org/2003/11/swrl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid252 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid253 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid254 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid255 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid256 <http://www.w3.org/2000/01/rdf-schema#comment> "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en .
+_:genid257 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:genid258 .
+_:genid258 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid258 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2002/07/owl#topDataProperty> .
+_:genid258 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid259 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid259 <http://www.w3.org/2002/07/owl#members> _:genid266 .
+_:genid266 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid265 .
+_:genid265 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid264 .
+_:genid264 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid263 .
+_:genid263 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid262 .
+_:genid262 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid261 .
+_:genid261 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid260 .
+_:genid260 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid260 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Skirt> .
+_:genid260 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid261 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Shirt> .
+_:genid261 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid262 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Overgarment> .
+_:genid262 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid263 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Jacket> .
+_:genid263 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid264 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Headwear> .
+_:genid264 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid265 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Bodice> .
+_:genid265 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid266 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Apron> .
+_:genid266 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid267 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid267 <http://www.w3.org/2002/07/owl#members> _:genid271 .
+_:genid271 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid270 .
+_:genid270 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid269 .
+_:genid269 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid268 .
+_:genid268 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid268 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Tube_trousers> .
+_:genid268 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid269 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Skirt_trousers> .
+_:genid269 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid270 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Loose_trousers> .
+_:genid270 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid271 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Bell-shaped_trousers> .
+_:genid271 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid272 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid272 <http://www.w3.org/2002/07/owl#members> _:genid280 .
+_:genid280 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid279 .
+_:genid279 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid278 .
+_:genid278 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid277 .
+_:genid277 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid276 .
+_:genid276 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid275 .
+_:genid275 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid274 .
+_:genid274 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid273 .
+_:genid273 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid273 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Trousers> .
+_:genid273 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid274 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Soft-bodice> .
+_:genid274 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid275 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Shirt> .
+_:genid275 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid276 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Overgarment> .
+_:genid276 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid277 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Jacket> .
+_:genid277 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid278 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Headwear> .
+_:genid278 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid279 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Gaiters> .
+_:genid279 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid280 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Belt> .
+_:genid280 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid281 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid281 <http://www.w3.org/2002/07/owl#members> _:genid286 .
+_:genid286 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid285 .
+_:genid285 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid284 .
+_:genid284 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid283 .
+_:genid283 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid282 .
+_:genid282 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid282 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Kerchief> .
+_:genid282 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid283 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#M-Cap> .
+_:genid283 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid284 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Fez> .
+_:genid284 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid285 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Brimmed_hat> .
+_:genid285 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid286 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Berritta> .
+_:genid286 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid287 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid287 <http://www.w3.org/2002/07/owl#members> _:genid290 .
+_:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid289 .
+_:genid289 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid288 .
+_:genid288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Giacchino> .
+_:genid288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid289 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Giubbetto> .
+_:genid289 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Bolero> .
+_:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid291 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid291 <http://www.w3.org/2002/07/owl#members> _:genid294 .
+_:genid294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid293 .
+_:genid293 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid292 .
+_:genid292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Soft_bodice> .
+_:genid292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid293 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Rigid_bodice> .
+_:genid293 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Corset_belt> .
+_:genid294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid295 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid295 <http://www.w3.org/2002/07/owl#members> _:genid298 .
+_:genid298 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid297 .
+_:genid297 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid296 .
+_:genid296 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid296 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Panel_apron> .
+_:genid296 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid297 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Fan-shaped_apron> .
+_:genid297 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid298 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Curly_apron> .
+_:genid298 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid299 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid299 <http://www.w3.org/2002/07/owl#members> _:genid306 .
+_:genid306 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid305 .
+_:genid305 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid304 .
+_:genid304 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid303 .
+_:genid303 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid302 .
+_:genid302 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid301 .
+_:genid301 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid300 .
+_:genid300 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid300 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Veil> .
+_:genid300 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid301 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Manticello> .
+_:genid301 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid302 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Headscarf> .
+_:genid302 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid303 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Head_shawl> .
+_:genid303 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid304 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Head_mantle> .
+_:genid304 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid305 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Kerchief> .
+_:genid305 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid306 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#F-Cap> .
+_:genid306 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid307 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid307 <http://www.w3.org/2002/07/owl#members> _:genid312 .
+_:genid312 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid311 .
+_:genid311 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid310 .
+_:genid310 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid309 .
+_:genid309 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid308 .
+_:genid308 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid308 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Short_coat> .
+_:genid308 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid309 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Mantle> .
+_:genid309 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid310 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Long_coat> .
+_:genid310 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid311 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Leather_overcoat> .
+_:genid311 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid312 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Fur_overcoat> .
+_:genid312 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid313 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid313 <http://www.w3.org/2002/07/owl#members> _:genid316 .
+_:genid316 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid315 .
+_:genid315 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid314 .
+_:genid314 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid314 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Paperbag_skirt> .
+_:genid314 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid315 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Long_skirt> .
+_:genid315 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid316 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Gheroni_skirt> .
+_:genid316 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid317 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid317 <http://www.w3.org/2002/07/owl#members> _:genid320 .
+_:genid320 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid319 .
+_:genid319 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid318 .
+_:genid318 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid318 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Shoulder_veil> .
+_:genid318 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid319 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Shoulder_scarf> .
+_:genid319 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid320 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://aimet-lab.github.io/BISTIRIS#Shawl> .
+_:genid320 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<urn:swrl:var#costume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#garment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#color> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid321 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid321 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid321 <http://www.w3.org/2000/01/rdf-schema#label> "SourceRule" .
+_:genid321 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid321 <http://www.w3.org/2003/11/swrl#body> _:genid324 .
+_:genid324 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid322 .
+_:genid322 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid322 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid323 .
+_:genid323 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#place> .
+_:genid323 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#costume> .
+_:genid323 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/dc/terms/source> .
+_:genid323 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid322 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid324 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid325 .
+_:genid325 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#garment> .
+_:genid325 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#costume> .
+_:genid325 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://schema.org/hasPart> .
+_:genid325 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid324 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid321 <http://www.w3.org/2003/11/swrl#head> _:genid326 .
+_:genid326 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid326 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid327 .
+_:genid327 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#place> .
+_:genid327 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#garment> .
+_:genid327 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.org/dc/terms/source> .
+_:genid327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid326 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid328 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid328 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid328 <http://www.w3.org/2000/01/rdf-schema#label> "LocationRule" .
+_:genid328 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid328 <http://www.w3.org/2003/11/swrl#body> _:genid331 .
+_:genid331 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid329 .
+_:genid329 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid329 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid330 .
+_:genid330 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#place> .
+_:genid330 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#costume> .
+_:genid330 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://schema.org/fromLocation> .
+_:genid330 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid329 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid331 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid332 .
+_:genid332 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#garment> .
+_:genid332 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#costume> .
+_:genid332 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://schema.org/hasPart> .
+_:genid332 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid331 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid328 <http://www.w3.org/2003/11/swrl#head> _:genid333 .
+_:genid333 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid333 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid334 .
+_:genid334 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#place> .
+_:genid334 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#garment> .
+_:genid334 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://schema.org/fromLocation> .
+_:genid334 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid333 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid335 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid335 <http://www.w3.org/2000/01/rdf-schema#label> "TransparencyRule" .
+_:genid335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid335 <http://www.w3.org/2003/11/swrl#body> _:genid338 .
+_:genid338 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid336 .
+_:genid336 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid336 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid337 .
+_:genid337 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#color> .
+_:genid337 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#garment> .
+_:genid337 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://aimet-lab.github.io/BISTIRIS#colourThroughTransparency> .
+_:genid337 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid336 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid338 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid339 .
+_:genid339 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#garment> .
+_:genid339 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#costume> .
+_:genid339 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://schema.org/hasPart> .
+_:genid339 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid338 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid335 <http://www.w3.org/2003/11/swrl#head> _:genid340 .
+_:genid340 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid340 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid341 .
+_:genid341 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#color> .
+_:genid341 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#costume> .
+_:genid341 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://aimet-lab.github.io/BISTIRIS#colourThroughTransparency> .
+_:genid341 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid340 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid342 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid342 <http://www.w3.org/2000/01/rdf-schema#label> "ColorRule" .
+_:genid342 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid342 <http://www.w3.org/2003/11/swrl#body> _:genid345 .
+_:genid345 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid343 .
+_:genid343 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid343 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid344 .
+_:genid344 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#color> .
+_:genid344 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#garment> .
+_:genid344 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/arco/ontology/arco-lite/hasColour> .
+_:genid344 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid343 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid345 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid346 .
+_:genid346 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#garment> .
+_:genid346 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#costume> .
+_:genid346 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://schema.org/hasPart> .
+_:genid346 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid345 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid342 <http://www.w3.org/2003/11/swrl#head> _:genid347 .
+_:genid347 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid347 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid348 .
+_:genid348 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#color> .
+_:genid348 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#costume> .
+_:genid348 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/arco/ontology/arco-lite/hasColour> .
+_:genid348 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid347 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid349 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid349 <http://www.w3.org/2000/01/rdf-schema#label> "DatationRule" .
+_:genid349 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid349 <http://www.w3.org/2003/11/swrl#body> _:genid352 .
+_:genid352 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid350 .
+_:genid350 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid350 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid351 .
+_:genid351 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#place> .
+_:genid351 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#costume> .
+_:genid351 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://schema.org/dateCreated> .
+_:genid351 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid350 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid352 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid353 .
+_:genid353 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#garment> .
+_:genid353 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#costume> .
+_:genid353 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://schema.org/hasPart> .
+_:genid353 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid352 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid349 <http://www.w3.org/2003/11/swrl#head> _:genid354 .
+_:genid354 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid354 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid355 .
+_:genid355 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#place> .
+_:genid355 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#garment> .
+_:genid355 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://schema.org/dateCreated> .
+_:genid355 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid354 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
