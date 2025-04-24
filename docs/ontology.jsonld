@@ -21,20 +21,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid101",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Costume"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://schema.org/isPartOf"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid128",
+  "@id" : "_:genid121",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -44,7 +31,7 @@
     "@id" : "https://aimet-lab.github.io/BISTIRIS#màsculas"
   } ]
 }, {
-  "@id" : "_:genid129",
+  "@id" : "_:genid122",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -54,7 +41,7 @@
     "@id" : "https://aimet-lab.github.io/BISTIRIS#fringes"
   } ]
 }, {
-  "@id" : "_:genid130",
+  "@id" : "_:genid123",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "Istituto Centrale per il Catalogo e la Documentazione"
@@ -63,7 +50,7 @@
     "@id" : "https://schema.org/publisher"
   } ]
 }, {
-  "@id" : "_:genid131",
+  "@id" : "_:genid124",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#Gaiters"
@@ -76,7 +63,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid132",
+  "@id" : "_:genid125",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#M-Skirt"
@@ -89,17 +76,17 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid133",
+  "@id" : "_:genid126",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/arco/ontology/clothing-description/Costume"
     }, {
-      "@id" : "_:genid135"
+      "@id" : "_:genid128"
     } ]
   } ]
 }, {
-  "@id" : "_:genid135",
+  "@id" : "_:genid128",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#M-Garment"
@@ -108,17 +95,17 @@
     "@id" : "https://schema.org/hasPart"
   } ]
 }, {
-  "@id" : "_:genid137",
+  "@id" : "_:genid130",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid141"
+      "@id" : "_:genid134"
     }, {
-      "@id" : "_:genid139"
+      "@id" : "_:genid132"
     } ]
   } ]
 }, {
-  "@id" : "_:genid139",
+  "@id" : "_:genid132",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -126,6 +113,65 @@
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#M-Headwear"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://schema.org/hasPart"
+  } ]
+}, {
+  "@id" : "_:genid134",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://aimet-lab.github.io/BISTIRIS#M-Headwear"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://schema.org/hasPart"
+  } ]
+}, {
+  "@id" : "_:genid135",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid149"
+    }, {
+      "@id" : "_:genid147"
+    }, {
+      "@id" : "_:genid145"
+    }, {
+      "@id" : "_:genid143"
+    }, {
+      "@id" : "_:genid141"
+    }, {
+      "@id" : "_:genid139"
+    }, {
+      "@id" : "_:genid137"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid137",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://aimet-lab.github.io/BISTIRIS#M-Overgarment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://schema.org/hasPart"
+  } ]
+}, {
+  "@id" : "_:genid139",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://aimet-lab.github.io/BISTIRIS#Neckerchief"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://schema.org/hasPart"
@@ -145,65 +191,6 @@
 }, {
   "@id" : "_:genid141",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://aimet-lab.github.io/BISTIRIS#M-Headwear"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://schema.org/hasPart"
-  } ]
-}, {
-  "@id" : "_:genid142",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid156"
-    }, {
-      "@id" : "_:genid154"
-    }, {
-      "@id" : "_:genid152"
-    }, {
-      "@id" : "_:genid150"
-    }, {
-      "@id" : "_:genid148"
-    }, {
-      "@id" : "_:genid146"
-    }, {
-      "@id" : "_:genid144"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid144",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "2"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://aimet-lab.github.io/BISTIRIS#M-Overgarment"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://schema.org/hasPart"
-  } ]
-}, {
-  "@id" : "_:genid146",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://aimet-lab.github.io/BISTIRIS#Neckerchief"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://schema.org/hasPart"
-  } ]
-}, {
-  "@id" : "_:genid148",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -215,7 +202,7 @@
     "@id" : "https://schema.org/hasPart"
   } ]
 }, {
-  "@id" : "_:genid150",
+  "@id" : "_:genid143",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -228,7 +215,7 @@
     "@id" : "https://schema.org/hasPart"
   } ]
 }, {
-  "@id" : "_:genid152",
+  "@id" : "_:genid145",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -241,7 +228,7 @@
     "@id" : "https://schema.org/hasPart"
   } ]
 }, {
-  "@id" : "_:genid154",
+  "@id" : "_:genid147",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#M-Shirt"
@@ -254,7 +241,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid156",
+  "@id" : "_:genid149",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#M-Jacket"
@@ -267,17 +254,17 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid157",
+  "@id" : "_:genid150",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid161"
+      "@id" : "_:genid154"
     }, {
-      "@id" : "_:genid159"
+      "@id" : "_:genid152"
     } ]
   } ]
 }, {
-  "@id" : "_:genid159",
+  "@id" : "_:genid152",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#Tube_trousers"
@@ -290,17 +277,17 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid161",
+  "@id" : "_:genid154",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid165"
+      "@id" : "_:genid158"
     }, {
-      "@id" : "_:genid163"
+      "@id" : "_:genid156"
     } ]
   } ]
 }, {
-  "@id" : "_:genid163",
+  "@id" : "_:genid156",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -313,7 +300,7 @@
     "@id" : "https://schema.org/hasPart"
   } ]
 }, {
-  "@id" : "_:genid165",
+  "@id" : "_:genid158",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#Loose_trousers"
@@ -326,17 +313,17 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid166",
+  "@id" : "_:genid159",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://aimet-lab.github.io/BISTIRIS#Garment"
     }, {
-      "@id" : "_:genid168"
+      "@id" : "_:genid161"
     } ]
   } ]
 }, {
-  "@id" : "_:genid168",
+  "@id" : "_:genid161",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#M-Costume"
@@ -359,7 +346,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid190",
+  "@id" : "_:genid183",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#Loose_trousers"
@@ -372,7 +359,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid191",
+  "@id" : "_:genid184",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -382,17 +369,17 @@
     "@id" : "https://aimet-lab.github.io/BISTIRIS#fringes"
   } ]
 }, {
-  "@id" : "_:genid192",
+  "@id" : "_:genid185",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid196"
+      "@id" : "_:genid189"
     }, {
-      "@id" : "_:genid194"
+      "@id" : "_:genid187"
     } ]
   } ]
 }, {
-  "@id" : "_:genid194",
+  "@id" : "_:genid187",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Garment"
@@ -401,7 +388,7 @@
     "@id" : "https://aimet-lab.github.io/BISTIRIS#coversWithTransparency"
   } ]
 }, {
-  "@id" : "_:genid196",
+  "@id" : "_:genid189",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#coversWithTransparency"
@@ -410,7 +397,7 @@
     "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Garment"
   } ]
 }, {
-  "@id" : "_:genid197",
+  "@id" : "_:genid190",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -420,17 +407,17 @@
     "@id" : "https://aimet-lab.github.io/BISTIRIS#curly"
   } ]
 }, {
-  "@id" : "_:genid202",
+  "@id" : "_:genid195",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid206"
+      "@id" : "_:genid199"
     }, {
-      "@id" : "_:genid204"
+      "@id" : "_:genid197"
     } ]
   } ]
 }, {
-  "@id" : "_:genid204",
+  "@id" : "_:genid197",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Garment"
@@ -439,7 +426,7 @@
     "@id" : "https://aimet-lab.github.io/BISTIRIS#coversWithTransparency"
   } ]
 }, {
-  "@id" : "_:genid206",
+  "@id" : "_:genid199",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#coversWithTransparency"
@@ -448,7 +435,7 @@
     "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Garment"
   } ]
 }, {
-  "@id" : "_:genid207",
+  "@id" : "_:genid200",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#Source"
@@ -461,7 +448,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid208",
+  "@id" : "_:genid201",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "http://dbpedia.org/ontology/Place"
@@ -474,7 +461,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid209",
+  "@id" : "_:genid202",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -482,6 +469,36 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://schema.org/dateCreated"
+  } ]
+}, {
+  "@id" : "_:genid205",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
+  } ]
+}, {
+  "@id" : "_:genid206",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
+  } ]
+}, {
+  "@id" : "_:genid207",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
+  } ]
+}, {
+  "@id" : "_:genid208",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
+  } ]
+}, {
+  "@id" : "_:genid209",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
   } ]
 }, {
   "@id" : "_:genid21",
@@ -492,6 +509,18 @@
     }, {
       "@id" : "https://w3id.org/arco/ontology/clothing-description/Costume"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid210",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
+  } ]
+}, {
+  "@id" : "_:genid211",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
   } ]
 }, {
   "@id" : "_:genid212",
@@ -537,9 +566,9 @@
   } ]
 }, {
   "@id" : "_:genid219",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
+  "http://www.w3.org/2003/11/swrl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ]
 }, {
   "@id" : "_:genid220",
@@ -549,9 +578,9 @@
   } ]
 }, {
   "@id" : "_:genid221",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
+  "http://www.w3.org/2003/11/swrl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ]
 }, {
   "@id" : "_:genid222",
@@ -567,9 +596,9 @@
   } ]
 }, {
   "@id" : "_:genid224",
-  "http://www.w3.org/2003/11/swrl#isRuleEnabled" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
   } ]
 }, {
   "@id" : "_:genid225",
@@ -585,9 +614,9 @@
   } ]
 }, {
   "@id" : "_:genid227",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
+  "http://www.w3.org/2003/11/swrl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ]
 }, {
   "@id" : "_:genid228",
@@ -597,9 +626,9 @@
   } ]
 }, {
   "@id" : "_:genid229",
-  "http://www.w3.org/2003/11/swrl#isRuleEnabled" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
   } ]
 }, {
   "@id" : "_:genid230",
@@ -679,15 +708,15 @@
   } ]
 }, {
   "@id" : "_:genid241",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
+  "http://www.w3.org/2003/11/swrl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ]
 }, {
   "@id" : "_:genid242",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
+  "http://www.w3.org/2003/11/swrl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ]
 }, {
   "@id" : "_:genid243",
@@ -703,9 +732,9 @@
   } ]
 }, {
   "@id" : "_:genid245",
-  "http://www.w3.org/2003/11/swrl#isRuleEnabled" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
   } ]
 }, {
   "@id" : "_:genid246",
@@ -733,53 +762,11 @@
   } ]
 }, {
   "@id" : "_:genid250",
-  "http://www.w3.org/2003/11/swrl#isRuleEnabled" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:genid251"
   } ]
 }, {
   "@id" : "_:genid251",
-  "http://www.w3.org/2003/11/swrl#isRuleEnabled" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
-  } ]
-}, {
-  "@id" : "_:genid252",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
-  } ]
-}, {
-  "@id" : "_:genid253",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
-  } ]
-}, {
-  "@id" : "_:genid254",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
-  } ]
-}, {
-  "@id" : "_:genid255",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
-  } ]
-}, {
-  "@id" : "_:genid256",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."
-  } ]
-}, {
-  "@id" : "_:genid257",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "_:genid258"
-  } ]
-}, {
-  "@id" : "_:genid258",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
@@ -788,7 +775,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
-  "@id" : "_:genid259",
+  "@id" : "_:genid252",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -808,7 +795,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid267",
+  "@id" : "_:genid260",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -822,21 +809,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid27",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://aimet-lab.github.io/BISTIRIS#Curly_apron"
-    }, {
-      "@id" : "https://aimet-lab.github.io/BISTIRIS#Giacchino"
-    }, {
-      "@id" : "https://aimet-lab.github.io/BISTIRIS#Long_skirt"
-    }, {
-      "@id" : "https://aimet-lab.github.io/BISTIRIS#Skirt_trousers"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid272",
+  "@id" : "_:genid265",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -858,7 +831,21 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid281",
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://aimet-lab.github.io/BISTIRIS#Curly_apron"
+    }, {
+      "@id" : "https://aimet-lab.github.io/BISTIRIS#Giacchino"
+    }, {
+      "@id" : "https://aimet-lab.github.io/BISTIRIS#Long_skirt"
+    }, {
+      "@id" : "https://aimet-lab.github.io/BISTIRIS#Skirt_trousers"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid274",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -874,7 +861,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid287",
+  "@id" : "_:genid280",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -886,7 +873,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid291",
+  "@id" : "_:genid284",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -898,7 +885,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid295",
+  "@id" : "_:genid288",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -910,7 +897,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid299",
+  "@id" : "_:genid292",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -930,7 +917,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid307",
+  "@id" : "_:genid300",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -946,7 +933,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid313",
+  "@id" : "_:genid306",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -958,7 +945,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid317",
+  "@id" : "_:genid310",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -968,6 +955,55 @@
     }, {
       "@id" : "https://aimet-lab.github.io/BISTIRIS#Shoulder_veil"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid314",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SourceRule"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid318"
+    }, {
+      "@id" : "_:genid316"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid320"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid316",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#costume"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#place"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://purl.org/dc/terms/source"
+  } ]
+}, {
+  "@id" : "_:genid318",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#costume"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#garment"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "https://schema.org/hasPart"
   } ]
 }, {
   "@id" : "_:genid32",
@@ -980,6 +1016,18 @@
     } ]
   } ]
 }, {
+  "@id" : "_:genid320",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#garment"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#place"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://purl.org/dc/terms/source"
+  } ]
+}, {
   "@id" : "_:genid321",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
@@ -990,7 +1038,7 @@
     "@value" : ""
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "SourceRule"
+    "@value" : "LocationRule"
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
@@ -1014,7 +1062,7 @@
     "@id" : "urn:swrl:var#place"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://purl.org/dc/terms/source"
+    "@id" : "https://schema.org/fromLocation"
   } ]
 }, {
   "@id" : "_:genid325",
@@ -1038,20 +1086,16 @@
     "@id" : "urn:swrl:var#place"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://purl.org/dc/terms/source"
+    "@id" : "https://schema.org/fromLocation"
   } ]
 }, {
   "@id" : "_:genid328",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
-  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : ""
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "LocationRule"
+    "@value" : "TransparencyRule"
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
@@ -1069,13 +1113,13 @@
   "@id" : "_:genid330",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl:var#costume"
+    "@id" : "urn:swrl:var#garment"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "urn:swrl:var#place"
+    "@id" : "urn:swrl:var#color"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://schema.org/fromLocation"
+    "@id" : "https://aimet-lab.github.io/BISTIRIS#colourThroughTransparency"
   } ]
 }, {
   "@id" : "_:genid332",
@@ -1093,13 +1137,13 @@
   "@id" : "_:genid334",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl:var#garment"
+    "@id" : "urn:swrl:var#costume"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "urn:swrl:var#place"
+    "@id" : "urn:swrl:var#color"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://schema.org/fromLocation"
+    "@id" : "https://aimet-lab.github.io/BISTIRIS#colourThroughTransparency"
   } ]
 }, {
   "@id" : "_:genid335",
@@ -1108,7 +1152,7 @@
     "@value" : ""
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "TransparencyRule"
+    "@value" : "ColorRule"
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
@@ -1132,7 +1176,7 @@
     "@id" : "urn:swrl:var#color"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://aimet-lab.github.io/BISTIRIS#colourThroughTransparency"
+    "@id" : "https://w3id.org/arco/ontology/arco-lite/hasColour"
   } ]
 }, {
   "@id" : "_:genid339",
@@ -1156,7 +1200,7 @@
     "@id" : "urn:swrl:var#color"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://aimet-lab.github.io/BISTIRIS#colourThroughTransparency"
+    "@id" : "https://w3id.org/arco/ontology/arco-lite/hasColour"
   } ]
 }, {
   "@id" : "_:genid342",
@@ -1165,7 +1209,7 @@
     "@value" : ""
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "ColorRule"
+    "@value" : "DatationRule"
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
@@ -1181,15 +1225,15 @@
   } ]
 }, {
   "@id" : "_:genid344",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl:var#garment"
+    "@id" : "urn:swrl:var#costume"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "urn:swrl:var#color"
+    "@id" : "urn:swrl:var#place"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://w3id.org/arco/ontology/arco-lite/hasColour"
+    "@id" : "https://schema.org/dateCreated"
   } ]
 }, {
   "@id" : "_:genid346",
@@ -1205,36 +1249,15 @@
   } ]
 }, {
   "@id" : "_:genid348",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl:var#costume"
+    "@id" : "urn:swrl:var#garment"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "urn:swrl:var#color"
+    "@id" : "urn:swrl:var#place"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://w3id.org/arco/ontology/arco-lite/hasColour"
-  } ]
-}, {
-  "@id" : "_:genid349",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : ""
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "DatationRule"
-  } ],
-  "http://www.w3.org/2003/11/swrl#body" : [ {
-    "@list" : [ {
-      "@id" : "_:genid353"
-    }, {
-      "@id" : "_:genid351"
-    } ]
-  } ],
-  "http://www.w3.org/2003/11/swrl#head" : [ {
-    "@list" : [ {
-      "@id" : "_:genid355"
-    } ]
+    "@id" : "https://schema.org/dateCreated"
   } ]
 }, {
   "@id" : "_:genid35",
@@ -1245,42 +1268,6 @@
     }, {
       "@id" : "https://aimet-lab.github.io/BISTIRIS#Giacchino"
     } ]
-  } ]
-}, {
-  "@id" : "_:genid351",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl:var#costume"
-  } ],
-  "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "urn:swrl:var#place"
-  } ],
-  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://schema.org/dateCreated"
-  } ]
-}, {
-  "@id" : "_:genid353",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl:var#costume"
-  } ],
-  "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "urn:swrl:var#garment"
-  } ],
-  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://schema.org/hasPart"
-  } ]
-}, {
-  "@id" : "_:genid355",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl:var#garment"
-  } ],
-  "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "urn:swrl:var#place"
-  } ],
-  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://schema.org/dateCreated"
   } ]
 }, {
   "@id" : "_:genid38",
@@ -1337,25 +1324,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://aimet-lab.github.io/BISTIRIS#Curly_apron"
-    }, {
-      "@id" : "https://aimet-lab.github.io/BISTIRIS#Shoulder_veil"
-    }, {
-      "@id" : "https://aimet-lab.github.io/BISTIRIS#Veil"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid54",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
       "@id" : "http://purl.org/ontology/bibo/Book"
     }, {
       "@id" : "http://purl.org/ontology/bibo/Periodical"
     } ]
   } ]
 }, {
-  "@id" : "_:genid57",
+  "@id" : "_:genid53",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -1365,7 +1340,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid60",
+  "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -1375,17 +1350,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid63",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://purl.org/ontology/bibo/Book"
-    }, {
-      "@id" : "http://purl.org/ontology/bibo/Periodical"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid69",
+  "@id" : "_:genid62",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1393,6 +1358,34 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#curly"
+  } ]
+}, {
+  "@id" : "_:genid63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "Istituto Superiore Regionale Etnografico"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://schema.org/publisher"
+  } ]
+}, {
+  "@id" : "_:genid67",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/arco/ontology/clothing-description/Costume"
+    }, {
+      "@id" : "_:genid69"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid69",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Garment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://schema.org/hasPart"
   } ]
 }, {
   "@id" : "_:genid7",
@@ -1405,45 +1398,17 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid70",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "Istituto Superiore Regionale Etnografico"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://schema.org/publisher"
-  } ]
-}, {
-  "@id" : "_:genid74",
+  "@id" : "_:genid71",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/arco/ontology/clothing-description/Costume"
+      "@id" : "_:genid75"
     }, {
-      "@id" : "_:genid76"
+      "@id" : "_:genid73"
     } ]
   } ]
 }, {
-  "@id" : "_:genid76",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Garment"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://schema.org/hasPart"
-  } ]
-}, {
-  "@id" : "_:genid78",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid82"
-    }, {
-      "@id" : "_:genid80"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid80",
+  "@id" : "_:genid73",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1456,7 +1421,7 @@
     "@id" : "https://schema.org/hasPart"
   } ]
 }, {
-  "@id" : "_:genid82",
+  "@id" : "_:genid75",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1469,17 +1434,17 @@
     "@id" : "https://schema.org/hasPart"
   } ]
 }, {
-  "@id" : "_:genid83",
+  "@id" : "_:genid76",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid87"
+      "@id" : "_:genid80"
     }, {
-      "@id" : "_:genid85"
+      "@id" : "_:genid78"
     } ]
   } ]
 }, {
-  "@id" : "_:genid85",
+  "@id" : "_:genid78",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1492,7 +1457,7 @@
     "@id" : "https://schema.org/hasPart"
   } ]
 }, {
-  "@id" : "_:genid87",
+  "@id" : "_:genid80",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1505,23 +1470,23 @@
     "@id" : "https://schema.org/hasPart"
   } ]
 }, {
-  "@id" : "_:genid88",
+  "@id" : "_:genid81",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid98"
+      "@id" : "_:genid91"
     }, {
-      "@id" : "_:genid96"
+      "@id" : "_:genid89"
     }, {
-      "@id" : "_:genid94"
+      "@id" : "_:genid87"
     }, {
-      "@id" : "_:genid92"
+      "@id" : "_:genid85"
     }, {
-      "@id" : "_:genid90"
+      "@id" : "_:genid83"
     } ]
   } ]
 }, {
-  "@id" : "_:genid90",
+  "@id" : "_:genid83",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1534,7 +1499,7 @@
     "@id" : "https://schema.org/hasPart"
   } ]
 }, {
-  "@id" : "_:genid92",
+  "@id" : "_:genid85",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Shirt"
@@ -1547,7 +1512,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid94",
+  "@id" : "_:genid87",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Jacket"
@@ -1560,7 +1525,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid96",
+  "@id" : "_:genid89",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Bodice"
@@ -1573,7 +1538,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid98",
+  "@id" : "_:genid91",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#Apron"
@@ -1586,14 +1551,27 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid99",
+  "@id" : "_:genid92",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://aimet-lab.github.io/BISTIRIS#Garment"
     }, {
-      "@id" : "_:genid101"
+      "@id" : "_:genid94"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid94",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Costume"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://schema.org/isPartOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://dbpedia.org/ontology/Place",
@@ -1832,7 +1810,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#Apron"
   }, {
-    "@id" : "_:genid69"
+    "@id" : "_:genid62"
   } ]
 }, {
   "@id" : "https://aimet-lab.github.io/BISTIRIS#DVV",
@@ -1840,7 +1818,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/arkivo/ontology#GlamThing"
   }, {
-    "@id" : "_:genid70"
+    "@id" : "_:genid63"
   } ]
 }, {
   "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Bodice",
@@ -1869,13 +1847,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/arco/ontology/clothing-description/Costume"
   }, {
-    "@id" : "_:genid74"
+    "@id" : "_:genid67"
   }, {
-    "@id" : "_:genid78"
+    "@id" : "_:genid71"
   }, {
-    "@id" : "_:genid83"
+    "@id" : "_:genid76"
   }, {
-    "@id" : "_:genid88"
+    "@id" : "_:genid81"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#M-Costume"
@@ -1886,7 +1864,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#Garment"
   }, {
-    "@id" : "_:genid99"
+    "@id" : "_:genid92"
   } ],
   "http://www.w3.org/2002/07/owl#disjointUnionOf" : [ {
     "@list" : [ {
@@ -2046,7 +2024,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Skirt"
   }, {
-    "@id" : "_:genid128"
+    "@id" : "_:genid121"
   } ]
 }, {
   "@id" : "https://aimet-lab.github.io/BISTIRIS#Giacchetta",
@@ -2087,7 +2065,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Headwear"
   }, {
-    "@id" : "_:genid129"
+    "@id" : "_:genid122"
   } ]
 }, {
   "@id" : "https://aimet-lab.github.io/BISTIRIS#Headscarf",
@@ -2107,7 +2085,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/arkivo/ontology#GlamThing"
   }, {
-    "@id" : "_:genid130"
+    "@id" : "_:genid123"
   } ]
 }, {
   "@id" : "https://aimet-lab.github.io/BISTIRIS#ICST",
@@ -2151,9 +2129,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#Trousers"
   }, {
-    "@id" : "_:genid131"
+    "@id" : "_:genid124"
   }, {
-    "@id" : "_:genid132"
+    "@id" : "_:genid125"
   } ]
 }, {
   "@id" : "https://aimet-lab.github.io/BISTIRIS#M-Bodice",
@@ -2173,13 +2151,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/arco/ontology/clothing-description/Costume"
   }, {
-    "@id" : "_:genid133"
+    "@id" : "_:genid126"
   }, {
-    "@id" : "_:genid137"
+    "@id" : "_:genid130"
   }, {
-    "@id" : "_:genid142"
+    "@id" : "_:genid135"
   }, {
-    "@id" : "_:genid157"
+    "@id" : "_:genid150"
   } ]
 }, {
   "@id" : "https://aimet-lab.github.io/BISTIRIS#M-Garment",
@@ -2187,7 +2165,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#Garment"
   }, {
-    "@id" : "_:genid166"
+    "@id" : "_:genid159"
   } ],
   "http://www.w3.org/2002/07/owl#disjointUnionOf" : [ {
     "@list" : [ {
@@ -2289,7 +2267,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#M-Garment"
   }, {
-    "@id" : "_:genid190"
+    "@id" : "_:genid183"
   } ]
 }, {
   "@id" : "https://aimet-lab.github.io/BISTIRIS#M-Soft-bodice",
@@ -2369,7 +2347,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Overgarment"
   }, {
-    "@id" : "_:genid191"
+    "@id" : "_:genid184"
   } ]
 }, {
   "@id" : "https://aimet-lab.github.io/BISTIRIS#Short_coat",
@@ -2389,7 +2367,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Overgarment"
   }, {
-    "@id" : "_:genid192"
+    "@id" : "_:genid185"
   } ]
 }, {
   "@id" : "https://aimet-lab.github.io/BISTIRIS#Skirt_hat",
@@ -2405,7 +2383,7 @@
   }, {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#Trousers"
   }, {
-    "@id" : "_:genid197"
+    "@id" : "_:genid190"
   } ]
 }, {
   "@id" : "https://aimet-lab.github.io/BISTIRIS#Source",
@@ -2457,7 +2435,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://aimet-lab.github.io/BISTIRIS#F-Headwear"
   }, {
-    "@id" : "_:genid202"
+    "@id" : "_:genid195"
   } ]
 }, {
   "@id" : "https://aimet-lab.github.io/BISTIRIS#White_category",
@@ -2817,18 +2795,6 @@
     "@id" : "https://aimet-lab.github.io/BISTIRIS#Garment"
   } ]
 }, {
-  "@id" : "https://aimet-lab.github.io/BISTIRIS#transparency",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid50"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://aimet-lab.github.io/BISTIRIS#technical_details"
-  } ]
-}, {
   "@id" : "https://aimet-lab.github.io/BISTIRIS#wrapping",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2848,7 +2814,7 @@
   } ]
 }, {
   "@id" : "https://dbpedia.org/ontology/neighboringMunicipality",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://yago-knowledge.org/resource/Comune"
   } ],
@@ -2868,7 +2834,7 @@
   "@id" : "https://schema.org/author",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid54"
+    "@id" : "_:genid50"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
@@ -2880,7 +2846,7 @@
     "@value" : "Extended Date/Time Format (EDTF)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid57"
+    "@id" : "_:genid53"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
@@ -2889,7 +2855,7 @@
   "@id" : "https://schema.org/datePublished",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid60"
+    "@id" : "_:genid56"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
@@ -2949,7 +2915,7 @@
   "@id" : "https://schema.org/publisher",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid63"
+    "@id" : "https://aimet-lab.github.io/BISTIRIS#Source"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
@@ -2967,11 +2933,11 @@
   "@id" : "https://w3id.org/arco/ontology/clothing-description/Costume",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid207"
+    "@id" : "_:genid200"
   }, {
-    "@id" : "_:genid208"
+    "@id" : "_:genid201"
   }, {
-    "@id" : "_:genid209"
+    "@id" : "_:genid202"
   } ],
   "http://www.w3.org/2002/07/owl#disjointUnionOf" : [ {
     "@list" : [ {
