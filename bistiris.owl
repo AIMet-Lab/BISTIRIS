@@ -7,7 +7,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://aimet-lab.github.io/BISTIRIS#"
      versionIRI="https://aimet-lab.github.io/BISTIRIS/bistiris.owl">
-    <Prefix name="" IRI="https://aimet-lab.github.io/BISTIRIS/"/>
+    <Prefix name="" IRI="https://aimet-lab.github.io/BISTIRIS#"/>
     <Prefix name="po" IRI="http://www.essepuntato.it/2008/12/pattern#"/>
     <Prefix name="bst" IRI="https://aimet-lab.github.io/BISTIRIS/"/>
     <Prefix name="clo" IRI="https://w3id.org/arco/ontology/clothing-description/"/>
@@ -32,16 +32,12 @@
     <Prefix name="schema" IRI="https://schema.org/"/>
     <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.0</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">G. Corona, D. Guidotti, L. Pandolfo, L. Pulina</Literal>
+        <Literal>G. Corona, D. Guidotti, L. Pandolfo, L. Pulina</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dcterms:description"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BISTIRIS is an ontology for analytically describing Sardinian traditional costumes.</Literal>
+        <Literal xml:lang="en">BISTIRIS is an ontology for analytically describing Sardinian traditional costumes.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dcterms:issued"/>
@@ -49,295 +45,326 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BISTIRIS ontology</Literal>
+        <Literal xml:lang="en">BISTIRIS ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.0</Literal>
     </Annotation>
     <Declaration>
-        <DataProperty IRI="open_slevees"/>
+        <Class abbreviatedIRI="dbo:Place"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="colourThroughTransparency"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Triangle_shaped_apron"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="M-Headwear"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="schema:Place"/>
+        <Class abbreviatedIRI="arkivo:GlamThing"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="bibo:Book"/>
     </Declaration>
     <Declaration>
-        <Class IRI="F-Headwear"/>
+        <Class abbreviatedIRI="bibo:Periodical"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="yago:Provinces_of_Italy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="dcterms:source"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="schema:location"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Fur_overcoat"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Curly_apron"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Red_category"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="M-Jacket"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Tube_trousers"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="F-Bodice"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Shoulder_veil"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="M-Garment"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Belt"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Berritta"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DVV"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="M-Shirt"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Short_coat"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Tongue_shaped_apron"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="geo:long"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Corset_belt"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="M-Soft-bodice"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Bell-shaped_trousers"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="schema:isPartOf"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Loose_trousers"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Fan-shaped_apron"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="F-Overgarment"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Paperbag_skirt"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ICST"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Skirt_trousers"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Long_coat"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Brown_category"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="striped_panel"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="panel_buttons"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="coveredBy"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Giacchino"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="schema:hasPart"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="technical_details"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Apron"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="pleating"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="floral_embroideries"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="schema:dateCreated"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Orange_category"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="drawing"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="sleeve_buttonholes"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="dbo:Place"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="BW"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Skirt_hat"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="covers"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Headscarf"/>
+        <Class abbreviatedIRI="doco:Figure"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="yago:Comune"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="flaps"/>
+        <Class abbreviatedIRI="yago:Provinces_of_Italy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Shawl"/>
+        <Class IRI="Apron"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Neckerchief"/>
+        <Class IRI="Bell-shaped_trousers"/>
     </Declaration>
     <Declaration>
-        <Class IRI="F-Jacket"/>
+        <Class IRI="Belt"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="a-lite:hasColour"/>
+        <Class IRI="Berritta"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="geo:lat"/>
+        <Class IRI="Black_category"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="skirt_panel"/>
+        <Class IRI="Blue_category"/>
     </Declaration>
     <Declaration>
-        <Class IRI="M-Overgarment"/>
+        <Class IRI="Bolero"/>
     </Declaration>
     <Declaration>
-        <Class IRI="M-Skirt"/>
+        <Class IRI="Brimmed_hat"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="lace"/>
+        <Class IRI="Brown_category"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="schema:SocialMediaPosting"/>
+        <Class IRI="Corset_belt"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="màsculas"/>
+        <Class IRI="Curly_apron"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="sleeve_buttons"/>
+        <Class IRI="DVV"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dcterms:issued"/>
+        <Class IRI="F-Bodice"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Head_shawl"/>
+        <Class IRI="F-Cap"/>
     </Declaration>
     <Declaration>
-        <Class IRI="PrivateImage"/>
+        <Class IRI="F-Costume"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Trousers"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Manticello"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Gaiters"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="IALZ"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="M-Costume"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="transparency"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="dbo:elevation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="curly"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Shoulder_scarf"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="fringes"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="embroideries"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="bow"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Veil"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Green_category"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Metallic_category"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Mantle"/>
+        <Class IRI="F-Garment"/>
     </Declaration>
     <Declaration>
         <Class IRI="F-Giubbetto"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="dbp:name"/>
+        <Class IRI="F-Headwear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Jacket"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Kerchief"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Overgarment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Rigid_bodice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Shirt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Skirt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Soft_bodice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Fan-shaped_apron"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Fez"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Fur_overcoat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Gaiters"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Garment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Gheroni_skirt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Giacchetta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Giacchino"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Gray_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Green_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Head_mantle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Head_shawl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Headscarf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IALZ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ICC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ICST"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IEC1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IRCR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Leather_overcoat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Long_coat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Long_skirt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Loose_trousers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Bodice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Cap"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Costume"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Garment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Giubbetto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Headwear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Jacket"/>
     </Declaration>
     <Declaration>
         <Class IRI="M-Kerchief"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="schema:datePublished"/>
+        <Class IRI="M-Overgarment"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="schema:fromLocation"/>
+        <Class IRI="M-Rigid_bodice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Shirt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Skirt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Soft-bodice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Manticello"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Mantle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Metallic_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Neckerchief"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Orange_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Panel_apron"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Paperbag_skirt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Pink_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PrivateImage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Purple_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Red_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Shawl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Short_coat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Shoulder_scarf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Shoulder_veil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Skirt_hat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Skirt_trousers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Source"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Tongue_shaped_apron"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Triangle_shaped_apron"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Trousers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Tube_trousers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Veil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="White_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Yellow_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://dbpedia.org/ontology/Colour"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:Place"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:SocialMediaPosting"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="clo:Costume"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="a-dd:TechnicalCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dcterms:source"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="po:isContainedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="colourThroughTransparency"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="coveredBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="coveredByTransparency"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="coveredColour"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="covers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="coversWithTransparency"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="sewn_togheter"/>
@@ -346,163 +373,133 @@
         <ObjectProperty IRI="https://dbpedia.org/ontology/neighboringMunicipality"/>
     </Declaration>
     <Declaration>
-        <Class IRI="F-Kerchief"/>
+        <ObjectProperty abbreviatedIRI="schema:fromLocation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="M-Giubbetto"/>
+        <ObjectProperty abbreviatedIRI="schema:hasPart"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="bibo:Periodical"/>
+        <ObjectProperty abbreviatedIRI="schema:isPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="schema:location"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="a-lite:hasColour"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dbo:elevation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dbp:name"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="dcterms:title"/>
     </Declaration>
     <Declaration>
-        <Class IRI="F-Skirt"/>
+        <DataProperty abbreviatedIRI="geo:lat"/>
     </Declaration>
     <Declaration>
-        <Class IRI="F-Costume"/>
+        <DataProperty abbreviatedIRI="geo:long"/>
     </Declaration>
     <Declaration>
-        <Class IRI="F-Rigid_bodice"/>
+        <DataProperty IRI="BW"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="wrapping"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="M-Cap"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="schema:publisher"/>
+        <DataProperty IRI="bow"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="checkered_panel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="M-Bodice"/>
+        <DataProperty IRI="curly"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="clo:Costume"/>
+        <DataProperty IRI="drawing"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Giacchetta"/>
+        <DataProperty IRI="embroideries"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Garment"/>
+        <DataProperty IRI="flaps"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Brimmed_hat"/>
+        <DataProperty IRI="floral_embroideries"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Fez"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="a-dd:TechnicalCharacteristic"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="sleeve_ribbon"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="coveredColour"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Black_category"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="F-Soft_bodice"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="F-Shirt"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Pink_category"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Yellow_category"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="po:isContainedBy"/>
+        <DataProperty IRI="fringes"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="intended_use"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="coversWithTransparency"/>
+        <DataProperty IRI="lace"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="doco:Figure"/>
+        <DataProperty IRI="màsculas"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Leather_overcoat"/>
+        <DataProperty IRI="open_slevees"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="panel_buttons"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="pleating"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="points"/>
     </Declaration>
     <Declaration>
-        <Class IRI="IEC1"/>
+        <DataProperty IRI="skirt_panel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Head_mantle"/>
+        <DataProperty IRI="sleeve_buttonholes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="sleeve_buttons"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="sleeve_ribbon"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="striped_panel"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="tassels"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Blue_category"/>
+        <DataProperty IRI="technical_details"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="arkivo:GlamThing"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Gheroni_skirt"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Panel_apron"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Gray_category"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Bolero"/>
+        <DataProperty IRI="wrapping"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="schema:author"/>
     </Declaration>
     <Declaration>
-        <Class IRI="White_category"/>
+        <DataProperty abbreviatedIRI="schema:dateCreated"/>
     </Declaration>
     <Declaration>
-        <Class IRI="F-Cap"/>
+        <DataProperty abbreviatedIRI="schema:datePublished"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Long_skirt"/>
+        <DataProperty abbreviatedIRI="schema:publisher"/>
     </Declaration>
     <Declaration>
-        <Class IRI="ICC"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="coveredByTransparency"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Source"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="M-Rigid_bodice"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Purple_category"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="F-Garment"/>
+        <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dcterms:description"/>
     </Declaration>
     <Declaration>
-        <Class IRI="IRCR"/>
+        <AnnotationProperty abbreviatedIRI="dcterms:issued"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
     </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="dbo:Place"/>
@@ -595,7 +592,7 @@
         <Class IRI="DVV"/>
         <DataHasValue>
             <DataProperty abbreviatedIRI="schema:publisher"/>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Istituto Superiore Regionale Etnografico</Literal>
+            <Literal>Istituto Superiore Regionale Etnografico</Literal>
         </DataHasValue>
     </SubClassOf>
     <SubClassOf>
@@ -799,7 +796,7 @@
         <Class IRI="ICC"/>
         <DataHasValue>
             <DataProperty abbreviatedIRI="schema:publisher"/>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Istituto Centrale per il Catalogo e la Documentazione</Literal>
+            <Literal>Istituto Centrale per il Catalogo e la Documentazione</Literal>
         </DataHasValue>
     </SubClassOf>
     <SubClassOf>
@@ -1349,7 +1346,7 @@
             <DataProperty abbreviatedIRI="owl:topDataProperty"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
-        <AnonymousIndividual nodeID="_:genid1"/>
+        <AnonymousIndividual nodeID="_:genid2147483648"/>
     </ClassAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="dcterms:source"/>
@@ -1428,6 +1425,9 @@
     </SymmetricObjectProperty>
     <SymmetricObjectProperty>
         <ObjectProperty IRI="sewn_togheter"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="https://dbpedia.org/ontology/neighboringMunicipality"/>
     </SymmetricObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -1655,10 +1655,6 @@
         <DataProperty IRI="technical_details"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="transparency"/>
-        <DataProperty IRI="technical_details"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="wrapping"/>
         <DataProperty IRI="technical_details"/>
     </SubDataPropertyOf>
@@ -1804,14 +1800,6 @@
         <Class IRI="Garment"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="transparency"/>
-        <ObjectUnionOf>
-            <Class IRI="Curly_apron"/>
-            <Class IRI="Shoulder_veil"/>
-            <Class IRI="Veil"/>
-        </ObjectUnionOf>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="wrapping"/>
         <Class IRI="Panel_apron"/>
     </DataPropertyDomain>
@@ -1838,10 +1826,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="schema:publisher"/>
-        <ObjectUnionOf>
-            <Class abbreviatedIRI="bibo:Book"/>
-            <Class abbreviatedIRI="bibo:Periodical"/>
-        </ObjectUnionOf>
+        <Class IRI="Source"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI="dbo:elevation"/>
@@ -1952,10 +1937,6 @@
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="transparency"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="wrapping"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
@@ -1982,11 +1963,11 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+            <Literal></Literal>
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SourceRule</Literal>
+            <Literal>SourceRule</Literal>
         </Annotation>
         <Body>
             <ObjectPropertyAtom>
@@ -2011,11 +1992,11 @@
     <DLSafeRule>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+            <Literal></Literal>
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TransparencyRule</Literal>
+            <Literal>TransparencyRule</Literal>
         </Annotation>
         <Body>
             <ObjectPropertyAtom>
@@ -2044,11 +2025,11 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+            <Literal></Literal>
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LocationRule</Literal>
+            <Literal>LocationRule</Literal>
         </Annotation>
         <Body>
             <ObjectPropertyAtom>
@@ -2073,11 +2054,11 @@
     <DLSafeRule>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+            <Literal></Literal>
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ColorRule</Literal>
+            <Literal>ColorRule</Literal>
         </Annotation>
         <Body>
             <ObjectPropertyAtom>
@@ -2102,11 +2083,11 @@
     <DLSafeRule>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+            <Literal></Literal>
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DatationRule</Literal>
+            <Literal>DatationRule</Literal>
         </Annotation>
         <Body>
             <ObjectPropertyAtom>
@@ -2131,241 +2112,241 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>schema:dateCreated</AbbreviatedIRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Extended Date/Time Format (EDTF).</Literal>
+        <Literal>Extended Date/Time Format (EDTF).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>schema:fromLocation</AbbreviatedIRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Traditional of</Literal>
+        <Literal>Traditional of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid10"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid11"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483650"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid12"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483651"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid13"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483652"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid14"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483653"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid15"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483654"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid16"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483655"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid17"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483656"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid18"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483657"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid19"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483658"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid2"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483659"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
-        <AnonymousIndividual nodeID="_:genid20"/>
+        <AnonymousIndividual nodeID="_:genid2147483660"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid21"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483661"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
-        <AnonymousIndividual nodeID="_:genid22"/>
+        <AnonymousIndividual nodeID="_:genid2147483662"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid23"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483663"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
-        <AnonymousIndividual nodeID="_:genid24"/>
+        <AnonymousIndividual nodeID="_:genid2147483664"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid25"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483665"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid26"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483666"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid27"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483667"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid28"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483668"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid29"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483669"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid3"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483670"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid30"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483671"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid31"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483672"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid32"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483673"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid33"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483674"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid34"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483675"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid35"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483676"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid36"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483677"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid37"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483678"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid38"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483679"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
-        <AnonymousIndividual nodeID="_:genid39"/>
+        <AnonymousIndividual nodeID="_:genid2147483680"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid4"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483681"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid40"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483682"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
-        <AnonymousIndividual nodeID="_:genid41"/>
+        <AnonymousIndividual nodeID="_:genid2147483683"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid42"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483684"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid43"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483685"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid44"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483686"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid45"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483687"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid46"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483688"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid5"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483689"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid6"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483690"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid7"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483691"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid8"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483692"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid9"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
+        <AnonymousIndividual nodeID="_:genid2147483693"/>
+        <Literal xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
