@@ -3,7 +3,7 @@
 **BISTÌRIS** is a semantic ontology for describing **Sardinian traditional costumes**. It provides a structured vocabulary designed to enable semantic representation and interlinking of cultural heritage data in digital archives.
 
 ## 📌 Base IRI
-https://aimet-lab.github.io/BISTIRIS/
+https://aimet-lab.github.io/BISTIRIS#
 
 ## 👤 Authors
 - Giorgio Corona  
@@ -21,12 +21,12 @@ The BISTÌRIS Ontology is designed to describe the various components of Sardini
 ## 📂 Resources
 - 🌐 [Ontology landing page](https://aimet-lab.github.io/BISTIRIS/)
 - 📄 [Ontology file in OWL format](https://aimet-lab.github.io/BISTIRIS/bistiris.owl)
-- 📄 [Data in Turtle format](https://aimet-lab.github.io/BISTIRIS/bistiris_data.ttl)
+- 📄 [Data in RDF format](https://aimet-lab.github.io/BISTIRIS/bistiris_data.rdf)
 - 📄 [VOID metadata file](https://aimet-lab.github.io/BISTIRIS/well-known/void.ttl)
 
 ## 🧪 Example IRI
 To refer to a class or concept:
-https://aimet-lab.github.io/BISTIRIS/F-Garment
+https://aimet-lab.github.io/BISTIRIS#F-Garment
 
 ## 📬 Contact
 For more information:
