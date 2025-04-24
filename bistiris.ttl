@@ -1,0 +1,1686 @@
+@prefix : <https://aimet-lab.github.io/BISTIRIS#> .
+@prefix po: <http://www.essepuntato.it/2008/12/pattern#> .
+@prefix bst: <https://aimet-lab.github.io/BISTIRIS/> .
+@prefix clo: <https://w3id.org/arco/ontology/clothing-description/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbp: <http://dbpedia.org/property/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix a-dd: <https://w3id.org/arco/ontology/denotative-description/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix doco: <http://purl.org/spar/doco/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix yago: <http://yago-knowledge.org/resource/> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix a-lite: <https://w3id.org/arco/ontology/arco-lite/> .
+@prefix arkivo: <http://purl.org/arkivo/ontology#> .
+@prefix schema: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://aimet-lab.github.io/BISTIRIS#> .
+
+<https://aimet-lab.github.io/BISTIRIS#> rdf:type owl:Ontology ;
+                                         owl:versionIRI bst:bistiris.owl ;
+                                         owl:versionInfo "2.0"^^xsd:float ;
+                                         dcterms:creator "G. Corona, D. Guidotti, L. Pandolfo, L. Pulina" ;
+                                         dcterms:description "BISTIRIS is an ontology for analytically describing Sardinian traditional costumes."@en ;
+                                         dcterms:issued "2025.0"^^xsd:float ;
+                                         rdfs:label "BISTIRIS ontology"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/11/swrl#isRuleEnabled
+swrl:isRuleEnabled rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/dc/terms/source
+dcterms:source rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :Garment
+                                           clo:Costume
+                                         )
+                           ] ;
+               rdfs:range :Source .
+
+
+###  http://www.essepuntato.it/2008/12/pattern#isContainedBy
+po:isContainedBy rdf:type owl:ObjectProperty ;
+                 rdfs:domain doco:Figure ;
+                 rdfs:range [ rdf:type owl:Class ;
+                              owl:unionOf ( bibo:Book
+                                            bibo:Periodical
+                                          )
+                            ] .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdf:type owl:SymmetricProperty ,
+                               owl:TransitiveProperty ,
+                               owl:ReflexiveProperty .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#colourThroughTransparency
+:colourThroughTransparency rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf owl:topObjectProperty ;
+                           rdfs:domain [ rdf:type owl:Class ;
+                                         owl:unionOf ( :F-Costume
+                                                       :F-Garment
+                                                     )
+                                       ] ;
+                           rdfs:range <https://dbpedia.org/ontology/Colour> .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#coveredBy
+:coveredBy rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :covers ;
+           rdfs:domain :Garment ;
+           rdfs:range :Garment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#coveredByTransparency
+:coveredByTransparency rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       owl:inverseOf :coversWithTransparency ;
+                       rdfs:domain :F-Garment ;
+                       rdfs:range [ rdf:type owl:Class ;
+                                    owl:unionOf ( :Curly_apron
+                                                  :Shoulder_veil
+                                                  :Veil
+                                                )
+                                  ] .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#coveredColour
+:coveredColour rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain clo:Costume ;
+               rdfs:range <https://dbpedia.org/ontology/Colour> .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#covers
+:covers rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        rdfs:domain :Garment ;
+        rdfs:range :Garment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#coversWithTransparency
+:coversWithTransparency rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( :Curly_apron
+                                                    :Shoulder_veil
+                                                    :Veil
+                                                  )
+                                    ] ;
+                        rdfs:range :F-Garment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#sewn_togheter
+:sewn_togheter rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               owl:inverseOf :sewn_togheter ;
+               rdf:type owl:SymmetricProperty ;
+               rdfs:domain :Garment ;
+               rdfs:range :Garment .
+
+
+###  https://dbpedia.org/ontology/neighboringMunicipality
+<https://dbpedia.org/ontology/neighboringMunicipality> rdf:type owl:ObjectProperty ,
+                                                                owl:SymmetricProperty ;
+                                                       rdfs:domain yago:Comune ;
+                                                       rdfs:range yago:Comune .
+
+
+###  https://schema.org/fromLocation
+schema:fromLocation rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdf:type owl:FunctionalProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Garment
+                                                clo:Costume
+                                              )
+                                ] ;
+                    rdfs:range schema:Place ;
+                    rdfs:comment "Traditional of" .
+
+
+###  https://schema.org/hasPart
+schema:hasPart rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               owl:inverseOf schema:isPartOf ;
+               rdf:type owl:InverseFunctionalProperty ;
+               rdfs:domain clo:Costume ;
+               rdfs:range :Garment .
+
+
+###  https://schema.org/isPartOf
+schema:isPartOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:domain :Garment ;
+                rdfs:range clo:Costume .
+
+
+###  https://schema.org/location
+schema:location rdf:type owl:ObjectProperty ;
+                rdfs:domain yago:Comune ;
+                rdfs:range yago:Provinces_of_Italy .
+
+
+###  https://w3id.org/arco/ontology/arco-lite/hasColour
+a-lite:hasColour rdf:type owl:ObjectProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :Garment
+                                             clo:Costume
+                                           )
+                             ] ;
+                 rdfs:range <https://dbpedia.org/ontology/Colour> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://dbpedia.org/ontology/elevation
+dbo:elevation rdf:type owl:DatatypeProperty ;
+              rdfs:domain dbo:Place ;
+              rdfs:range xsd:float .
+
+
+###  http://dbpedia.org/property/name
+dbp:name rdf:type owl:DatatypeProperty ;
+         rdfs:domain owl:Thing ;
+         rdfs:range xsd:string .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:DatatypeProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( bibo:Book
+                                          bibo:Periodical
+                                        )
+                          ] ;
+              rdfs:range rdfs:Literal .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+geo:lat rdf:type owl:DatatypeProperty ;
+        rdfs:domain dbo:Place ;
+        rdfs:range xsd:float .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+geo:long rdf:type owl:DatatypeProperty ;
+         rdfs:domain dbo:Place ;
+         rdfs:range xsd:float .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#BW
+:BW rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Source ;
+    rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#bow
+:bow rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf :technical_details ;
+     rdfs:domain :F-Garment ;
+     rdfs:range rdfs:Literal .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#checkered_panel
+:checkered_panel rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :skirt_panel ;
+                 rdfs:domain :Long_skirt ;
+                 rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#curly
+:curly rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf :technical_details ;
+       rdfs:domain [ rdf:type owl:Class ;
+                     owl:unionOf ( :Curly_apron
+                                   :Giacchino
+                                   :Long_skirt
+                                   :Skirt_trousers
+                                 )
+                   ] ;
+       rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#drawing
+:drawing rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Source ;
+         rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#embroideries
+:embroideries rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :technical_details ;
+              rdfs:domain :Garment ;
+              rdfs:range rdfs:Literal .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#flaps
+:flaps rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf :technical_details ;
+       rdfs:domain :F-Jacket ;
+       rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#floral_embroideries
+:floral_embroideries rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :embroideries ;
+                     rdfs:domain :F-Garment ;
+                     rdfs:range rdfs:Literal .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#fringes
+:fringes rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :technical_details ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :Head_shawl
+                                     :Shawl
+                                   )
+                     ] ;
+         rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#intended_use
+:intended_use rdf:type owl:DatatypeProperty ;
+              rdfs:domain clo:Costume ;
+              rdfs:range xsd:string .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#lace
+:lace rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf :technical_details ;
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :Curly_apron
+                                  :Giacchino
+                                )
+                  ] ;
+      rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#màsculas
+:màsculas rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :technical_details ;
+          rdfs:domain :Gheroni_skirt ;
+          rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#open_slevees
+:open_slevees rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :technical_details ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :F-Giubbetto
+                                          :M-Giubbetto
+                                        )
+                          ] ;
+              rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#panel_buttons
+:panel_buttons rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :skirt_panel ;
+               rdfs:domain :Long_skirt ;
+               rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#pleating
+:pleating rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :technical_details ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Apron
+                                      :F-Skirt
+                                    )
+                      ] ;
+          rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#points
+:points rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :technical_details ;
+        rdfs:domain :F-Bodice ;
+        rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#skirt_panel
+:skirt_panel rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :technical_details ;
+             rdfs:domain :Long_skirt ;
+             rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#sleeve_buttonholes
+:sleeve_buttonholes rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :technical_details ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :F-Jacket
+                                                :M-Jacket
+                                              )
+                                ] ;
+                    rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#sleeve_buttons
+:sleeve_buttons rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :technical_details ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :F-Jacket
+                                            :M-Jacket
+                                          )
+                            ] ;
+                rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#sleeve_ribbon
+:sleeve_ribbon rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :technical_details ;
+               rdfs:domain :F-Jacket ;
+               rdfs:range rdfs:Literal .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#striped_panel
+:striped_panel rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :skirt_panel ;
+               rdfs:domain :Long_skirt ;
+               rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#tassels
+:tassels rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :technical_details ;
+         rdfs:domain :F-Headwear ;
+         rdfs:range xsd:boolean .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#technical_details
+:technical_details rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Garment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#wrapping
+:wrapping rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :technical_details ;
+          rdfs:domain :Panel_apron ;
+          rdfs:range xsd:boolean .
+
+
+###  https://schema.org/author
+schema:author rdf:type owl:DatatypeProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( bibo:Book
+                                          bibo:Periodical
+                                        )
+                          ] ;
+              rdfs:range rdfs:Literal .
+
+
+###  https://schema.org/dateCreated
+schema:dateCreated rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Garment
+                                               clo:Costume
+                                             )
+                               ] ;
+                   rdfs:range rdfs:Literal ;
+                   rdfs:comment "Extended Date/Time Format (EDTF)." .
+
+
+###  https://schema.org/datePublished
+schema:datePublished rdf:type owl:DatatypeProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( bibo:Book
+                                                 bibo:Periodical
+                                               )
+                                 ] ;
+                     rdfs:range rdfs:Literal .
+
+
+###  https://schema.org/publisher
+schema:publisher rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Source ;
+                 rdfs:range rdfs:Literal .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/ontology/Place
+dbo:Place rdf:type owl:Class ;
+          rdfs:subClassOf schema:Place .
+
+
+###  http://purl.org/arkivo/ontology#GlamThing
+arkivo:GlamThing rdf:type owl:Class ;
+                 rdfs:subClassOf :Source .
+
+
+###  http://purl.org/ontology/bibo/Book
+bibo:Book rdf:type owl:Class ;
+          rdfs:subClassOf :Source .
+
+
+###  http://purl.org/ontology/bibo/Periodical
+bibo:Periodical rdf:type owl:Class ;
+                rdfs:subClassOf :Source .
+
+
+###  http://purl.org/spar/doco/Figure
+doco:Figure rdf:type owl:Class ;
+            rdfs:subClassOf :Source .
+
+
+###  http://yago-knowledge.org/resource/Comune
+yago:Comune rdf:type owl:Class ;
+            rdfs:subClassOf schema:Place .
+
+
+###  http://yago-knowledge.org/resource/Provinces_of_Italy
+yago:Provinces_of_Italy rdf:type owl:Class ;
+                        rdfs:subClassOf owl:Thing .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Apron
+:Apron rdf:type owl:Class ;
+       rdfs:subClassOf :F-Garment ;
+       owl:disjointUnionOf ( :Curly_apron
+                             :Fan-shaped_apron
+                             :Panel_apron
+                           ) .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Bell-shaped_trousers
+:Bell-shaped_trousers rdf:type owl:Class ;
+                      rdfs:subClassOf :M-Skirt ,
+                                      :Trousers .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Belt
+:Belt rdf:type owl:Class ;
+      rdfs:subClassOf :M-Garment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Berritta
+:Berritta rdf:type owl:Class ;
+          rdfs:subClassOf :M-Headwear .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Black_category
+:Black_category rdf:type owl:Class ;
+                rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Blue_category
+:Blue_category rdf:type owl:Class ;
+               rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Bolero
+:Bolero rdf:type owl:Class ;
+        rdfs:subClassOf :F-Jacket .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Brimmed_hat
+:Brimmed_hat rdf:type owl:Class ;
+             rdfs:subClassOf :M-Headwear .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Brown_category
+:Brown_category rdf:type owl:Class ;
+                rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Corset_belt
+:Corset_belt rdf:type owl:Class ;
+             rdfs:subClassOf :F-Bodice .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Curly_apron
+:Curly_apron rdf:type owl:Class ;
+             rdfs:subClassOf :Apron ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :curly ;
+                               owl:hasValue "true"^^xsd:boolean
+                             ] .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#DVV
+:DVV rdf:type owl:Class ;
+     rdfs:subClassOf arkivo:GlamThing ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty schema:publisher ;
+                       owl:hasValue "Istituto Superiore Regionale Etnografico"
+                     ] .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#F-Bodice
+:F-Bodice rdf:type owl:Class ;
+          rdfs:subClassOf :F-Garment ;
+          owl:disjointUnionOf ( :Corset_belt
+                                :F-Rigid_bodice
+                                :F-Soft_bodice
+                              ) .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#F-Cap
+:F-Cap rdf:type owl:Class ;
+       rdfs:subClassOf :F-Headwear .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#F-Costume
+:F-Costume rdf:type owl:Class ;
+           rdfs:subClassOf clo:Costume ,
+                           [ owl:intersectionOf ( clo:Costume
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:allValuesFrom :F-Garment
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ,
+                           [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :F-Headwear
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :F-Headwear
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ,
+                           [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :F-Skirt
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:maxQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :F-Skirt
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ,
+                           [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :Apron
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :F-Bodice
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :F-Jacket
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :F-Shirt
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :F-Overgarment
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+           owl:disjointWith :M-Costume .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#F-Garment
+:F-Garment rdf:type owl:Class ;
+           rdfs:subClassOf :Garment ,
+                           [ owl:intersectionOf ( :Garment
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:isPartOf ;
+                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :F-Costume
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+           owl:disjointUnionOf ( :Apron
+                                 :F-Bodice
+                                 :F-Headwear
+                                 :F-Jacket
+                                 :F-Overgarment
+                                 :F-Shirt
+                                 :F-Skirt
+                               ) .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#F-Giubbetto
+:F-Giubbetto rdf:type owl:Class ;
+             rdfs:subClassOf :F-Jacket .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#F-Headwear
+:F-Headwear rdf:type owl:Class ;
+            rdfs:subClassOf :F-Garment ;
+            owl:disjointUnionOf ( :F-Cap
+                                  :F-Kerchief
+                                  :Head_mantle
+                                  :Head_shawl
+                                  :Headscarf
+                                  :Manticello
+                                  :Veil
+                                ) .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#F-Jacket
+:F-Jacket rdf:type owl:Class ;
+          rdfs:subClassOf :F-Garment ;
+          owl:disjointUnionOf ( :Bolero
+                                :F-Giubbetto
+                                :Giacchino
+                              ) .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#F-Kerchief
+:F-Kerchief rdf:type owl:Class ;
+            rdfs:subClassOf :F-Headwear .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#F-Overgarment
+:F-Overgarment rdf:type owl:Class ;
+               rdfs:subClassOf :F-Garment ;
+               owl:disjointUnionOf ( :Shawl
+                                     :Shoulder_scarf
+                                     :Shoulder_veil
+                                   ) .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#F-Rigid_bodice
+:F-Rigid_bodice rdf:type owl:Class ;
+                rdfs:subClassOf :F-Bodice .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#F-Shirt
+:F-Shirt rdf:type owl:Class ;
+         rdfs:subClassOf :F-Garment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#F-Skirt
+:F-Skirt rdf:type owl:Class ;
+         rdfs:subClassOf :F-Garment ;
+         owl:disjointUnionOf ( :Gheroni_skirt
+                               :Long_skirt
+                               :Paperbag_skirt
+                             ) .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#F-Soft_bodice
+:F-Soft_bodice rdf:type owl:Class ;
+               rdfs:subClassOf :F-Bodice .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Fan-shaped_apron
+:Fan-shaped_apron rdf:type owl:Class ;
+                  rdfs:subClassOf :Apron .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Fez
+:Fez rdf:type owl:Class ;
+     rdfs:subClassOf :M-Headwear .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Fur_overcoat
+:Fur_overcoat rdf:type owl:Class ;
+              rdfs:subClassOf :M-Overgarment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Gaiters
+:Gaiters rdf:type owl:Class ;
+         rdfs:subClassOf :M-Garment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Garment
+:Garment rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing ;
+         owl:disjointUnionOf ( :F-Garment
+                               :M-Garment
+                             ) .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Gheroni_skirt
+:Gheroni_skirt rdf:type owl:Class ;
+               rdfs:subClassOf :F-Skirt ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :màsculas ;
+                                 owl:hasValue "true"^^xsd:boolean
+                               ] .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Giacchetta
+:Giacchetta rdf:type owl:Class ;
+            rdfs:subClassOf :M-Jacket ;
+            owl:disjointWith :M-Giubbetto .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Giacchino
+:Giacchino rdf:type owl:Class ;
+           rdfs:subClassOf :F-Jacket .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Gray_category
+:Gray_category rdf:type owl:Class ;
+               rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Green_category
+:Green_category rdf:type owl:Class ;
+                rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Head_mantle
+:Head_mantle rdf:type owl:Class ;
+             rdfs:subClassOf :F-Headwear .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Head_shawl
+:Head_shawl rdf:type owl:Class ;
+            rdfs:subClassOf :F-Headwear ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :fringes ;
+                              owl:hasValue "true"^^xsd:boolean
+                            ] .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Headscarf
+:Headscarf rdf:type owl:Class ;
+           rdfs:subClassOf :F-Headwear .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#IALZ
+:IALZ rdf:type owl:Class ;
+      rdfs:subClassOf doco:Figure .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#ICC
+:ICC rdf:type owl:Class ;
+     rdfs:subClassOf arkivo:GlamThing ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty schema:publisher ;
+                       owl:hasValue "Istituto Centrale per il Catalogo e la Documentazione"
+                     ] .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#ICST
+:ICST rdf:type owl:Class ;
+      rdfs:subClassOf doco:Figure .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#IEC1
+:IEC1 rdf:type owl:Class ;
+      rdfs:subClassOf doco:Figure .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#IRCR
+:IRCR rdf:type owl:Class ;
+      rdfs:subClassOf doco:Figure .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Leather_overcoat
+:Leather_overcoat rdf:type owl:Class ;
+                  rdfs:subClassOf :M-Overgarment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Long_coat
+:Long_coat rdf:type owl:Class ;
+           rdfs:subClassOf :M-Overgarment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Long_skirt
+:Long_skirt rdf:type owl:Class ;
+            rdfs:subClassOf :F-Skirt .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Loose_trousers
+:Loose_trousers rdf:type owl:Class ;
+                rdfs:subClassOf :Trousers ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :coveredBy ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :Gaiters
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :coveredBy ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :M-Skirt
+                                ] .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#M-Bodice
+:M-Bodice rdf:type owl:Class ;
+          rdfs:subClassOf :M-Garment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#M-Cap
+:M-Cap rdf:type owl:Class ;
+       rdfs:subClassOf :M-Headwear .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#M-Costume
+:M-Costume rdf:type owl:Class ;
+           rdfs:subClassOf clo:Costume ,
+                           [ owl:intersectionOf ( clo:Costume
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:allValuesFrom :M-Garment
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ,
+                           [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :M-Headwear
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:maxQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :M-Headwear
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ,
+                           [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :M-Jacket
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :M-Shirt
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :Belt
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :Gaiters
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :M-Soft-bodice
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :Neckerchief
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:hasPart ;
+                                                    owl:maxQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :M-Overgarment
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ,
+                           [ rdf:type owl:Class ;
+                             owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty schema:hasPart ;
+                                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                    owl:onClass :Loose_trousers
+                                                                  ]
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty schema:hasPart ;
+                                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                    owl:onClass :M-Skirt
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ]
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty schema:hasPart ;
+                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onClass :Tube_trousers
+                                           ]
+                                         )
+                           ] .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#M-Garment
+:M-Garment rdf:type owl:Class ;
+           rdfs:subClassOf :Garment ,
+                           [ owl:intersectionOf ( :Garment
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty schema:isPartOf ;
+                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :M-Costume
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+           owl:disjointUnionOf ( :Belt
+                                 :Gaiters
+                                 :M-Headwear
+                                 :M-Jacket
+                                 :M-Overgarment
+                                 :M-Shirt
+                                 :M-Soft-bodice
+                                 :Trousers
+                               ) .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#M-Giubbetto
+:M-Giubbetto rdf:type owl:Class ;
+             rdfs:subClassOf :M-Jacket .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#M-Headwear
+:M-Headwear rdf:type owl:Class ;
+            rdfs:subClassOf :M-Garment ;
+            owl:disjointUnionOf ( :Berritta
+                                  :Brimmed_hat
+                                  :Fez
+                                  :M-Cap
+                                  :M-Kerchief
+                                ) .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#M-Jacket
+:M-Jacket rdf:type owl:Class ;
+          rdfs:subClassOf :M-Garment ;
+          owl:disjointUnionOf ( :Giacchetta
+                                :M-Giubbetto
+                              ) .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#M-Kerchief
+:M-Kerchief rdf:type owl:Class ;
+            rdfs:subClassOf :M-Headwear .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#M-Overgarment
+:M-Overgarment rdf:type owl:Class ;
+               rdfs:subClassOf :M-Garment ;
+               owl:disjointUnionOf ( :Fur_overcoat
+                                     :Leather_overcoat
+                                     :Long_coat
+                                     :Mantle
+                                     :Short_coat
+                                   ) .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#M-Rigid_bodice
+:M-Rigid_bodice rdf:type owl:Class ;
+                rdfs:subClassOf :M-Bodice .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#M-Shirt
+:M-Shirt rdf:type owl:Class ;
+         rdfs:subClassOf :M-Garment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#M-Skirt
+:M-Skirt rdf:type owl:Class ;
+         rdfs:subClassOf :M-Garment ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :covers ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Loose_trousers
+                         ] .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#M-Soft-bodice
+:M-Soft-bodice rdf:type owl:Class ;
+               rdfs:subClassOf :M-Bodice .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Manticello
+:Manticello rdf:type owl:Class ;
+            rdfs:subClassOf :F-Headwear .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Mantle
+:Mantle rdf:type owl:Class ;
+        rdfs:subClassOf :M-Overgarment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Metallic_category
+:Metallic_category rdf:type owl:Class ;
+                   rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Neckerchief
+:Neckerchief rdf:type owl:Class ;
+             rdfs:subClassOf :M-Garment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Orange_category
+:Orange_category rdf:type owl:Class ;
+                 rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Panel_apron
+:Panel_apron rdf:type owl:Class ;
+             rdfs:subClassOf :Apron .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Paperbag_skirt
+:Paperbag_skirt rdf:type owl:Class ;
+                rdfs:subClassOf :F-Skirt .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Pink_category
+:Pink_category rdf:type owl:Class ;
+               rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#PrivateImage
+:PrivateImage rdf:type owl:Class ;
+              rdfs:subClassOf :Source .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Purple_category
+:Purple_category rdf:type owl:Class ;
+                 rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Red_category
+:Red_category rdf:type owl:Class ;
+              rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Shawl
+:Shawl rdf:type owl:Class ;
+       rdfs:subClassOf :F-Overgarment ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :fringes ;
+                         owl:hasValue "true"^^xsd:boolean
+                       ] .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Short_coat
+:Short_coat rdf:type owl:Class ;
+            rdfs:subClassOf :M-Overgarment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Shoulder_scarf
+:Shoulder_scarf rdf:type owl:Class ;
+                rdfs:subClassOf :F-Overgarment .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Shoulder_veil
+:Shoulder_veil rdf:type owl:Class ;
+               rdfs:subClassOf :F-Overgarment ,
+                               [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :coversWithTransparency ;
+                                                        owl:someValuesFrom :F-Garment
+                                                      ]
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :coversWithTransparency ;
+                                                        owl:allValuesFrom :F-Garment
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Skirt_hat
+:Skirt_hat rdf:type owl:Class ;
+           rdfs:subClassOf :F-Headwear .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Skirt_trousers
+:Skirt_trousers rdf:type owl:Class ;
+                rdfs:subClassOf :M-Skirt ,
+                                :Trousers ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :curly ;
+                                  owl:hasValue "true"^^xsd:boolean
+                                ] .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Source
+:Source rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Tongue_shaped_apron
+:Tongue_shaped_apron rdf:type owl:Class ;
+                     rdfs:subClassOf :Panel_apron ;
+                     owl:disjointWith :Triangle_shaped_apron .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Triangle_shaped_apron
+:Triangle_shaped_apron rdf:type owl:Class ;
+                       rdfs:subClassOf :Panel_apron .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Trousers
+:Trousers rdf:type owl:Class ;
+          rdfs:subClassOf :M-Garment ;
+          owl:disjointUnionOf ( :Bell-shaped_trousers
+                                :Loose_trousers
+                                :Skirt_trousers
+                                :Tube_trousers
+                              ) .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Tube_trousers
+:Tube_trousers rdf:type owl:Class ;
+               rdfs:subClassOf :Trousers .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Veil
+:Veil rdf:type owl:Class ;
+      rdfs:subClassOf :F-Headwear ,
+                      [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                               owl:onProperty :coversWithTransparency ;
+                                               owl:someValuesFrom :F-Garment
+                                             ]
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :coversWithTransparency ;
+                                               owl:allValuesFrom :F-Garment
+                                             ]
+                                           ) ;
+                        rdf:type owl:Class
+                      ] .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#White_category
+:White_category rdf:type owl:Class ;
+                rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+
+
+###  https://aimet-lab.github.io/BISTIRIS#Yellow_category
+:Yellow_category rdf:type owl:Class ;
+                 rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+
+
+###  https://dbpedia.org/ontology/Colour
+<https://dbpedia.org/ontology/Colour> rdf:type owl:Class ;
+                                      rdfs:subClassOf a-dd:TechnicalCharacteristic .
+
+
+###  https://schema.org/Place
+schema:Place rdf:type owl:Class .
+
+
+###  https://schema.org/SocialMediaPosting
+schema:SocialMediaPosting rdf:type owl:Class ;
+                          rdfs:subClassOf :Source .
+
+
+###  https://w3id.org/arco/ontology/clothing-description/Costume
+clo:Costume rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty dcterms:source ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Source
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty schema:fromLocation ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass dbo:Place
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty schema:dateCreated ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                            ] ;
+            owl:disjointUnionOf ( :F-Costume
+                                  :M-Costume
+                                ) .
+
+
+###  https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic
+a-dd:TechnicalCharacteristic rdf:type owl:Class .
+
+
+[ rdf:type [ rdf:type owl:Restriction ;
+             owl:onProperty owl:topDataProperty ;
+             owl:someValuesFrom xsd:boolean
+           ]
+] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ swrl:isRuleEnabled "true"^^xsd:boolean
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ swrl:isRuleEnabled "true"^^xsd:boolean
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ swrl:isRuleEnabled "true"^^xsd:boolean
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ swrl:isRuleEnabled "true"^^xsd:boolean
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ swrl:isRuleEnabled "true"^^xsd:boolean
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+   owl:members ( :Apron
+                 :F-Bodice
+                 :F-Headwear
+                 :F-Jacket
+                 :F-Overgarment
+                 :F-Shirt
+                 :F-Skirt
+               )
+ ] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Bell-shaped_trousers
+                :Loose_trousers
+                :Skirt_trousers
+                :Tube_trousers
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Belt
+                :Gaiters
+                :M-Headwear
+                :M-Jacket
+                :M-Overgarment
+                :M-Shirt
+                :M-Soft-bodice
+                :Trousers
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Berritta
+                :Brimmed_hat
+                :Fez
+                :M-Cap
+                :M-Kerchief
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Bolero
+                :F-Giubbetto
+                :Giacchino
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Corset_belt
+                :F-Rigid_bodice
+                :F-Soft_bodice
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Curly_apron
+                :Fan-shaped_apron
+                :Panel_apron
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :F-Cap
+                :F-Kerchief
+                :Head_mantle
+                :Head_shawl
+                :Headscarf
+                :Manticello
+                :Veil
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Fur_overcoat
+                :Leather_overcoat
+                :Long_coat
+                :Mantle
+                :Short_coat
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Gheroni_skirt
+                :Long_skirt
+                :Paperbag_skirt
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Shawl
+                :Shoulder_scarf
+                :Shoulder_veil
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#costume> rdf:type swrl:Variable .
+
+<urn:swrl:var#garment> rdf:type swrl:Variable .
+
+<urn:swrl:var#place> rdf:type swrl:Variable .
+
+<urn:swrl:var#color> rdf:type swrl:Variable .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "SourceRule" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate schema:hasPart ;
+                           swrl:argument1 <urn:swrl:var#costume> ;
+                           swrl:argument2 <urn:swrl:var#garment>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate dcterms:source ;
+                                      swrl:argument1 <urn:swrl:var#costume> ;
+                                      swrl:argument2 <urn:swrl:var#place>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate dcterms:source ;
+                           swrl:argument1 <urn:swrl:var#garment> ;
+                           swrl:argument2 <urn:swrl:var#place>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "" ;
+   rdfs:label "TransparencyRule" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate schema:hasPart ;
+                           swrl:argument1 <urn:swrl:var#costume> ;
+                           swrl:argument2 <urn:swrl:var#garment>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate :colourThroughTransparency ;
+                                      swrl:argument1 <urn:swrl:var#garment> ;
+                                      swrl:argument2 <urn:swrl:var#color>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :colourThroughTransparency ;
+                           swrl:argument1 <urn:swrl:var#costume> ;
+                           swrl:argument2 <urn:swrl:var#color>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "LocationRule" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate schema:hasPart ;
+                           swrl:argument1 <urn:swrl:var#costume> ;
+                           swrl:argument2 <urn:swrl:var#garment>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate schema:fromLocation ;
+                                      swrl:argument1 <urn:swrl:var#costume> ;
+                                      swrl:argument2 <urn:swrl:var#place>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate schema:fromLocation ;
+                           swrl:argument1 <urn:swrl:var#garment> ;
+                           swrl:argument2 <urn:swrl:var#place>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "" ;
+   rdfs:label "ColorRule" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate schema:hasPart ;
+                           swrl:argument1 <urn:swrl:var#costume> ;
+                           swrl:argument2 <urn:swrl:var#garment>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate a-lite:hasColour ;
+                                      swrl:argument1 <urn:swrl:var#garment> ;
+                                      swrl:argument2 <urn:swrl:var#color>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate a-lite:hasColour ;
+                           swrl:argument1 <urn:swrl:var#costume> ;
+                           swrl:argument2 <urn:swrl:var#color>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "" ;
+   rdfs:label "DatationRule" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate schema:hasPart ;
+                           swrl:argument1 <urn:swrl:var#costume> ;
+                           swrl:argument2 <urn:swrl:var#garment>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                      swrl:propertyPredicate schema:dateCreated ;
+                                      swrl:argument1 <urn:swrl:var#costume> ;
+                                      swrl:argument2 <urn:swrl:var#place>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate schema:dateCreated ;
+                           swrl:argument1 <urn:swrl:var#garment> ;
+                           swrl:argument2 <urn:swrl:var#place>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+###  Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
