@@ -1,0 +1,36 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX bst: <https://aimet-lab.github.io/BISTIRIS#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX schema: <https://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbr: <http://dbpedia.org/resource/>
+
+SELECT ?category ?type (COUNT(?garment) AS ?garmentCount)
+WHERE {
+  ?garment a bst:M\-Headwear ;
+       a ?type ;
+       schema:fromLocation ?place .
+  ?place dbo:elevation ?elevation .
+
+FILTER(STRSTARTS(STR(?place), STR(dbr:)))
+
+  BIND(xsd:decimal(?elevation) AS ?elevationDecimal)
+  BIND(
+    IF(?elevation > 600,
+       "Elevation > 600 m",
+       "Elevation <= 600 m"
+    ) AS ?category
+  )
+
+  FILTER(?type != owl:NamedIndividual && ?type != bst:Garment)
+  FILTER NOT EXISTS { 
+    ?otherType rdfs:subClassOf ?type .
+    FILTER(?otherType != ?type) }
+
+}
+
+GROUP BY ?category ?type
+ORDER BY ?category DESC(?garmentCount)

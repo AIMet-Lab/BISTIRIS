@@ -1,0 +1,37 @@
+PREFIX schema: <https://schema.org/>
+PREFIX bst: <https://aimet-lab.github.io/BISTIRIS#>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX a-lite: <https://w3id.org/arco/ontology/arco-lite/>
+
+
+SELECT DISTINCT ?garmentType ?colour (COUNT(DISTINCT ?neighbor) AS ?NeighborCount) 
+                ?characteristic
+WHERE {
+      ?garment1 a bst:F\-Garment ;
+          schema:fromLocation dbr:Galtellì ;
+          a ?garmentType ;
+          a-lite:hasColour ?colour .
+          ?characteristic rdfs:subPropertyOf bst:technical\_details .
+          ?garment1 ?characteristic ?value .
+      
+      ?garment2 a bst:F-Garment ;
+          a ?garmentType ;
+          schema:fromLocation ?neighbor ;
+          a-lite:hasColour ?colour .
+          ?garment2 ?characteristic ?value .
+      
+      ?neighbor dbo:neighboringMunicipality dbr:Galtellì .
+
+      FILTER(STRSTARTS(STR(?neighbor), STR(dbr:)))
+    
+      FILTER NOT EXISTS { ?OtherClass rdfs:subClassOf ?garmentType }
+      
+      FILTER ( ?garmentType != owl:NamedIndividual )
+
+    }
+
+GROUP BY ?garmentType ?colour ?characteristic
+ORDER BY DESC(?NeighborCount)

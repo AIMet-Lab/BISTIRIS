@@ -1,0 +1,28 @@
+PREFIX schema: <https://schema.org/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX a-lite: <https://w3id.org/arco/ontology/arco-lite/>
+PREFIX bst: <https://aimet-lab.github.io/BISTIRIS#>
+
+SELECT ?ColourCategory ?period (COUNT(?ColourCategory) AS ?ColourCount)
+WHERE {
+  ?garment a-lite:hasColour ?colour ;
+        schema:dateCreated ?datation ;
+        a bst:Garment .
+        
+	FILTER NOT EXISTS { ?garment a bst:F\-Shirt }
+	FILTER NOT EXISTS { ?garment a bst:M\-Shirt }
+   
+    ?colour a ?ColourCategory .
+    ?ColourCategory rdfs:subClassOf dbo:Colour .
+
+    BIND(
+        IF(STRSTARTS(STR(?datation), "18") || STRSTARTS(STR(?datation), "../18"), 
+        "19th century", 
+        "20th century"
+        ) AS ?period
+      )
+}
+
+GROUP BY ?period ?ColourCategory
+ORDER BY ?period DESC(?ColourCount)

@@ -1,0 +1,22 @@
+PREFIX schema: <https://schema.org/>
+PREFIX bst: <https://aimet-lab.github.io/BISTIRIS#>
+
+SELECT (?count AS ?CurlyApronCount)
+       ((?CurlyApronCount / ?total) AS ?Frequency)
+WHERE {
+  
+  {
+    SELECT (COUNT(DISTINCT ?garment) AS ?count)
+    WHERE {
+      ?garment a bst:Curly_apron ;
+           bst:coversWithTransparency ?otherGarment .
+    }
+  }
+  {
+    SELECT (COUNT(DISTINCT ?CurlyAprons) AS ?total)
+    WHERE {
+      ?CurlyAprons a bst:Curly_apron .
+    }
+  }
+}
+    
