@@ -60,6 +60,14 @@ swrl:isRuleEnabled rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://dbpedia.org/ontology/neighboringMunicipality
+dbo:neighboringMunicipality rdf:type owl:ObjectProperty ,
+                                     owl:SymmetricProperty ;
+                            rdfs:domain dbo:Place ;
+                            rdfs:range dbo:Place ;
+                            rdfs:isDefinedBy "http://dbpedia.org/ontology/" .
+
+
 ###  http://purl.org/dc/terms/source
 dcterms:source rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
@@ -69,7 +77,8 @@ dcterms:source rdf:type owl:ObjectProperty ;
                                            clo:Costume
                                          )
                            ] ;
-               rdfs:range :Source .
+               rdfs:range :Source ;
+               rdfs:isDefinedBy "http://purl.org/dc/terms/" .
 
 
 ###  http://www.essepuntato.it/2008/12/pattern#isContainedBy
@@ -79,7 +88,8 @@ po:isContainedBy rdf:type owl:ObjectProperty ;
                               owl:unionOf ( bibo:Book
                                             bibo:Periodical
                                           )
-                            ] .
+                            ] ;
+                 rdfs:isDefinedBy "http://www.essepuntato.it/2008/12/pattern#" .
 
 
 ###  http://www.w3.org/2002/07/owl#topObjectProperty
@@ -96,7 +106,7 @@ owl:topObjectProperty rdf:type owl:SymmetricProperty ,
                                                        :F-Garment
                                                      )
                                        ] ;
-                           rdfs:range <https://dbpedia.org/ontology/Colour> .
+                           rdfs:range dbo:Colour .
 
 
 ###  https://aimet-lab.github.io/BISTIRIS#coveredBy
@@ -124,7 +134,7 @@ owl:topObjectProperty rdf:type owl:SymmetricProperty ,
 :coveredColour rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
                rdfs:domain clo:Costume ;
-               rdfs:range <https://dbpedia.org/ontology/Colour> .
+               rdfs:range dbo:Colour .
 
 
 ###  https://aimet-lab.github.io/BISTIRIS#covers
@@ -155,13 +165,6 @@ owl:topObjectProperty rdf:type owl:SymmetricProperty ,
                rdfs:range :Garment .
 
 
-###  https://dbpedia.org/ontology/neighboringMunicipality
-<https://dbpedia.org/ontology/neighboringMunicipality> rdf:type owl:ObjectProperty ,
-                                                                owl:SymmetricProperty ;
-                                                       rdfs:domain yago:Comune ;
-                                                       rdfs:range yago:Comune .
-
-
 ###  https://schema.org/fromLocation
 schema:fromLocation rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty ;
@@ -171,8 +174,9 @@ schema:fromLocation rdf:type owl:ObjectProperty ;
                                                 clo:Costume
                                               )
                                 ] ;
-                    rdfs:range schema:Place ;
-                    rdfs:comment "Traditional of" .
+                    rdfs:range dbo:Place ;
+                    rdfs:comment "Traditional of" ;
+                    rdfs:isDefinedBy "https://schema.org/" .
 
 
 ###  https://schema.org/hasPart
@@ -181,7 +185,8 @@ schema:hasPart rdf:type owl:ObjectProperty ;
                owl:inverseOf schema:isPartOf ;
                rdf:type owl:InverseFunctionalProperty ;
                rdfs:domain clo:Costume ;
-               rdfs:range :Garment .
+               rdfs:range :Garment ;
+               rdfs:isDefinedBy "https://schema.org/" .
 
 
 ###  https://schema.org/isPartOf
@@ -189,13 +194,15 @@ schema:isPartOf rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 rdf:type owl:FunctionalProperty ;
                 rdfs:domain :Garment ;
-                rdfs:range clo:Costume .
+                rdfs:range clo:Costume ;
+                rdfs:isDefinedBy "https://schema.org/" .
 
 
 ###  https://schema.org/location
 schema:location rdf:type owl:ObjectProperty ;
-                rdfs:domain yago:Comune ;
-                rdfs:range yago:Provinces_of_Italy .
+                rdfs:domain dbo:Place ;
+                rdfs:range yago:Provinces_of_Italy ;
+                rdfs:isDefinedBy "https://schema.org/" .
 
 
 ###  https://w3id.org/arco/ontology/arco-lite/hasColour
@@ -205,7 +212,8 @@ a-lite:hasColour rdf:type owl:ObjectProperty ;
                                              clo:Costume
                                            )
                              ] ;
-                 rdfs:range <https://dbpedia.org/ontology/Colour> .
+                 rdfs:range dbo:Colour ;
+                 rdfs:isDefinedBy "https://w3id.org/arco/ontology/arco-lite/" .
 
 
 #################################################################
@@ -215,13 +223,15 @@ a-lite:hasColour rdf:type owl:ObjectProperty ;
 ###  http://dbpedia.org/ontology/elevation
 dbo:elevation rdf:type owl:DatatypeProperty ;
               rdfs:domain dbo:Place ;
-              rdfs:range xsd:float .
+              rdfs:range xsd:float ;
+              rdfs:isDefinedBy "http://dbpedia.org/ontology/" .
 
 
 ###  http://dbpedia.org/property/name
 dbp:name rdf:type owl:DatatypeProperty ;
          rdfs:domain owl:Thing ;
-         rdfs:range xsd:string .
+         rdfs:range xsd:string ;
+         rdfs:isDefinedBy "http://dbpedia.org/property/" .
 
 
 ###  http://purl.org/dc/terms/title
@@ -231,19 +241,22 @@ dcterms:title rdf:type owl:DatatypeProperty ;
                                           bibo:Periodical
                                         )
                           ] ;
-              rdfs:range rdfs:Literal .
+              rdfs:range rdfs:Literal ;
+              rdfs:isDefinedBy "http://purl.org/dc/terms/" .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
 geo:lat rdf:type owl:DatatypeProperty ;
         rdfs:domain dbo:Place ;
-        rdfs:range xsd:float .
+        rdfs:range xsd:float ;
+        rdfs:isDefinedBy "http://www.w3.org/2003/01/geo/wgs84_pos#" .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#long
 geo:long rdf:type owl:DatatypeProperty ;
          rdfs:domain dbo:Place ;
-         rdfs:range xsd:float .
+         rdfs:range xsd:float ;
+         rdfs:isDefinedBy "http://www.w3.org/2003/01/geo/wgs84_pos#" .
 
 
 ###  https://aimet-lab.github.io/BISTIRIS#BW
@@ -446,7 +459,8 @@ schema:author rdf:type owl:DatatypeProperty ;
                                           bibo:Periodical
                                         )
                           ] ;
-              rdfs:range rdfs:Literal .
+              rdfs:range rdfs:Literal ;
+              rdfs:isDefinedBy "https://schema.org/" .
 
 
 ###  https://schema.org/dateCreated
@@ -458,7 +472,8 @@ schema:dateCreated rdf:type owl:DatatypeProperty ,
                                              )
                                ] ;
                    rdfs:range rdfs:Literal ;
-                   rdfs:comment "Extended Date/Time Format (EDTF)." .
+                   rdfs:comment "Extended Date/Time Format (EDTF)." ;
+                   rdfs:isDefinedBy "https://schema.org/" .
 
 
 ###  https://schema.org/datePublished
@@ -468,52 +483,60 @@ schema:datePublished rdf:type owl:DatatypeProperty ;
                                                  bibo:Periodical
                                                )
                                  ] ;
-                     rdfs:range rdfs:Literal .
+                     rdfs:range rdfs:Literal ;
+                     rdfs:isDefinedBy "https://schema.org/" .
 
 
 ###  https://schema.org/publisher
 schema:publisher rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Source ;
-                 rdfs:range rdfs:Literal .
+                 rdfs:range rdfs:Literal ;
+                 rdfs:isDefinedBy "https://schema.org/" .
 
 
 #################################################################
 #    Classes
 #################################################################
 
+###  http://dbpedia.org/ontology/Colour
+dbo:Colour rdf:type owl:Class ;
+           rdfs:subClassOf a-dd:TechnicalCharacteristic ;
+           rdfs:isDefinedBy "http://dbpedia.org/ontology/" .
+
+
 ###  http://dbpedia.org/ontology/Place
 dbo:Place rdf:type owl:Class ;
-          rdfs:subClassOf schema:Place .
+          rdfs:isDefinedBy "http://dbpedia.org/ontology/" .
 
 
 ###  http://purl.org/arkivo/ontology#GlamThing
 arkivo:GlamThing rdf:type owl:Class ;
-                 rdfs:subClassOf :Source .
+                 rdfs:subClassOf :Source ;
+                 rdfs:isDefinedBy "http://purl.org/arkivo/ontology#" .
 
 
 ###  http://purl.org/ontology/bibo/Book
 bibo:Book rdf:type owl:Class ;
-          rdfs:subClassOf :Source .
+          rdfs:subClassOf :Source ;
+          rdfs:isDefinedBy "http://purl.org/ontology/bibo/" .
 
 
 ###  http://purl.org/ontology/bibo/Periodical
 bibo:Periodical rdf:type owl:Class ;
-                rdfs:subClassOf :Source .
+                rdfs:subClassOf :Source ;
+                rdfs:isDefinedBy "http://purl.org/ontology/bibo/" .
 
 
 ###  http://purl.org/spar/doco/Figure
 doco:Figure rdf:type owl:Class ;
-            rdfs:subClassOf :Source .
-
-
-###  http://yago-knowledge.org/resource/Comune
-yago:Comune rdf:type owl:Class ;
-            rdfs:subClassOf schema:Place .
+            rdfs:subClassOf :Source ;
+            rdfs:isDefinedBy "http://purl.org/spar/doco/" .
 
 
 ###  http://yago-knowledge.org/resource/Provinces_of_Italy
 yago:Provinces_of_Italy rdf:type owl:Class ;
-                        rdfs:subClassOf owl:Thing .
+                        rdfs:subClassOf owl:Thing ;
+                        rdfs:isDefinedBy "http://yago-knowledge.org/resource/" .
 
 
 ###  https://aimet-lab.github.io/BISTIRIS#Apron
@@ -543,12 +566,12 @@ yago:Provinces_of_Italy rdf:type owl:Class ;
 
 ###  https://aimet-lab.github.io/BISTIRIS#Black_category
 :Black_category rdf:type owl:Class ;
-                rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+                rdfs:subClassOf dbo:Colour .
 
 
 ###  https://aimet-lab.github.io/BISTIRIS#Blue_category
 :Blue_category rdf:type owl:Class ;
-               rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+               rdfs:subClassOf dbo:Colour .
 
 
 ###  https://aimet-lab.github.io/BISTIRIS#Bolero
@@ -563,7 +586,7 @@ yago:Provinces_of_Italy rdf:type owl:Class ;
 
 ###  https://aimet-lab.github.io/BISTIRIS#Brown_category
 :Brown_category rdf:type owl:Class ;
-                rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+                rdfs:subClassOf dbo:Colour .
 
 
 ###  https://aimet-lab.github.io/BISTIRIS#Corset_belt
@@ -808,12 +831,12 @@ yago:Provinces_of_Italy rdf:type owl:Class ;
 
 ###  https://aimet-lab.github.io/BISTIRIS#Gray_category
 :Gray_category rdf:type owl:Class ;
-               rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+               rdfs:subClassOf dbo:Colour .
 
 
 ###  https://aimet-lab.github.io/BISTIRIS#Green_category
 :Green_category rdf:type owl:Class ;
-                rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+                rdfs:subClassOf dbo:Colour .
 
 
 ###  https://aimet-lab.github.io/BISTIRIS#Head_mantle
@@ -1089,7 +1112,7 @@ yago:Provinces_of_Italy rdf:type owl:Class ;
 
 ###  https://aimet-lab.github.io/BISTIRIS#Metallic_category
 :Metallic_category rdf:type owl:Class ;
-                   rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+                   rdfs:subClassOf dbo:Colour .
 
 
 ###  https://aimet-lab.github.io/BISTIRIS#Neckerchief
@@ -1099,7 +1122,7 @@ yago:Provinces_of_Italy rdf:type owl:Class ;
 
 ###  https://aimet-lab.github.io/BISTIRIS#Orange_category
 :Orange_category rdf:type owl:Class ;
-                 rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+                 rdfs:subClassOf dbo:Colour .
 
 
 ###  https://aimet-lab.github.io/BISTIRIS#Panel_apron
@@ -1114,7 +1137,7 @@ yago:Provinces_of_Italy rdf:type owl:Class ;
 
 ###  https://aimet-lab.github.io/BISTIRIS#Pink_category
 :Pink_category rdf:type owl:Class ;
-               rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+               rdfs:subClassOf dbo:Colour .
 
 
 ###  https://aimet-lab.github.io/BISTIRIS#PrivateImage
@@ -1124,12 +1147,12 @@ yago:Provinces_of_Italy rdf:type owl:Class ;
 
 ###  https://aimet-lab.github.io/BISTIRIS#Purple_category
 :Purple_category rdf:type owl:Class ;
-                 rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+                 rdfs:subClassOf dbo:Colour .
 
 
 ###  https://aimet-lab.github.io/BISTIRIS#Red_category
 :Red_category rdf:type owl:Class ;
-              rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+              rdfs:subClassOf dbo:Colour .
 
 
 ###  https://aimet-lab.github.io/BISTIRIS#Shawl
@@ -1231,26 +1254,18 @@ yago:Provinces_of_Italy rdf:type owl:Class ;
 
 ###  https://aimet-lab.github.io/BISTIRIS#White_category
 :White_category rdf:type owl:Class ;
-                rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
+                rdfs:subClassOf dbo:Colour .
 
 
 ###  https://aimet-lab.github.io/BISTIRIS#Yellow_category
 :Yellow_category rdf:type owl:Class ;
-                 rdfs:subClassOf <https://dbpedia.org/ontology/Colour> .
-
-
-###  https://dbpedia.org/ontology/Colour
-<https://dbpedia.org/ontology/Colour> rdf:type owl:Class ;
-                                      rdfs:subClassOf a-dd:TechnicalCharacteristic .
-
-
-###  https://schema.org/Place
-schema:Place rdf:type owl:Class .
+                 rdfs:subClassOf dbo:Colour .
 
 
 ###  https://schema.org/SocialMediaPosting
 schema:SocialMediaPosting rdf:type owl:Class ;
-                          rdfs:subClassOf :Source .
+                          rdfs:subClassOf :Source ;
+                          rdfs:isDefinedBy "https://schema.org/" .
 
 
 ###  https://w3id.org/arco/ontology/clothing-description/Costume
@@ -1271,11 +1286,13 @@ clo:Costume rdf:type owl:Class ;
                             ] ;
             owl:disjointUnionOf ( :F-Costume
                                   :M-Costume
-                                ) .
+                                ) ;
+            rdfs:isDefinedBy "https://w3id.org/arco/ontology/clothing-description/" .
 
 
 ###  https://w3id.org/arco/ontology/denotative-description/TechnicalCharacteristic
-a-dd:TechnicalCharacteristic rdf:type owl:Class .
+a-dd:TechnicalCharacteristic rdf:type owl:Class ;
+                             rdfs:isDefinedBy "https://w3id.org/arco/ontology/denotative-description/" .
 
 
 [ rdf:type [ rdf:type owl:Restriction ;
@@ -1537,9 +1554,13 @@ a-dd:TechnicalCharacteristic rdf:type owl:Class .
 
 <urn:swrl:var#garment> rdf:type swrl:Variable .
 
-<urn:swrl:var#place> rdf:type swrl:Variable .
+<urn:swrl:var#source> rdf:type swrl:Variable .
 
 <urn:swrl:var#color> rdf:type swrl:Variable .
+
+<urn:swrl:var#place> rdf:type swrl:Variable .
+
+<urn:swrl:var#date> rdf:type swrl:Variable .
 
 [ swrla:isRuleEnabled "true"^^xsd:boolean ;
    rdfs:comment "" ;
@@ -1555,7 +1576,7 @@ a-dd:TechnicalCharacteristic rdf:type owl:Class .
                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
                                       swrl:propertyPredicate dcterms:source ;
                                       swrl:argument1 <urn:swrl:var#costume> ;
-                                      swrl:argument2 <urn:swrl:var#place>
+                                      swrl:argument2 <urn:swrl:var#source>
                                     ] ;
                           rdf:rest rdf:nil
                         ]
@@ -1564,7 +1585,7 @@ a-dd:TechnicalCharacteristic rdf:type owl:Class .
                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
                            swrl:propertyPredicate dcterms:source ;
                            swrl:argument1 <urn:swrl:var#garment> ;
-                           swrl:argument2 <urn:swrl:var#place>
+                           swrl:argument2 <urn:swrl:var#source>
                          ] ;
                rdf:rest rdf:nil
              ]
@@ -1655,7 +1676,8 @@ a-dd:TechnicalCharacteristic rdf:type owl:Class .
              ]
  ] .
 
-[ rdfs:comment "" ;
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
    rdfs:label "DatationRule" ;
    rdf:type swrl:Imp ;
    swrl:body [ rdf:type swrl:AtomList ;
@@ -1668,7 +1690,7 @@ a-dd:TechnicalCharacteristic rdf:type owl:Class .
                           rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
                                       swrl:propertyPredicate schema:dateCreated ;
                                       swrl:argument1 <urn:swrl:var#costume> ;
-                                      swrl:argument2 <urn:swrl:var#place>
+                                      swrl:argument2 <urn:swrl:var#date>
                                     ] ;
                           rdf:rest rdf:nil
                         ]
@@ -1677,7 +1699,7 @@ a-dd:TechnicalCharacteristic rdf:type owl:Class .
                rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
                            swrl:propertyPredicate schema:dateCreated ;
                            swrl:argument1 <urn:swrl:var#garment> ;
-                           swrl:argument2 <urn:swrl:var#place>
+                           swrl:argument2 <urn:swrl:var#date>
                          ] ;
                rdf:rest rdf:nil
              ]
