@@ -15,8 +15,6 @@ WHERE {
        schema:fromLocation ?place .
   ?place dbo:elevation ?elevation .
 
-FILTER(STRSTARTS(STR(?place), STR(dbr:)))
-
   BIND(xsd:decimal(?elevation) AS ?elevationDecimal)
   BIND(
     IF(?elevation > 600,

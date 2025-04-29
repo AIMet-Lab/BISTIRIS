@@ -12,7 +12,5 @@ WHERE {
     
     ?otherGarment a bst:F-Jacket ;
       schema:fromLocation ?place .
-
-    FILTER(STRSTARTS(STR(?place), STR(dbr:)))
   
   }

@@ -25,7 +25,6 @@ WHERE {
       
       ?neighbor dbo:neighboringMunicipality dbr:Galtellì .
 
-      FILTER(STRSTARTS(STR(?neighbor), STR(dbr:)))
     
       FILTER NOT EXISTS { ?OtherClass rdfs:subClassOf ?garmentType }
       

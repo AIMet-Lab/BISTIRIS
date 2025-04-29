@@ -52,6 +52,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.0</Literal>
     </Annotation>
     <Declaration>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="dbo:Place"/>
     </Declaration>
     <Declaration>
@@ -65,9 +68,6 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="doco:Figure"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="yago:Comune"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="yago:Provinces_of_Italy"/>
@@ -328,12 +328,6 @@
         <Class IRI="Yellow_category"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="schema:Place"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="schema:SocialMediaPosting"/>
     </Declaration>
     <Declaration>
@@ -341,6 +335,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="a-dd:TechnicalCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dbo:neighboringMunicipality"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="dcterms:source"/>
@@ -368,9 +365,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="sewn_togheter"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="https://dbpedia.org/ontology/neighboringMunicipality"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="schema:fromLocation"/>
@@ -502,8 +496,8 @@
         <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
     </Declaration>
     <SubClassOf>
-        <Class abbreviatedIRI="dbo:Place"/>
-        <Class abbreviatedIRI="schema:Place"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+        <Class abbreviatedIRI="a-dd:TechnicalCharacteristic"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="arkivo:GlamThing"/>
@@ -520,10 +514,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="doco:Figure"/>
         <Class IRI="Source"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="yago:Comune"/>
-        <Class abbreviatedIRI="schema:Place"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="yago:Provinces_of_Italy"/>
@@ -551,11 +541,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Black_category"/>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Blue_category"/>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Bolero"/>
@@ -567,7 +557,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Brown_category"/>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Corset_belt"/>
@@ -759,11 +749,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Gray_category"/>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Green_category"/>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Head_mantle"/>
@@ -995,7 +985,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Metallic_category"/>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Neckerchief"/>
@@ -1003,7 +993,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Orange_category"/>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Panel_apron"/>
@@ -1015,7 +1005,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Pink_category"/>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="PrivateImage"/>
@@ -1023,11 +1013,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Purple_category"/>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Red_category"/>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Shawl"/>
@@ -1123,15 +1113,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="White_category"/>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Yellow_category"/>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
-        <Class abbreviatedIRI="a-dd:TechnicalCharacteristic"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="schema:SocialMediaPosting"/>
@@ -1421,13 +1407,13 @@
         <ObjectProperty abbreviatedIRI="schema:hasPart"/>
     </InverseFunctionalObjectProperty>
     <SymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI="dbo:neighboringMunicipality"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SymmetricObjectProperty>
     <SymmetricObjectProperty>
         <ObjectProperty IRI="sewn_togheter"/>
-    </SymmetricObjectProperty>
-    <SymmetricObjectProperty>
-        <ObjectProperty IRI="https://dbpedia.org/ontology/neighboringMunicipality"/>
     </SymmetricObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -1435,6 +1421,10 @@
     <ReflexiveObjectProperty>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </ReflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="dbo:neighboringMunicipality"/>
+        <Class abbreviatedIRI="dbo:Place"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="dcterms:source"/>
         <ObjectUnionOf>
@@ -1482,10 +1472,6 @@
         <Class IRI="Garment"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://dbpedia.org/ontology/neighboringMunicipality"/>
-        <Class abbreviatedIRI="yago:Comune"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="schema:fromLocation"/>
         <ObjectUnionOf>
             <Class IRI="Garment"/>
@@ -1502,7 +1488,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="schema:location"/>
-        <Class abbreviatedIRI="yago:Comune"/>
+        <Class abbreviatedIRI="dbo:Place"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="a-lite:hasColour"/>
@@ -1511,6 +1497,10 @@
             <Class abbreviatedIRI="clo:Costume"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="dbo:neighboringMunicipality"/>
+        <Class abbreviatedIRI="dbo:Place"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="dcterms:source"/>
         <Class IRI="Source"/>
@@ -1524,7 +1514,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="colourThroughTransparency"/>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="coveredBy"/>
@@ -1540,7 +1530,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="coveredColour"/>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="covers"/>
@@ -1555,12 +1545,8 @@
         <Class IRI="Garment"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://dbpedia.org/ontology/neighboringMunicipality"/>
-        <Class abbreviatedIRI="yago:Comune"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="schema:fromLocation"/>
-        <Class abbreviatedIRI="schema:Place"/>
+        <Class abbreviatedIRI="dbo:Place"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="schema:hasPart"/>
@@ -1576,7 +1562,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="a-lite:hasColour"/>
-        <Class IRI="https://dbpedia.org/ontology/Colour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="bow"/>
@@ -1978,14 +1964,14 @@
             <ObjectPropertyAtom>
                 <ObjectProperty abbreviatedIRI="dcterms:source"/>
                 <Variable IRI="urn:swrl:var#costume"/>
-                <Variable IRI="urn:swrl:var#place"/>
+                <Variable IRI="urn:swrl:var#source"/>
             </ObjectPropertyAtom>
         </Body>
         <Head>
             <ObjectPropertyAtom>
                 <ObjectProperty abbreviatedIRI="dcterms:source"/>
                 <Variable IRI="urn:swrl:var#garment"/>
-                <Variable IRI="urn:swrl:var#place"/>
+                <Variable IRI="urn:swrl:var#source"/>
             </ObjectPropertyAtom>
         </Head>
     </DLSafeRule>
@@ -2082,6 +2068,10 @@
     </DLSafeRule>
     <DLSafeRule>
         <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal></Literal>
         </Annotation>
@@ -2098,26 +2088,161 @@
             <DataPropertyAtom>
                 <DataProperty abbreviatedIRI="schema:dateCreated"/>
                 <Variable IRI="urn:swrl:var#costume"/>
-                <Variable IRI="urn:swrl:var#place"/>
+                <Variable IRI="urn:swrl:var#date"/>
             </DataPropertyAtom>
         </Body>
         <Head>
             <DataPropertyAtom>
                 <DataProperty abbreviatedIRI="schema:dateCreated"/>
                 <Variable IRI="urn:swrl:var#garment"/>
-                <Variable IRI="urn:swrl:var#place"/>
+                <Variable IRI="urn:swrl:var#date"/>
             </DataPropertyAtom>
         </Head>
     </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dbo:Colour</AbbreviatedIRI>
+        <Literal>http://dbpedia.org/ontology/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dbo:Place</AbbreviatedIRI>
+        <Literal>http://dbpedia.org/ontology/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dbo:elevation</AbbreviatedIRI>
+        <Literal>http://dbpedia.org/ontology/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dbo:neighboringMunicipality</AbbreviatedIRI>
+        <Literal>http://dbpedia.org/ontology/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dbp:name</AbbreviatedIRI>
+        <Literal>http://dbpedia.org/property/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>arkivo:GlamThing</AbbreviatedIRI>
+        <Literal>http://purl.org/arkivo/ontology#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dcterms:source</AbbreviatedIRI>
+        <Literal>http://purl.org/dc/terms/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dcterms:title</AbbreviatedIRI>
+        <Literal>http://purl.org/dc/terms/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>bibo:Book</AbbreviatedIRI>
+        <Literal>http://purl.org/ontology/bibo/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>bibo:Periodical</AbbreviatedIRI>
+        <Literal>http://purl.org/ontology/bibo/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>doco:Figure</AbbreviatedIRI>
+        <Literal>http://purl.org/spar/doco/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>po:isContainedBy</AbbreviatedIRI>
+        <Literal>http://www.essepuntato.it/2008/12/pattern#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geo:lat</AbbreviatedIRI>
+        <Literal>http://www.w3.org/2003/01/geo/wgs84_pos#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>geo:long</AbbreviatedIRI>
+        <Literal>http://www.w3.org/2003/01/geo/wgs84_pos#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>yago:Provinces_of_Italy</AbbreviatedIRI>
+        <Literal>http://yago-knowledge.org/resource/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>schema:SocialMediaPosting</AbbreviatedIRI>
+        <Literal>https://schema.org/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>schema:author</AbbreviatedIRI>
+        <Literal>https://schema.org/</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>schema:dateCreated</AbbreviatedIRI>
         <Literal>Extended Date/Time Format (EDTF).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>schema:dateCreated</AbbreviatedIRI>
+        <Literal>https://schema.org/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>schema:datePublished</AbbreviatedIRI>
+        <Literal>https://schema.org/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>schema:fromLocation</AbbreviatedIRI>
         <Literal>Traditional of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>schema:fromLocation</AbbreviatedIRI>
+        <Literal>https://schema.org/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>schema:hasPart</AbbreviatedIRI>
+        <Literal>https://schema.org/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>schema:isPartOf</AbbreviatedIRI>
+        <Literal>https://schema.org/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>schema:location</AbbreviatedIRI>
+        <Literal>https://schema.org/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>schema:publisher</AbbreviatedIRI>
+        <Literal>https://schema.org/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>a-lite:hasColour</AbbreviatedIRI>
+        <Literal>https://w3id.org/arco/ontology/arco-lite/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>clo:Costume</AbbreviatedIRI>
+        <Literal>https://w3id.org/arco/ontology/clothing-description/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>a-dd:TechnicalCharacteristic</AbbreviatedIRI>
+        <Literal>https://w3id.org/arco/ontology/denotative-description/</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
