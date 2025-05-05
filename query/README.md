@@ -25,4 +25,4 @@ Sardinia?**
 
 ## Instructions for Running Queries
 
-- You can run these queries on a SPARQL endpoint like [https://triplydb.com/LauraPandolfo/Bistiris/sparql] or using a local RDF store.
+- You can run these queries on a SPARQL endpoint like [https://triplydb.com/aimetlab/bistiris/sparql] or using a local RDF store.
