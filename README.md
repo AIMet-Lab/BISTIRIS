@@ -19,7 +19,7 @@ The BISTÌRIS Ontology is designed to describe the various components of Sardini
 
 
 ## Resources
-- 🌐 [Ontology landing page](https://aimet-lab.github.io/BISTIRIS)
+- 🌐 [Ontology landing page](https://aimet-lab.github.io/BISTIRIS/)
 - 🌐 [Ontology Documentation](https://aimet-lab.github.io/BISTIRIS/docs/index-en.html)
 - 📄 [Ontology file in OWL format](https://aimet-lab.github.io/BISTIRIS/bistiris.owl)
 - 📄 [Data in RDF format](https://aimet-lab.github.io/BISTIRIS/bistiris_data.rdf)
