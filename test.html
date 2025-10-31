@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valutazione delle Query SPARQL - BISTIRIS</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background-color: #f9f9f9; line-height: 1.6; }
+    h1, h2 { color: #2c3e50; }
+    section { background: #fff; padding: 20px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #e9ecef; }
+    tr:nth-child(even) { background-color: #f7f7f7; }
+    a.button { display: inline-block; background: #007bff; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; margin-top: 10px; }
+    a.button:hover { background: #0056b3; }
+    .scrollable { overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h1>Valutazione delle Query SPARQL - Ontologia BISTIRIS</h1>
+ <p>Questa pagina presenta le Competency Questions (CQ) relative all'ontologia BISTIRIS, un sistema che raccoglie informazioni sui costumi tradizionali sardi. Per ogni CQ, mostriamo i dati raccolti dai nostri esperti e dai reperti storici. L'obiettivo è raccogliere il vostro feedback sulla correttezza e completezza delle informazioni.</p>
+
+
+  <!-- CQ1 -->
+  <section>
+    <h2>CQ1. Come variano le caratteristiche dei costumi e dei capi d'abbigliamento nelle diverse aree geografiche della Sardegna?</h2>
+    <p>La query ha analizzato i copricapi maschili (<code>:M-Headwear</code>) per tipo specifico e fascia altimetrica (>600 m o ≤600 m). Sono stati esclusi tipi generici e considerati solo i capi più specifici.</p>
+    <div class="scrollable">
+      <table>
+        <tr><th>Categoria altimetrica</th><th>Tipo di copricapo</th><th>Numero di capi</th></tr>
+        <tr><td>Elevazione ≤ 600 m</td><td>:Berritta</td><td>115</td></tr>
+	<tr><td>Elevazione ≤ 600 m</td><td>:Cappello a tesa</td><td>20</td></tr>
+        <tr><td>Elevazione ≤ 600 m</td><td>:Fazzoletto maschile</td><td>18</td></tr>
+        <tr><td>Elevazione ≤ 600 m</td><td>:Fez</td><td>9</td></tr>
+        <tr><td>Elevazione ≤ 600 m</td><td>:Cuffia</td><td>8</td></tr>
+        <tr><td>Elevazione > 600 m</td><td>:Berritta</td><td>25</td></tr>
+      </table>
+    </div>
+    <p><strong>Commento:</strong> La <em>Berritta</em> è il copricapo più diffuso in entrambe le fasce altimetriche. Altri tipi appaiono solo nelle aree più basse, suggerendo differenziazioni geografiche.</p>
+    <a href="https://forms.gle/TUO_LINK_GOOGLE_FORM" class="button" target="_blank">Valuta CQ1</a>
+  </section>
+
+ <section>
+  <h2>CQ2. Come variano le caratteristiche dei costumi e dei capi d'abbigliamento nel tempo?</h2>
+  <p>La query ha analizzato i colori dei capi per XIX e XX secolo, escludendo camicie bianche per evitare distorsioni.</p>
+  <div style="display:flex; gap: 20px;">
+    <table style="border-collapse: collapse; width: 100%;">
+      <tr style="background-color: #f2f2f2;">
+         <th style="border: 1px solid #ddd; padding: 8px; text-align: center;" colspan="2">XIX secolo</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: center;" colspan="2">XX secolo</th>
+      </tr>
+      <tr style="background-color: #f2f2f2;">
+        <th style="border: 1px solid #ddd; padding: 8px;">Colore</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Occorrenze</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Colore</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Occorrenze</th>
+      </tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">Blu</td><td style="border: 1px solid #ddd; padding: 8px;">15</td><td style="border: 1px solid #ddd; padding: 8px;">Rosso</td><td style="border: 1px solid #ddd; padding: 8px;">37</td></tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">Rosso</td><td style="border: 1px solid #ddd; padding: 8px;">14</td><td style="border: 1px solid #ddd; padding: 8px;">Nero</td><td style="border: 1px solid #ddd; padding: 8px;">29</td></tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">Bianco</td><td style="border: 1px solid #ddd; padding: 8px;">11</td><td style="border: 1px solid #ddd; padding: 8px;">Giallo</td><td style="border: 1px solid #ddd; padding: 8px;">28</td></tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">Marrone</td><td style="border: 1px solid #ddd; padding: 8px;">8</td><td style="border: 1px solid #ddd; padding: 8px;">Viola</td><td style="border: 1px solid #ddd; padding: 8px;">28</td></tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">Nero</td><td style="border: 1px solid #ddd; padding: 8px;">5</td><td style="border: 1px solid #ddd; padding: 8px;">Bianco</td><td style="border: 1px solid #ddd; padding: 8px;">22</td></tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">Giallo</td><td style="border: 1px solid #ddd; padding: 8px;">5</td><td style="border: 1px solid #ddd; padding: 8px;">Marrone</td><td style="border: 1px solid #ddd; padding: 8px;">20</td></tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">Verde</td><td style="border: 1px solid #ddd; padding: 8px;">4</td><td style="border: 1px solid #ddd; padding: 8px;">Metallico</td><td style="border: 1px solid #ddd; padding: 8px;">17</td></tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">Metallico</td><td style="border: 1px solid #ddd; padding: 8px;">3</td><td style="border: 1px solid #ddd; padding: 8px;">Blu</td><td style="border: 1px solid #ddd; padding: 8px;">14</td></tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">Viola</td><td style="border: 1px solid #ddd; padding: 8px;">3</td><td style="border: 1px solid #ddd; padding: 8px;">Rosa</td><td style="border: 1px solid #ddd; padding: 8px;">14</td></tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">Rosa</td><td style="border: 1px solid #ddd; padding: 8px;">2</td><td style="border: 1px solid #ddd; padding: 8px;">Verde</td><td style="border: 1px solid #ddd; padding: 8px;">12</td></tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">Grigio</td><td style="border: 1px solid #ddd; padding: 8px;">1</td><td style="border: 1px solid #ddd; padding: 8px;">Arancio</td><td style="border: 1px solid #ddd; padding: 8px;">6</td></tr>
+      <tr><td></td><td></td><td style="border: 1px solid #ddd; padding: 8px;">Grigio</td><td style="border: 1px solid #ddd; padding: 8px;">5</td></tr>
+    </table>
+  </div>
+  <p><strong>Commento:</strong> Nel XIX secolo prevalgono i colori blu e rosso, con presenza minore di bianco e marrone. Nel XX secolo aumenta la varietà cromatica, con predominanza di rosso, nero, giallo e viola, evidenziando l’evoluzione stilistica.</p>
+  <a href="https://forms.gle/TUO_LINK_GOOGLE_FORM" class="button" target="_blank">Valuta CQ2</a>
+
+<form action="https://formspree.io/f/mgvpndzo" method="POST" target="_blank">
+    <p><strong>Rilevanza:</strong></p>
+    <div class="rating">
+      <label>★<input type="radio" name="CQ1_relevance" value="1"></label>
+      <label>★<input type="radio" name="CQ1_relevance" value="2"></label>
+      <label>★<input type="radio" name="CQ1_relevance" value="3"></label>
+      <label>★<input type="radio" name="CQ1_relevance" value="4"></label>
+      <label>★<input type="radio" name="CQ1_relevance" value="5"></label>
+    </div>
+</section>
+
+  <!-- CQ3 -->
+<section>
+  <h2>CQ3. I costumi e i capi condividono caratteristiche simili in località vicine?</h2>
+  <p>Confronto dei capi provenienti da Galtellì con quelli dei comuni limitrofi, includendo colore, frequenza e dettagli tecnici.</p>
+  <div class="scrollable">
+    <table>
+      <tr>
+        <th>Tipo di capo</th>
+        <th>Colore</th>
+        <th>Frequenza</th>
+        <th>Caratteristiche</th>
+      </tr>
+      <tr><td>Scialle indossato come copricapo</td><td>Nero</td><td>3</td><td>Frange decorative</td></tr>
+      <tr><td>Scialle indossato come copricapo</td><td>Nero</td><td>3</td><td>Frange decorative</td></tr>
+      <tr><td>Scialle indossato come copricapo</td><td>Viola</td><td>3</td><td>Frange decorative</td></tr>
+      <tr><td>Grembiule leggero con arricciature</td><td>Bianco</td><td>1</td><td>Arricciature</td></tr>
+      <tr><td>Gonna a gheroni</td><td>Marrone</td><td>1</td><td>Màsculas</td></tr>
+      <tr><td>Gonna a gheroni</td><td>Rosso</td><td>1</td><td>Màsculas</td></tr>
+      <tr><td>Gonna a gheroni</td><td>Marrone</td><td>1</td><td>Plissettatura</td></tr>
+    </table>
+  </div>
+  <p><strong>Commento:</strong> Alcuni capi, come gli scialli neri e viola con frange decorative o le gonne a gheroni con plissettatura e màsculas, sono diffusi tra comuni limitrofi, indicando continuità regionale.</p>
+  <a href="https://forms.gle/TUO_LINK_GOOGLE_FORM" class="button" target="_blank">Valuta CQ3</a>
+</section>
+
+  <!-- CQ4 -->
+  <section>
+    <h2>CQ4. Quali capi sono realizzati con materiali trasparenti?</h2>
+    <p>Identificazione dei capi coinvolti nella relazione <code>:coversWithTransparency</code>.</p>
+    <div class="scrollable">
+      <table>
+        <tr><th>Tipo di capo</th>
+        <tr><td>Velo copricapo</td>
+       <tr><td>Velo portato sulle spalle </td>
+        <tr><td>Grembiule leggero, con arricciature</td>
+      </table>
+    </div>
+    <p><strong>Commento:</strong> La trasparenza è usata come elemento stilistico, in particolare nei veli e negli aprons.</p>
+    <a href="https://forms.gle/TUO_LINK_GOOGLE_FORM" class="button" target="_blank">Valuta CQ4</a>
+  </section>
+
+  <!-- CQ5 -->
+  <section>
+    <h2>CQ5. In quali casi il corpetto copre la giacca?</h2>
+    <p>Individuazione dei capi <code>:F-Bodice</code> che coprono <code>:F-Jacket</code>, con indicazione della località.</p>
+    <div class="scrollable">
+      <table>
+        <tr><th>Località</th>
+        <tr><td>Bono</td>
+        <tr><td>Nuoro</td>
+        <tr><td>Orgosolo</td>
+        <tr><td>Tonara</td>
+      </table>
+    </div>
+    <p><strong>Commento:</strong> Evidenziata una convenzione locale specifica di indossare il corpetto sopra la giacca.</p>
+    <a href="https://forms.gle/TUO_LINK_GOOGLE_FORM" class="button" target="_blank">Valuta CQ5</a>
+  </section>
+
+  <!-- CQ6 -->
+  <section>
+    <h2>CQ6. Frequenza di due proprietà contemporanee nei capi</h2>
+    <p>Frequenza relativa dei grembiuli leggeri arricciati (<code>:Curly apron</code>) che partecipano alla relazione <code>:coversWithTransparency</code>.</p>
+    <div class="scrollable">
+      <table>
+        <tr><th>Proprietà</th><th>Valore</th></tr>
+        <tr><td>Grembiule leggero, con arricciature</td><td>6 casi (3,4%)</td></tr>
+      </table>
+    </div>
+    <p><strong>Commento:</strong> L’uso della trasparenza è limitato ma significativo per questo tipo di capo.</p>
+    <a href="https://forms.gle/TUO_LINK_GOOGLE_FORM" class="button" target="_blank">Valuta CQ6</a>
+  </section>
+
+</body>
+</html>
