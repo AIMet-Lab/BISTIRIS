@@ -1,8 +1,5 @@
-<p align="left">
-<img src="website/imgs/logo_bistiris.png" width="140">
-</p>
-
 # BISTÌRIS Ontology
+<img src="https://raw.githubusercontent.com/AIMet-Lab/BISTIRIS/main/home/imgs/logo_bistiris.png" width="100" alt="Logo BISTIRIS">
 
 **BISTÌRIS** is a semantic ontology for describing **Sardinian traditional costumes**. It provides a structured vocabulary designed to enable semantic representation and interlinking of cultural heritage data in digital archives.
 
