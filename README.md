@@ -9,21 +9,6 @@
   <img src="https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg" alt="CC BY 4.0">
 </a>
 
-## Base IRI
-https://aimet-lab.github.io/BISTIRIS#
-
-## Authors
-- Giorgio Corona  
-- Dario Guidotti  
-- Laura Pandolfo  
-- Luca Pulina  
-
-**Version:** 3.0
-
-## Description
-The BISTÌRIS Ontology is designed to describe the various components of Sardinian traditional clothing, including garments, accessories, materials, and related cultural information. It supports the integration of cultural heritage knowledge in semantic web applications and digital archives.
-
-
 ## Resources
 - 🌐 [BISTÌRIS landing page](https://aimet-lab.github.io/BISTIRIS/home/index.html)
 - 🌐 [Ontology Documentation](https://aimet-lab.github.io/BISTIRIS/docs/index-en.html)
@@ -31,10 +16,43 @@ The BISTÌRIS Ontology is designed to describe the various components of Sardini
 - 📄 [Data in RDF format](https://aimet-lab.github.io/BISTIRIS/bistiris_data.rdf)
 - 📄 [VOID metadata file](https://aimet-lab.github.io/BISTIRIS/well-known/void.ttl)
 
-## Example IRI
-To refer to a class or concept:
-https://aimet-lab.github.io/BISTIRIS#F-Garment
+## Base IRI
+🔗 https://aimet-lab.github.io/BISTIRIS#
 
+**Version:** 3.0
+
+## Competency Questions Addressed
+- How do costume and garment characteristics vary across different geographical areas of Sardinia?
+- How do costume and garment characteristics vary over time?
+- Do the costumes and garments share similar characteristics in nearby places?
+- Which specimens of a given garment are constructed using transparent materials?
+- Which garments are typically worn over others? For example, in which costumes is the bodice worn over the jacket?
+- What is the frequency with which two specific properties occur simultaneously among the garments?
+
+## Example of SPARQL queries addressed
+- Which garments are typically worn over others? For example, in which costumes is the bodice worn over the jacket?
+```
+PREFIX schema: <https://schema.org/>
+PREFIX bst: <https://aimet-lab.github.io/BISTIRIS#>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?garment ?place
+WHERE {
+    ?garment a bst:F-Bodice ;
+        bst:covers ?otherGarment .  
+    ?otherGarment a bst:F-Jacket ;
+      schema:fromLocation ?place .
+  }
+```
+For additional query examples, see [here](https://github.com/AIMet-Lab/BISTIRIS/tree/main/query).
+
+## Authors
+- Giorgio Corona  
+- Dario Guidotti  
+- Laura Pandolfo  
+- Luca Pulina
+  
 ## Contact
 For more information:
 - [lpandolfo@uniss.it](mailto:lpandolfo@uniss.it)
