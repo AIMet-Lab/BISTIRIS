@@ -63,7 +63,7 @@ Per saperne di più, si rimanda al <a href="TODO" target="_blank">sito web</a>
   </p>
 <button type="button" onclick="showPage('formPage')">Vai al questionario</button>
 <section id="funding" style="background:#ffff; padding:15px 20px; margin-top:25px; font-size:0.9em; text-align:center; color:#333; border-radius:8px;">
-  <p style="margin:0 0 12px 0; line-height:1.5;">
+  <p style="margin:0 0 11px 0; line-height:1.5;">
     This work has been developed by the <a href="https://aimet-lab.github.io/" target="_blank" style="color:#007bff; text-decoration:none;">AIMET Lab </a>(University of Sassari) within the framework of the project e.INS- Ecosystem of Innovation for Next Generation Sardinia (cod. ECS 00000038) funded by the Italian Ministry for Research and Education (MUR) under the National Recovery and Resilience Plan (NRRP) - MISSION 4 COMPONENT 2, “From research to business” INVESTMENT 1.5, “Creation and strengthening of Ecosystems of innovation” and construction of “Territorial R&D Leaders”.
   </p>
   <div class="logos" style="max-width:100%; margin:0 auto; padding-top:5px;">
@@ -438,7 +438,7 @@ document.getElementById('evaluationForm').addEventListener('submit', async (e) =
       headers: { 'Accept': 'application/json' }
     });
     if (response.ok) {
-      alert('Grazie! Feedback inviato con successo.');
+      alert('Grazie per la partecipazione e per il prezioso contributo!');
       form.reset();
     } else {
       alert('Errore nell’invio: server non disponibile o dati incompleti.');
