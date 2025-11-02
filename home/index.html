@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BISTÌRIS — An Ontology and Knowledge Graph for Sardinian Traditional Costumes</title>
+  <meta name="description" content="BISTÌRIS is an ontology and knowledge graph to describe, compare, and valorise Sardinian traditional costumes with semantic search and reasoning." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BISTÌRIS — Ontology & Knowledge Graph" />
+  <meta property="og:description" content="Ontology and Knowledge Graph for Sardinian traditional costumes: data model, SPARQL examples, resources, and paper." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="imgs/cover_bistiris.jpg" />
+
+  <link rel="icon" href="imgs/favicon.png" />
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --panel: ##1a1a1a;
+      --text: #e7e9ee;
+      --muted: #aab0bd;
+      --brand: #7cc4ff;
+      --accent: #ffd166;
+      --ring: #2a9d8f;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius-xl: 22px;
+      --radius: 14px;
+      --maxw: 1060px;
+      --link: var(--brand);
+      --ok: #22c55e;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f7f8fb;
+        --panel: #ffffff;
+        --text: #101318;
+        --muted: #596277;
+        --brand: #0077ff;
+        --accent: #8b5cf6;
+        --ring: #0ea5e9;
+        --shadow: 0 16px 40px rgba(16,19,24,.08);
+        --link: #0059c9;
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji"; line-height:1.6}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:saturate(1.1) blur(10px);
+      background: color-mix(in oklab, var(--bg) 80%, transparent);
+      border-bottom:1px solid color-mix(in oklab, var(--text) 15%, transparent);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand .logo{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background: radial-gradient(120px 60px at 30% 30%, var(--brand), var(--accent)); box-shadow: var(--shadow)}
+    .nav a{margin:0 10px;color:var(--text)}
+    .nav a.muted{color:var(--muted)}
+    .funding{
+      background: color-mix(in oklab, var(--accent) 18%, transparent);
+      border-bottom: 1px solid color-mix(in oklab, var(--text) 12%, transparent);
+    }
+    .funding .bar{
+      display:flex;align-items:center;gap:14px; padding:10px 0; font-size:14px; color:var(--text)
+    }
+    .funding img{height:26px; width:auto}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background: color-mix(in oklab, var(--brand) 18%, transparent); color: var(--text); font-size:12px; letter-spacing:.3px}
+    .hero{padding:54px 0 24px}
+    .hero-grid{display:grid;grid-template-columns: 1.2fr .8fr; gap:28px}
+    .card{
+      background:var(--panel);border:1px solid color-mix(in oklab, var(--text) 12%, transparent);
+      border-radius:var(--radius-xl); box-shadow: var(--shadow);
+    }
+    .card.pad{padding:24px}
+    h1{font-size:clamp(28px, 3.2vw, 52px); line-height:1.1; margin:8px 0 10px}
+    .lead{font-size:clamp(16px, 1.4vw, 19px); color:var(--muted)}
+    .btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:12px 16px;border-radius:14px;border:1px solid color-mix(in oklab, var(--text) 12%, transparent);
+      background: linear-gradient(180deg, color-mix(in oklab, var(--panel) 85%, transparent), color-mix(in oklab, var(--panel) 12%, transparent));
+      color:var(--text); text-decoration:none; box-shadow: var(--shadow);
+    }
+    .btn:hover{transform: translateY(-1px); transition: .15s ease}
+    .btn.primary{border-color: color-mix(in oklab, var(--brand) 45%, transparent)}
+    .badge{font-size:12px; color:var(--muted)}
+    .media{
+      height:100%; overflow:hidden; border-radius:var(--radius-xl);
+      overflow:hidden; 
+      background: var(--panel);
+      display:grid; place-items:center; padding:12px
+    }
+    .media img{width:100%; height:auto; display:block; border-radius:18px}
+    section{padding:28px 0}
+    .section-title{font-size:22px;margin:6px 0 10px}
+    .grid{display:grid; gap:18px}
+    .g-3{grid-template-columns: repeat(3, minmax(0,1fr))}
+    .g-2{grid-template-columns: repeat(2, minmax(0,1fr))}
+    .kpi{display:flex;gap:12px;align-items:flex-start}
+    .muted{color:var(--muted)}
+    .prose p{margin: 8px 0}
+    .code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono","Courier New", monospace;
+      font-size: .95rem; background: #0b0d12; color:#e6edf3; padding:14px 16px; border-radius:12px;
+      border: 1px solid color-mix(in oklab, #fff 10%, transparent); overflow:auto
+    }
+    footer{padding:36px 0 60px; color:var(--muted); font-size:14px}
+    .logos{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:10px}
+    .logos img{height:36px}
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns: 1fr}
+      .g-3{grid-template-columns: 1fr}
+      .g-2{grid-template-columns: 1fr}
+    }
+
+header {
+  background: #ffffff;             /* bianco puro */
+  border-bottom: 1px solid #e5e7eb; /* sottile linea grigia */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav a,
+.brand span {
+  color: #111111;                  /* testo scuro */
+}
+
+.brand .logo {
+  width: 94px;                     /* logo più grande */
+  height: 94px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: none;
+  box-shadow: none;                /* senza ombra */
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="imgs/logo_bistiris.png" alt="BISTÌRIS logo" class="logo" />
+        <span>BISTÌRIS</span>
+      </div>
+      <nav>
+        <a href="#abstract">Abstract</a>
+        <a href="#features">Features</a>
+        <a href="#ontology">Ontology & KG</a>
+        <a href="#queries">SPARQL</a>
+        <a href="#resources">Resources</a>
+        <a href="#team">Team</a>
+        <a href="#funding" class="muted">Funding</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="card pad">
+          <div class="pill">Cultural Heritage • Ontology • Knowledge Graph</div>
+          <h1>BISTÌRIS</h1>
+          <h2>Ontology & Knowledge Graph for Sardinian Traditional Costumes</h2>
+          <p class="lead" style="text-align: justify;">A domain ontology and a curated knowledge graph to describe, compare, and analyse traditional Sardinian costumes and their parts, materials, colours, and provenance. The project supports cultural heritage documentation, enables semantic search and reasoning on costume‑features across regions and eras, and opens new avenues for education, tourism and heritage valorisation.</p>
+          <div class="btnrow">
+            <a class="btn primary" href="https://github.com/USER_OR_ORG/REPO" target="_blank" rel="noopener">GitHub Repository</a>
+            <a class="btn" href="data/bistiris_kg.ttl">Download KG (TTL)</a>
+            <a class="btn" href="ontology/bistiris.owl">Ontology (OWL)</a>
+          </div>
+          <p class="badge">Last updated: <!-- TODO: set date --> October 2025</p>
+        </div>
+        <div class="media card">
+          <img src="imgs/cover2.png" alt="BISTÌRIS overview illustration" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Abstract -->
+<section id="abstract" style="text-align: justify;">
+      <div class="container">
+        <h2 class="section-title">Abstract</h2>
+        <div class="card pad prose">
+          <p><strong>BISTÌRIS</strong> provides a semantic framework and an associated Knowledge Graph for representing traditional Sardinian costumes through geographical, temporal, and stylistic parameters. 
+    It enables researchers to identify recurring patterns, compare garments across regions and historical periods, and reveal cultural relationships hidden in dispersed data sources. 
+    By offering a formal and interoperable ontology together with the KG, BISTIRIS supports advanced analysis, including the study of material characteristics, colour usage, and costume layering. 
+    The project improves digital accessibility and semantic interoperability, facilitating the documentation and preservation of intangible heritage while opening opportunities for cultural tourism, education, and open data reuse. 
+    Although developed for Sardinia, BISTIRIS can be adapted to other Mediterranean dress traditions, providing a reusable framework for comparative studies and cross-regional heritage initiatives. </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+      <div class="container">
+        <h2 class="section-title">Key Features</h2>
+        <div class="grid g-3">
+          <div class="card pad">
+            <div class="kpi">
+              <div>
+                <h3>Domain Ontology</h3>
+                <p class="muted">Covers garments, parts, materials, colours, techniques, and provenance with explicit relations and constraints.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card pad">
+            <div class="kpi">
+              <div>
+                <h3>Knowledge Graph</h3>
+                <p class="muted">Curated entities and links to images and references; export in Turtle/OWL for reuse and extension.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card pad">
+            <div class="kpi">
+              <div>
+                <h3>Semantic Queries</h3>
+                <p class="muted">Ready-to-use SPARQL examples to retrieve garments by area, part, material, and colour palettes.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card pad">
+            <div class="kpi">
+              <div>
+                <h3>Interoperability</h3>
+                <p class="muted">Mappings and alignments to facilitate integration with CH datasets and digital collections.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card pad">
+            <div class="kpi">
+              <div>
+                <h3>Extensibility</h3>
+                <p class="muted">Modular classes and properties to add new municipalities, garments, parts, and controlled vocabularies.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card pad">
+            <div class="kpi">
+              <div>
+                <h3>Reproducible</h3>
+                <p class="muted">Scripts/notebooks (in repo) to regenerate the KG from cleaned sources and normalization tables.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ontology & KG -->
+    <section id="ontology">
+      <div class="container">
+        <h2 class="section-title">Ontology & Knowledge Graph</h2>
+        <div class="card pad prose">
+          <p>The ontology defines core classes such as <em>Costume</em>, <em>Garment</em>, <em>TechnicalCharacteristic</em>, <em>Colour</em>, and <em>Place</em>, along with properties including <em>hasPart</em>, <em>madeOf</em>, <em>hasColour</em>, <em>usesTechnique</em>, and <em>originatesFrom</em>. 
+Integrity constraints and recommended controlled vocabularies enhance data quality and support reliable reasoning.  </p>
+          <p>The KG instance data describe garments and their attributes, supported by controlled vocabularies and metadata for colours and materials.</p>
+
+          <details>
+            <summary>Example fragment (Turtle)</summary>
+            <pre class="code">
+@prefix bistiris: &lt;https://aimet-lab.github.io/BISTIRIS#> .
+@prefix dcterms: &lt;http://purl.org/dc/terms/> .
+@prefix schema: &lt;http://schema.org/> .
+@prefix dbpedia: &lt;http://dbpedia.org/resource/> .
+@prefix yago: &lt;http://yago-knowledge.org/resource/> .
+@prefix a-lite: &lt;https://aimet-lab.github.io/BISTIRIS#a-lite/> .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+&lt;https://aimet-lab.github.io/BISTIRIS#DVV0056>
+  a bistiris:"F-Garment",
+    bistiris:"F-Skirt",
+    bistiris:Garment,
+    bistiris:Gheroni_skirt ;
+  dcterms:source &lt;https://aimet-lab.github.io/BISTIRIS#IDVV0052> ;
+  schema:fromLocation dbpedia:Bitti ;
+  schema:fromLocation yago:Bitti ;
+  schema:isPartOf &lt;https://aimet-lab.github.io/BISTIRIS#DVV0052> ;
+  a-lite:hasColour dbpedia:Black,
+                   dbpedia:Blue,
+                   dbpedia:Green,
+                   dbpedia:Purple,
+                   dbpedia:Red,
+                   dbpedia:Yellow ;
+  bistiris:embroideries "true"^^xsd:boolean ;
+  bistiris:floral_embroideries "true"^^xsd:boolean ;
+  bistiris:màsculas "true"^^xsd:boolean ;
+  bistiris:technical_details "true"^^xsd:boolean ;
+  schema:dateCreated "1900/.." .
+            </pre>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPARQL examples -->
+<section id="queries">
+  <div class="container">
+    <h2 class="section-title">SPARQL — Example Queries</h2>
+    <div class="grid g-2">
+
+      <div class="card pad">
+        <h3>Geographical Patterns in Headwear Types</h3>
+        <pre class="code" style="white-space: pre-wrap; word-wrap: break-word;">
+SELECT ?category ?type (COUNT(?garment) AS ?count)
+WHERE {
+  ?garment a bst:M-Headwear ; a ?type ;
+           schema:fromLocation ?place .
+  ?place dbo:elevation ?elev .
+  BIND(IF(?elev > 600, "Elevation > 600 m", "≤ 600 m") AS ?category)
+}
+GROUP BY ?category ?type
+        </pre>
+      </div>
+
+      <div class="card pad">
+        <h3>Colours by Period</h3>
+        <pre class="code" style="white-space: pre-wrap; word-wrap: break-word;">
+SELECT ?period ?colourCat (COUNT(?colourCat) AS ?count)
+WHERE {
+  ?g a bst:Garment ; a-lite:hasColour ?c ; schema:dateCreated ?d .
+  ?c a ?colourCat ; rdfs:subClassOf dbo:Colour .
+  BIND(IF(STRSTARTS(STR(?d),"18"),"19th c.","20th c.") AS ?period)
+}
+        </pre>
+      </div>
+
+      <div class="card pad">
+        <h3>Covering Garments by Location</h3>
+        <pre class="code" style="white-space: pre-wrap; word-wrap: break-word;">
+SELECT ?garment ?place
+WHERE {
+  ?garment a bst:F-Bodice ;
+           bst:covers ?otherGarment .
+  ?otherGarment a bst:F-Jacket ;
+                schema:fromLocation ?place .
+}
+        </pre>
+      </div>
+      <div class="card pad">
+        <h3>Layered Garments</h3>
+        <pre class="code" style="white-space: pre-wrap; word-wrap: break-word;">
+SELECT ?garment ?type ?place
+WHERE {
+  ?garment bst:coversWithTransparency ?other ;
+           a ?type ; schema:fromLocation ?place .
+}
+        </pre>
+      </div>
+
+    </div>
+    <p class="container muted" style="margin-top:8px">
+      Try these at the <a href="https://triplydb.com/aimetlab/bistiris/sparql" target="_blank">SPARQL endpoint</a>.
+    </p>
+  </div>
+</section>
+
+    <!-- Resources -->
+    <section id="resources">
+      <div class="container">
+        <h2 class="section-title">Resources</h2>
+        <div class="grid g-2">
+          <div class="card pad">
+            <h3>Repository</h3>
+            <p>Provides access to the ontology, the Knowledge Graph datasets, and supporting resources.</p>
+            <p><a href="https://github.com/AIMet-Lab/BISTIRIS" target="_blank" rel="noopener">https://github.com/AIMet-Lab/BISTIRIS</a></p>
+          </div>
+          <div class="card pad">
+            <h3>Downloads</h3>
+ 	<p>Download the ontology and the Knowledge Graph in standard formats.</p>
+            <ul>
+              <li><a href="ontology/bistiris.owl">Ontology (OWL)</a></li>
+              <li><a href="data/bistiris_kg.ttl">Knowledge Graph (TTL)</a></li>
+            </ul>
+          </div>
+          <div class="card pad">
+            <h3 id="citation">Documentation</h3>
+            <p>Background materials describing data provenance, modelling rationale, and examples of reuse:</p>
+           <ul>
+             <li><a href="docs/provenance.md">Data provenance</a></li>
+             <li><a href="docs/examples.md">Usage examples</a></li>
+             <li><a href="docs/design_notes.pdf">Ontology design notes</a></li>
+            </ul>
+	</div>
+          <div class="card pad">
+            <h3>Cite & Publications</h3>
+  <ul>
+    <li> Pandolfo, L., Corona, G., Guidotti, D. <em>et al.</em> BISTÌRIS Knowledge Graph (2.0), 2025. 
+    <br> DOI: <a href="https://doi.org/10.5281/zenodo.15310350" target="_blank" rel="noopener">
+      10.5281/zenodo.15310350
+    </a>.
+  <li> Corona, G., Guidotti, D., Pandolfo, L. <em>et al.</em> BISTÌRIS Ontology: Towards a Structured Representation of Sardinian Traditional Female Costumes. In <em>SemDH@ESWC</em>.
+  </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+<section id="team">
+  <div class="container">
+    <h2 class="section-title">Team & Contacts</h2>
+    <div class="card pad" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;">
+      
+      <!-- Testo a sinistra -->
+      <div style="flex:1; min-width:250px;">
+        <p><strong>Team:</strong> Artificial Intelligence and formal METhods Laboratory, University of Sassari</p>
+        <p><strong>Contact:</strong> <a href="mailto:aimetlab@uniss.it">aimetlab@uniss.it</a></p>
+        <p><strong>Contact Person:</strong> Laura Pandolfo — <a href="mailto:lpandolfo@uniss.it">lpandolfo@uniss.it</a></p>
+      </div>
+
+      <!-- Loghi a destra, affiancati -->
+      <div class="logos" style="display:flex; align-items:center; gap:16px; flex-shrink:0;">
+        <a href="https://aimet-lab.github.io/" target="_blank" rel="noopener">
+ 	 <img src="imgs/aimet.png" alt="AIMET Lab logo" style="height:60px; object-fit:contain;">
+	</a>
+	<a href="https://www.uniss.it" target="_blank" rel="noopener">
+  	<img src="imgs/uniss.png" alt="University of Sassari logo" style="height:58px; object-fit:contain;">
+	</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Funding -->
+    <section id="funding">
+      <div class="container">
+        <h2 class="section-title">Funding </h2>
+        <div class="card pad prose">
+          <p>This work has been developed within the framework of the project e.INS- Ecosystem of Innovation for Next Generation Sardinia (cod. ECS 00000038) funded by the Italian Ministry for Research and Education (MUR) under the National Recovery and Resilience Plan (NRRP) - MISSION 4 COMPONENT 2, “From research to business” INVESTMENT 1.5, “Creation and strengthening of Ecosystems of innovation” and construction of “Territorial R&D Leaders”.</p>
+          <div class="logos">
+             <img src="imgs\loghi.png" alt="Funding logos" style="width:100%; height:auto; object-fit:contain;">
+      </div>
+            <!-- Add more logos if needed -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+    <div>
+      © <span id="y"></span> BISTÌRIS.  
+      Content released under 
+      <a href="LICENSE" target="_blank" rel="noopener">CC BY 4.0 International</a>.
+    </div>
+    <div>
+        <img src="imgs/logo_bistiris.png" alt="Project Logo" style="height:100px; object-fit:contain;">
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <script>
+    // set current year
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

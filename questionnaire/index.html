@@ -18,9 +18,9 @@
   tr:nth-child(even) { background-color: #f7f7f7; }
   .scrollable { overflow-x: auto; }
   .star-rating { direction: rtl; display: inline-flex; font-size: 1.8em; }
-.star-rating input[type="radio"] {
-  opacity: 0;       /* invisibile ma presente nel DOM */
+  .star-rating input[type="radio"] {
   position: absolute;
+  opacity: 0;
   width: 1px;
   height: 1px;
 }
@@ -43,16 +43,23 @@
 <header>
   <h1>Competency Questions Evaluation - BISTÌRIS</h1>
   <div class="logo-container">
-    <img src="logo_bistiris.png" alt="Logo BISTIRIS">
+    <img src="imgs/logo_bistiris.png" alt="Logo BISTIRIS">
   </div>
 </header>
 
 <!-- PAGINA INTRODUTTIVA -->
 <section id="introPage" class="page active" style="background:#eef5fb; border-left:4px solid #007bff; text-align:justify;">
-  <h2>Cos'è BISTÌRIS?</h2>
-  <p><strong>BISTÌRIS</strong> è un’ontologia dedicata ai costumi tradizionali sardi, che organizza informazioni su capi di abbigliamento, materiali, decorazioni e varianti locali. Il suo obiettivo è fornire uno strumento di ricerca a studiosi e operatori culturali, favorendo la conservazione, la valorizzazione e l’analisi comparativa di questa parte importante di patrimonio identitario.</p>
-  <p>Nel corso del progetto, sono state individuate sei <strong>Competency Question (CQ)</strong>, ovvero domande guida che aiutano a esplorare diversi aspetti dei costumi tradizionali. Ogni CQ ha un esempio concreto basato sul nostro <strong>Knowledge Graph (KG)</strong>, che collega dati da fonti archivistiche, fotografie, libri e altro.</p>
-  <p>Il questionario chiede di valutare chiarezza, completezza e rilevanza delle risposte. Non servono competenze tecniche: il tuo contributo aiuterà a rendere <strong>BISTÌRIS</strong> più utile.</p>
+<h2>Cos'è BISTÌRIS?</h2>
+  <p>
+  <strong> BISTÌRIS </strong> è un’ontologia dedicata ai costumi tradizionali sardi, che organizza in modo strutturato e semantico informazioni su capi di abbigliamento, materiali, decorazioni e varianti locali, con l'obiettivo di fornire uno strumento di ricerca per studiosi e operatori culturali, al fine di favorire la conservazione, la valorizzazione e l’analisi comparativa di questo patrimonio identitario.
+</p>
+  <p>
+Il questionario ti chiede di valutare alcune risposte ottenute interrogando il nostro <strong>Knowledge Graph (KG)</strong>, una base di conoscenza semantica che collega dati estratti da archivi, fotografie, libri e altre fonti. Le risposte riguardano specifiche <strong>Competency Questions (CQ)</strong>, domande guida pensate per esplorare aspetti chiave dei costumi.
+  </p>
+  <p>
+Per ogni CQ troverai le informazioni necessarie per valutarla, con i risultati ricavati dal KG, un breve commento sui principali dati e strumenti per esprimere il tuo giudizio su rilevanza, completezza e comprensibilità, oltre alla possibilità di aggiungere eventuali osservazioni.
+NB: le risposte alle CQ riflettono lo stato attuale dei dati, in continuo aggiornamento, pertanto valori e frequenze potrebbero cambiare con l’integrazione di nuovi contenuti.
+  </p>
 <p style="margin-top:15px;">
 Per saperne di più visita la <a href="TODO" target="_blank">pagina del progetto</a>
   </p>
@@ -62,11 +69,10 @@ Per saperne di più visita la <a href="TODO" target="_blank">pagina del progetto
     This work has been developed by the <a href="https://aimet-lab.github.io/" target="_blank" style="color:#007bff; text-decoration:none;">AIMET Lab </a>(University of Sassari) within the framework of the project e.INS- Ecosystem of Innovation for Next Generation Sardinia (cod. ECS 00000038) funded by the Italian Ministry for Research and Education (MUR) under the National Recovery and Resilience Plan (NRRP) - MISSION 4 COMPONENT 2, “From research to business” INVESTMENT 1.5, “Creation and strengthening of Ecosystems of innovation” and construction of “Territorial R&D Leaders”.
   </p>
   <div class="logos" style="max-width:100%; margin:0 auto; padding-top:5px;">
-    <img src="loghi.png" alt="Loghi finanziamento" style="width:40%; height:auto; object-fit:contain;">
+    <img src="imgs/loghi.png" alt="Loghi finanziamento" style="width:40%; height:auto; object-fit:contain;">
   </div>
 </section>
-</section>
-</section>
+
 
 <!-- PAGINA QUESTIONARIO -->
 <section id="formPage" class="page">
@@ -419,56 +425,15 @@ document.getElementById('evaluationForm').addEventListener('submit', async (e) =
   e.preventDefault();
   const form = e.target;
 
-  if (!form.checkValidity()) {
-    form.reportValidity();
-    return;
-  }
-document.getElementById('evaluationForm').addEventListener('submit', function(e) {
-  e.preventDefault(); // blocca invio normale
-  const form = e.target;
-  let valid = true;
-
-  // Controlla tutti i gruppi di radio
-  form.querySelectorAll('.star-rating').forEach(group => {
-    const name = group.querySelector('input[type="radio"]').name;
-    const checked = form.querySelector(`input[name="${name}"]:checked`);
-    if (!checked) valid = false;
+  // Validazione radio e altri required
+  const requiredRadios = [...form.querySelectorAll('input[type="radio"][required]')];
+  const validRadios = requiredRadios.every(radio => {
+    return [...form.querySelectorAll(`input[name="${radio.name}"]`)].some(r => r.checked);
   });
 
-  if (!form.checkValidity() || !valid) {
-    alert('Compila tutti i campi richiesti prima di inviare.');
+  if (!form.checkValidity() || !validRadios) {
+    alert('Compila tutti i campi richiesti!');
     return;
-  }
-
-  // Invio via Formspree
-  const data = new FormData(form);
-  fetch(form.action, {
-    method: 'POST',
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  }).then(response => {
-    if (response.ok) {
-      alert('Grazie! Feedback inviato.');
-      form.reset();
-    } else {
-      alert('Errore nell\'invio, riprova.');
-    }
-  }).catch(err => {
-    alert('Errore di rete: ' + err.message);
-  });
-});
-  // Controllo manuale radio required
-  const requiredRadioGroups = ['CQ1_Rilevanza','CQ1_Completezza','CQ1_Comprensibilita',
-                               'CQ2_Rilevanza','CQ2_Completezza','CQ2_Comprensibilita',
-                               'CQ3_Rilevanza','CQ3_Completezza','CQ3_Comprensibilita',
-                               'CQ4_Rilevanza','CQ4_Completezza','CQ4_Comprensibilita',
-                               'CQ5_Rilevanza','CQ5_Completezza','CQ5_Comprensibilita',
-                               'CQ6_Rilevanza','CQ6_Completezza','CQ6_Comprensibilita'];
-  for (const group of requiredRadioGroups) {
-    if (!form.querySelector(`input[name="${group}"]:checked`)) {
-      alert('Seleziona tutte le stelle richieste prima di inviare.');
-      return;
-    }
   }
 
   const data = new FormData(form);
@@ -478,14 +443,13 @@ document.getElementById('evaluationForm').addEventListener('submit', function(e)
       body: data,
       headers: { 'Accept': 'application/json' }
     });
-
     if (response.ok) {
-      alert('Grazie! I tuoi feedback sono stati inviati.');
+      alert('Grazie! Feedback inviato con successo.');
       form.reset();
     } else {
-      alert('Errore invio dati. Controlla la connessione o l\'endpoint.');
+      alert('Errore nell’invio: server non disponibile o dati incompleti.');
     }
-  } catch(err) {
+  } catch (err) {
     alert('Errore di rete: ' + err.message);
   }
 });
