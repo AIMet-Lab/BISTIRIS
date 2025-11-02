@@ -1,7 +1,7 @@
-# BISTÌRIS Ontology
+# BISTÌRIS Ontology & Knowledge Graph
 <img src="https://raw.githubusercontent.com/AIMet-Lab/BISTIRIS/main/home/imgs/logo_bistiris.png" width="100" alt="Logo BISTIRIS">
 
-**BISTÌRIS** is domain ontology and a curated knowledge graph to describe, compare, and analyse traditional **Sardinian traditional costumes** and their parts, materials, colours, and provenance. It provides a structured vocabulary designed to enable semantic representation and interlinking of cultural heritage data in digital archives. The project supports cultural heritage documentation, enables semantic search and reasoning on costume‑features across regions and eras, and opens new avenues for education, tourism and heritage valorisation. 
+<p align="justify"><strong>BISTÌRIS</strong> is domain ontology and a curated knowledge graph designed to describe, compare, and analyse <strong>Sardinian traditional costumes</strong> and their parts, materials, colours, and provenance. The project supports cultural heritage documentation, enables semantic search and reasoning on costume‑features across regions and eras, and opens new avenues for education, tourism and heritage valorisation.</p>
 
 <a href="https://doi.org/10.5281/zenodo.15310350">
   <img src="https://zenodo.org/badge/372536364.svg" alt="DOI"></a>
