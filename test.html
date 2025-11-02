@@ -4,237 +4,96 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Valutazione CQ - Ontologia BISTIRIS</title>
-<link rel="stylesheet" href="style.css">
 <style>
-  /* ===== Stile base ===== */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f9f9f9;
-    line-height: 1.6;
-    color: #2c3e50;
-  }
-
-  h1, h2 {
-    color: #2c3e50;
-  }
-
-  section {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-
+  body { font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; color: #2c3e50; line-height: 1.6; }
+  h1, h2 { color: #2c3e50; }
+  section { background: #fff; padding: 20px; margin-bottom: 30px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
   p { margin-bottom: 15px; }
-
-  /* ===== Header e loghi ===== */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-  }
-
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .logo-container img {
-    max-width: 120px;
-    height: auto;
-  }
-
-  /* ===== Tabelle ===== */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    font-size: 14px;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  th, td {
-    border: 1px solid #ccc;
-    padding: 8px 10px;
-    text-align: left;
-  }
-
-  th {
-    background-color: #007bff;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-
-  tr:nth-child(even) {
-    background-color: #f7f7f7;
-  }
-
-  .scrollable {
-    overflow-x: auto;
-  }
-
-  /* ===== Stelle cliccabili ===== */
-  .star-rating {
-    direction: rtl;
-    display: inline-flex;
-    font-size: 1.8em;
-  }
-  .star-rating input[type="radio"] {
-    display: none;
-  }
-  .star-rating label {
-    color: #ccc;
-    cursor: pointer;
-    transition: color 0.2s;
-  }
-  .star-rating label:hover,
-  .star-rating label:hover ~ label,
-  .star-rating input[type="radio"]:checked ~ label {
-    color: gold;
-  }
-
-  .cq-ratings {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-  }
-
-  .note {
-    width: 100%;
-    min-height: 60px;
-    margin-top: 10px;
-  }
-
-  button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    background: #007bff;
-    color: white;
-    cursor: pointer;
-    margin-top: 15px;
-    font-size: 16px;
-  }
-
-  button:hover {
-    background: #0056b3;
-  }
-
-  label span {
-    font-weight: bold;
-    margin-right: 5px;
-  }
-
-  /* ===== Media queries ===== */
-  @media (max-width: 768px) {
-    body {
-      margin: 10px;
-    }
-
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-    }
-
-    .logo-container img {
-      max-width: 90px;
-    }
-
-    .cq-ratings {
-      flex-direction: column;
-    }
-
-    table {
-      font-size: 12px;
-    }
-
-    textarea.note {
-      min-height: 50px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 1.5em;
-    }
-    h2 {
-      font-size: 1.2em;
-    }
-    table {
-      font-size: 11px;
-    }
-  }
+  header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 20px; }
+  .logo-container { display: flex; align-items: center; gap: 15px; }
+  .logo-container img { max-width: 90px; height: auto; }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; border-radius: 8px; overflow: hidden; }
+  th, td { border: 1px solid #ccc; padding: 8px 10px; text-align: left; }
+  th { background-color: #007bff; color: white; text-transform: uppercase; font-weight: bold; }
+  tr:nth-child(even) { background-color: #f7f7f7; }
+  .scrollable { overflow-x: auto; }
+  .star-rating { direction: rtl; display: inline-flex; font-size: 1.8em; }
+  .star-rating input[type="radio"] { display: none; }
+  .star-rating label { color: #ccc; cursor: pointer; transition: color 0.2s; }
+  .star-rating label:hover, .star-rating label:hover ~ label, .star-rating input[type="radio"]:checked ~ label { color: gold; }
+  .cq-ratings { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
+  .note { width: 100%; min-height: 60px; margin-top: 10px; }
+  button { padding: 10px 15px; border: none; border-radius: 5px; background: #007bff; color: white; cursor: pointer; margin-top: 15px; font-size: 16px; }
+  button:hover { background: #0056b3; }
+  label span { font-weight: bold; margin-right: 5px; }
+  /* nascondi/mostra pagine */
+  .page { display: none; }
+  .page.active { display: block; }
+  @media (max-width: 768px) { body { margin: 10px; } header { flex-direction: column; align-items: flex-start; gap: 10px; } .logo-container img { max-width: 50px; } .cq-ratings { flex-direction: column; } table { font-size: 12px; } textarea.note { min-height: 50px; } }
+  @media (max-width: 480px) { h1 { font-size: 1.5em; } h2 { font-size: 1.2em; } table { font-size: 11px; } }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Competency Questions Evaluation - BISTIRIS</h1>
+  <h1>Competency Questions Evaluation - BISTÌRIS</h1>
   <div class="logo-container">
     <img src="logo_bistiris.png" alt="Logo BISTIRIS">
-    <img src="aimet.png" alt="Logo ALTRO">
   </div>
 </header>
 
-<section style="background:#eef5fb; border-left:4px solid #007bff; padding:15px; margin-bottom:25px; text-align:justify;">
-  <h2>Cos'è BISTIRIS?</h2>
-  <p>
-    <strong>BISTIRIS</strong> è un'ontologia progettata per documentare e analizzare in modo strutturato i 
-    <strong>costumi tradizionali sardi</strong>. Descrive capi di abbigliamento, materiali, decorazioni e varianti locali, 
-    con l'obiettivo di preservare e valorizzare questo patrimonio culturale.
+<!-- PAGINA INTRODUTTIVA -->
+<section id="introPage" class="page active" style="background:#eef5fb; border-left:4px solid #007bff; text-align:justify;">
+  <h2>Cos'è BISTÌRIS?</h2>
+  <p><strong>BISTÌRIS</strong> è un’ontologia dedicata ai costumi tradizionali sardi, che organizza informazioni su capi di abbigliamento, materiali, decorazioni e varianti locali. Il suo obiettivo è fornire uno strumento di ricerca a studiosi e operatori culturali, favorendo la conservazione, la valorizzazione e l’analisi comparativa di questa parte importante di patrimonio identitario.</p>
+  <p>Nel corso del progetto, sono state individuate sei <strong>Competency Question (CQ)</strong>, ovvero domande guida che aiutano a esplorare diversi aspetti dei costumi tradizionali. Ogni CQ ha un esempio concreto basato sul nostro <strong>Knowledge Graph (KG)</strong>, che collega dati da fonti archivistiche, fotografie, libri e altro.</p>
+  <p>Il questionario chiede di valutare chiarezza, completezza e rilevanza delle risposte. Non servono competenze tecniche: il tuo contributo aiuterà a rendere <strong>BISTÌRIS</strong> più utile.</p>
+<p style="margin-top:15px;">
+Per saperne di più visita la <a href="TODO" target="_blank">pagina del progetto</a>
   </p>
-  <p>
-    Le <strong>Competency Questions (CQ)</strong> verificano se l'ontologia e i dati raccolti possono rappresentare informazioni significative 
-    (es. “Come variano i costumi nel tempo?”). In questo modulo chiediamo il tuo parere su quanto le risposte a queste domande siano 
-    <em>rilevanti</em>, <em>complete</em> e <em>comprensibili</em> per chi lavora nei beni culturali.
+  <button onclick="showPage('formPage')">Vai al questionario</button>
+<section id="funding" style="background:#ffff; padding:15px 20px; margin-top:25px; font-size:0.9em; text-align:center; color:#333; border-radius:8px;">
+  <p style="margin:0 0 12px 0; line-height:1.5;">
+    This work has been developed by the <a href="https://aimet-lab.github.io/" target="_blank" style="color:#007bff; text-decoration:none;">AIMET Lab </a>(University of Sassari) within the framework of the project e.INS- Ecosystem of Innovation for Next Generation Sardinia (cod. ECS 00000038) funded by the Italian Ministry for Research and Education (MUR) under the National Recovery and Resilience Plan (NRRP) - MISSION 4 COMPONENT 2, “From research to business” INVESTMENT 1.5, “Creation and strengthening of Ecosystems of innovation” and construction of “Territorial R&D Leaders”.
   </p>
-  <p>
-    Non sono richieste competenze tecniche: ci interessa il punto di vista di chi opera in ambito culturale, museale o storico. 
-    I tuoi contributi aiuteranno a rendere l'ontologia più utile per professionisti e istituzioni.
-  </p>
-  <p style="margin-top:15px;">
-    <strong>Per saperne di più:</strong><br>
-    <a href="TODO" target="_blank">Pagina del progetto BISTIRIS</a><br>
-    <a href="TODO" target="_blank">Repository GitHub ufficiale</a><br>
-    <a href="TODO" target="_blank">SPARQL endpoint</a>
-  </p>
+  <div class="logos" style="max-width:100%; margin:0 auto; padding-top:5px;">
+    <img src="loghi.png" alt="Loghi finanziamento" style="width:40%; height:auto; object-fit:contain;">
+  </div>
+</section>
+</section>
 </section>
 
+<!-- PAGINA QUESTIONARIO -->
+<section id="formPage" class="page">
+<button type="button" onclick="showPage('introPage')" style="background:#6c757d; margin-bottom:15px;">← Torna indietro</button>
 <form id="evaluationForm" action="https://formspree.io/f/mgvpndzo" method="POST">
-  <!-- Qui rimane tutto il contenuto dei CQ come nel tuo file originale -->
-<!-- PROFILO -->
-<section>
-  <h2>Profilo utente</h2>
-  <label>Ruolo:
-    <select name="Ruolo" required>
-      <option value="">-- Seleziona --</option>
-      <option value="Ricercatore">Ricercatore</option>
-      <option value="Curatore">Curatore</option>
-      <option value="Studente">Studente</option>
-      <option value="Altro">Altro</option>
-    </select>
-  </label>
-  <br><br>
-  <label>Dominio di competenza:
-    <input type="text" name="Ambito di competenza" placeholder="Es. arte, storia, beni culturali, storia del costume" required style="width: 80%;">
-  </label>
-</section>
+
+  <!-- PROFILO -->
+  <section>
+    <h2>Informazioni sul compilatore</h2>
+    <label>Ruolo:
+      <select name="Ruolo" required>
+        <option value="">-- Seleziona --</option>
+        <option value="Ricercatore">Ricercatore</option>
+        <option value="Curatore">Curatore</option>
+        <option value="Studente">Studente</option>
+        <option value="Altro">Altro</option>
+      </select>
+    </label>
+    <br><br>
+    <label>Dominio di competenza:
+      <input type="text" name="Ambito di competenza" placeholder="Es. arte, storia, beni culturali, storia del costume" required style="width: 80%;">
+    </label>
+  </section>
 
 <!-- CQ1 -->
 <section>
   <h2>CQ1. Come variano le caratteristiche dei costumi e dei capi d'abbigliamento nelle diverse aree geografiche della Sardegna?</h2>
- <div class="scrollable">
+<div class="scrollable">
+<p>In questo esempio, si intende esplorare come i copricapi tradizionali maschili variano a seconda della località di provenienza. I dati sono raggruppati per tipo di capo e altitudine della zona (<em>≤ 600 m</em> e <em>> 600 m</em>).
+    </p>
     <table>
-      <tr><th>Categoria altimetrica</th><th>Tipo di copricapo</th><th>Numero di capi</th></tr>
+      <tr><th>Fascia di altitudine</th><th>Tipologia di copricapo</th><th>Numero di capi</th></tr>
       <tr><td>Elevazione ≤ 600 m</td><td>:Berritta</td><td>115</td></tr>
       <tr><td>Elevazione ≤ 600 m</td><td>:Cappello a tesa</td><td>20</td></tr>
       <tr><td>Elevazione ≤ 600 m</td><td>:Fazzoletto maschile</td><td>18</td></tr>
@@ -242,11 +101,14 @@
       <tr><td>Elevazione ≤ 600 m</td><td>:Cuffia</td><td>8</td></tr>
       <tr><td>Elevazione > 600 m</td><td>:Berritta</td><td>25</td></tr>
     </table>
+<p>
+    <strong>Risultati principali:</strong> Il copricapo maschile più diffuso è la <code>Berritta</code>, presente in entrambe le fasce di altitudine. Altri tipi, come <code>Cappello a tesa</code>, <code>Fazzoletto</code>, <code>Fez</code> e <code>Cuffia</code>, compaiono solo nelle aree sotto i 600 metri, suggerendo differenze geografiche nelle tradizioni dei copricapi.
+  </p>
   </div>
   <div class="cq-ratings">
     <div><label>Rilevanza:</label>
       <div class="star-rating">
-        <input type="radio" id="cq1r5" name="CQ1_Rilevanza" value="5"><label for="cq1r5">★</label>
+        <input type="radio" id="cq1r5" name="CQ1_Rilevanza" value="5" required><label for="cq1r5">★</label>
         <input type="radio" id="cq1r4" name="CQ1_Rilevanza" value="4"><label for="cq1r4">★</label>
         <input type="radio" id="cq1r3" name="CQ1_Rilevanza" value="3"><label for="cq1r3">★</label>
         <input type="radio" id="cq1r2" name="CQ1_Rilevanza" value="2"><label for="cq1r2">★</label>
@@ -255,7 +117,7 @@
     </div>
     <div><label>Completezza:</label>
       <div class="star-rating">
-        <input type="radio" id="cq1c5" name="CQ1_Completezza" value="5"><label for="cq1c5">★</label>
+        <input type="radio" id="cq1c5" name="CQ1_Completezza" value="5" required><label for="cq1c5">★</label>
         <input type="radio" id="cq1c4" name="CQ1_Completezza" value="4"><label for="cq1c4">★</label>
         <input type="radio" id="cq1c3" name="CQ1_Completezza" value="3"><label for="cq1c3">★</label>
         <input type="radio" id="cq1c2" name="CQ1_Completezza" value="2"><label for="cq1c2">★</label>
@@ -264,7 +126,7 @@
     </div>
     <div><label>Comprensibilità:</label>
       <div class="star-rating">
-        <input type="radio" id="cq1cl5" name="CQ1_Comprensibilita" value="5"><label for="cq1cl5">★</label>
+        <input type="radio" id="cq1cl5" name="CQ1_Comprensibilita" value="5" required><label for="cq1cl5">★</label>
         <input type="radio" id="cq1cl4" name="CQ1_Comprensibilita" value="4"><label for="cq1cl4">★</label>
         <input type="radio" id="cq1cl3" name="CQ1_Comprensibilita" value="3"><label for="cq1cl3">★</label>
         <input type="radio" id="cq1cl2" name="CQ1_Comprensibilita" value="2"><label for="cq1cl2">★</label>
@@ -278,6 +140,9 @@
 <!-- CQ2 -->
 <section>
   <h2>CQ2. Come variano le caratteristiche dei costumi e dei capi d'abbigliamento nel tempo?</h2>
+<p>
+    In questo esempio, si intende analizzare l'evoluzione dei colori dei capi tradizionali femminili e maschili tra XIX e XX secolo. Sono considerati tutti i capi ad eccezione di camicie bianche, per evitare distorsioni dovute alla loro uniformità.
+  </p>
   <div class="scrollable">
     <table>
       <tr><th>Colore</th><th>XIX secolo</th><th>XX secolo</th></tr>
@@ -292,13 +157,15 @@
       <tr><td>Viola</td><td>3</td><td>28</td></tr>
       <tr><td>Rosa</td><td>2</td><td>14</td></tr>
       <tr><td>Grigio</td><td>1</td><td>5</td></tr>
-      <tr><td>Arancio</td><td>-</td><td>6</td></tr>
     </table>
   </div>
+<p>
+    <strong>Risultati principali:</strong> Nel XIX secolo i colori predominanti erano blu, rosso e bianco. Nel XX secolo, oltre al rosso, aumentano la presenza di nero, giallo e viola, evidenziando un'evoluzione temporale dei gusti cromatici con maggiore diversificazione dei toni.
+  </p>
     <div class="cq-ratings">
     <div><label>Rilevanza:</label>
       <div class="star-rating">
-        <input type="radio" id="cq2r5" name="CQ2_Rilevanza" value="5"><label for="cq2r5">★</label>
+        <input type="radio" id="cq2r5" name="CQ2_Rilevanza" value="5" required><label for="cq2r5">★</label>
         <input type="radio" id="cq2r4" name="CQ2_Rilevanza" value="4"><label for="cq2r4">★</label>
         <input type="radio" id="cq2r3" name="CQ2_Rilevanza" value="3"><label for="cq2r3">★</label>
         <input type="radio" id="cq2r2" name="CQ2_Rilevanza" value="2"><label for="cq2r2">★</label>
@@ -307,7 +174,7 @@
     </div>
     <div><label>Completezza:</label>
       <div class="star-rating">
-        <input type="radio" id="cq2c5" name="CQ2_Completezza" value="5"><label for="cq2c5">★</label>
+        <input type="radio" id="cq2c5" name="CQ2_Completezza" value="5" required><label for="cq2c5">★</label>
         <input type="radio" id="cq2c4" name="CQ2_Completezza" value="4"><label for="cq2c4">★</label>
         <input type="radio" id="cq2c3" name="CQ2_Completezza" value="3"><label for="cq2c3">★</label>
         <input type="radio" id="cq2c2" name="CQ2_Completezza" value="2"><label for="cq2c2">★</label>
@@ -316,7 +183,7 @@
     </div>
     <div><label>Comprensibilità:</label>
       <div class="star-rating">
-        <input type="radio" id="cq2cl5" name="CQ2_Comprensibilita" value="5"><label for="cq2cl5">★</label>
+        <input type="radio" id="cq2cl5" name="CQ2_Comprensibilita" value="5" required><label for="cq2cl5">★</label>
         <input type="radio" id="cq2cl4" name="CQ2_Comprensibilita" value="4"><label for="cq2cl4">★</label>
         <input type="radio" id="cq2cl3" name="CQ2_Comprensibilita" value="3"><label for="cq2cl3">★</label>
         <input type="radio" id="cq2cl2" name="CQ2_Comprensibilita" value="2"><label for="cq2cl2">★</label>
@@ -330,6 +197,9 @@
 <!-- CQ3 -->
 <section>
   <h2>CQ3. I costumi e i capi condividono caratteristiche simili in località vicine?</h2>
+<p>
+    In questo esempio si valuta quali capi tradizionali di Galtellì, per tipo e colore, sono presenti anche nei comuni limitrofi. Vengono considerati solo i tipi specifici di capo, escludendo categorie generiche e individui singoli.
+  </p>
   <div class="scrollable">
     <table>
       <tr><th>Tipo di capo</th><th>Colore</th><th>Frequenza</th><th>Caratteristiche</th></tr>
@@ -341,10 +211,13 @@
       <tr><td>Gonna a gheroni</td><td>Marrone</td><td>1</td><td>Plissettatura</td></tr>
     </table>
   </div>
+<p>
+    <strong>Risultati principali:</strong> Alcuni tipi di capo, come gli scialli usati come copricapo, sono condivisi tra i comuni vicini, soprattutto quando presentano colori nero o viola e frange decorative.
+  </p>
 <div class="cq-ratings">
     <div><label>Rilevanza:</label>
       <div class="star-rating">
-        <input type="radio" id="cq3r5" name="CQ3_Rilevanza" value="5"><label for="cq3r5">★</label>
+        <input type="radio" id="cq3r5" name="CQ3_Rilevanza" value="5" required><label for="cq3r5">★</label>
         <input type="radio" id="cq3r4" name="CQ3_Rilevanza" value="4"><label for="cq3r4">★</label>
         <input type="radio" id="cq3r3" name="CQ3_Rilevanza" value="3"><label for="cq3r3">★</label>
         <input type="radio" id="cq3r2" name="CQ3_Rilevanza" value="2"><label for="cq3r2">★</label>
@@ -353,7 +226,7 @@
     </div>
     <div><label>Completezza:</label>
       <div class="star-rating">
-        <input type="radio" id="cq3c5" name="CQ3_Completezza" value="5"><label for="cq3c5">★</label>
+        <input type="radio" id="cq3c5" name="CQ3_Completezza" value="5" required><label for="cq3c5">★</label>
         <input type="radio" id="cq3c4" name="CQ3_Completezza" value="4"><label for="cq3c4">★</label>
         <input type="radio" id="cq3c3" name="CQ3_Completezza" value="3"><label for="cq3c3">★</label>
         <input type="radio" id="cq3c2" name="CQ3_Completezza" value="2"><label for="cq3c2">★</label>
@@ -362,7 +235,7 @@
     </div>
     <div><label>Comprensibilità:</label>
       <div class="star-rating">
-        <input type="radio" id="cq3cl5" name="CQ3_Comprensibilita" value="5"><label for="cq3cl5">★</label>
+        <input type="radio" id="cq3cl5" name="CQ3_Comprensibilita" value="5" required><label for="cq3cl5">★</label>
         <input type="radio" id="cq3cl4" name="CQ3_Comprensibilita" value="4"><label for="cq3cl4">★</label>
         <input type="radio" id="cq3cl3" name="CQ3_Comprensibilita" value="3"><label for="cq3cl3">★</label>
         <input type="radio" id="cq3cl2" name="CQ3_Comprensibilita" value="2"><label for="cq3cl2">★</label>
@@ -376,18 +249,25 @@
 <!-- CQ4 -->
 <section>
   <h2>CQ4. Quali capi sono realizzati con materiali trasparenti?</h2>
+<p>
+    Con questo esempio di domanda, si individuano i capi che utilizzano materiali trasparenti, come veli o sovrapposizioni trasparenti, 
+    dove la trasparenza ha un ruolo visivo o funzionale.
+  </p>
   <div class="scrollable">
     <table>
-      <tr><th>Tipo di capo</th></tr>
+      <tr><th>Capi con trasparenza</th></tr>
       <tr><td>Velo copricapo</td></tr>
       <tr><td>Velo portato sulle spalle</td></tr>
       <tr><td>Grembiule leggero, con arricciature</td></tr>
     </table>
   </div>
+<p>
+    <strong>Risultati principali:</strong> I capi trasparenti individuati includono principalmente veli copricapo e veli sulle spalle, ma anche alcuni grembiuli leggeri, dimostrando l'uso della trasparenza come elemento stilistico rilevante.
+  </p>
 <div class="cq-ratings">
     <div><label>Rilevanza:</label>
       <div class="star-rating">
-        <input type="radio" id="cq4r5" name="CQ4_Rilevanza" value="5"><label for="cq4r5">★</label>
+        <input type="radio" id="cq4r5" name="CQ4_Rilevanza" value="5" required><label for="cq4r5">★</label>
         <input type="radio" id="cq4r4" name="CQ4_Rilevanza" value="4"><label for="cq4r4">★</label>
         <input type="radio" id="cq4r3" name="CQ4_Rilevanza" value="3"><label for="cq4r3">★</label>
         <input type="radio" id="cq4r2" name="CQ4_Rilevanza" value="2"><label for="cq4r2">★</label>
@@ -396,7 +276,7 @@
     </div>
     <div><label>Completezza:</label>
       <div class="star-rating">
-        <input type="radio" id="cq4c5" name="CQ4_Completezza" value="5"><label for="cq4c5">★</label>
+        <input type="radio" id="cq4c5" name="CQ4_Completezza" value="5" required><label for="cq4c5">★</label>
         <input type="radio" id="cq4c4" name="CQ4_Completezza" value="4"><label for="cq4c4">★</label>
         <input type="radio" id="cq4c3" name="CQ4_Completezza" value="3"><label for="cq4c3">★</label>
         <input type="radio" id="cq4c2" name="CQ4_Completezza" value="2"><label for="cq4c2">★</label>
@@ -405,7 +285,7 @@
     </div>
     <div><label>Comprensibilità:</label>
       <div class="star-rating">
-        <input type="radio" id="cq4cl5" name="CQ4_Comprensibilita" value="5"><label for="cq4cl5">★</label>
+        <input type="radio" id="cq4cl5" name="CQ4_Comprensibilita" value="5" required><label for="cq4cl5">★</label>
         <input type="radio" id="cq4cl4" name="CQ4_Comprensibilita" value="4"><label for="cq4cl4">★</label>
         <input type="radio" id="cq4cl3" name="CQ4_Comprensibilita" value="3"><label for="cq4cl3">★</label>
         <input type="radio" id="cq4cl2" name="CQ4_Comprensibilita" value="2"><label for="cq4cl2">★</label>
@@ -419,6 +299,10 @@
 <!-- CQ5 -->
 <section>
   <h2>CQ5. In quali casi il corpetto copre la giacca?</h2>
+<p>
+    Questo esempio analizza i casi in cui il corpetto tradizionale femminile viene indossato sopra la giacca, 
+    evidenziando una specifica convenzione stilistica o funzionale in alcune comunità locali.
+  </p>
   <div class="scrollable">
     <table>
       <tr><th>Località</th></tr>
@@ -428,19 +312,22 @@
       <tr><td>Tonara</td></tr>
     </table>
   </div>
+<p>
+    <strong>Risultati principali:</strong> Il corpetto indossato sopra la giacca è documentato in quattro comuni, indicando un particolare stile di stratificazione dei capi nelle tradizioni femminili locali.
+  </p>
 <div class="cq-ratings">
     <div><label>Rilevanza:</label>
       <div class="star-rating">
-        <input type="radio" id="cq5r5" name="CQ5_Rilevanza" value="5"><label for="cq4r5">★</label>
-        <input type="radio" id="cq5r4" name="CQ5_Rilevanza" value="4"><label for="cq4r4">★</label>
-        <input type="radio" id="cq5r3" name="CQ5_Rilevanza" value="3"><label for="cq4r3">★</label>
-        <input type="radio" id="cq5r2" name="CQ5_Rilevanza" value="2"><label for="cq4r2">★</label>
-        <input type="radio" id="cq5r1" name="CQ5_Rilevanza" value="1"><label for="cq4r1">★</label>
+        <input type="radio" id="cq5r5" name="CQ5_Rilevanza" value="5" required><label for="cq5r5">★</label>
+        <input type="radio" id="cq5r4" name="CQ5_Rilevanza" value="4"><label for="cq5r4">★</label>
+        <input type="radio" id="cq5r3" name="CQ5_Rilevanza" value="3"><label for="cq5r3">★</label>
+        <input type="radio" id="cq5r2" name="CQ5_Rilevanza" value="2"><label for="cq5r2">★</label>
+        <input type="radio" id="cq5r1" name="CQ5_Rilevanza" value="1"><label for="cq5r1">★</label>
       </div>
     </div>
     <div><label>Completezza:</label>
       <div class="star-rating">
-        <input type="radio" id="cq5c5" name="CQ5_Completezza" value="5"><label for="cq5c5">★</label>
+        <input type="radio" id="cq5c5" name="CQ5_Completezza" value="5" required><label for="cq5c5">★</label>
         <input type="radio" id="cq5c4" name="CQ5_Completezza" value="4"><label for="cq5c4">★</label>
         <input type="radio" id="cq5c3" name="CQ5_Completezza" value="3"><label for="cq5c3">★</label>
         <input type="radio" id="cq5c2" name="CQ5_Completezza" value="2"><label for="cq5c2">★</label>
@@ -449,11 +336,11 @@
     </div>
     <div><label>Comprensibilità:</label>
       <div class="star-rating">
-        <input type="radio" id="cq5cl5" name="CQ4_Comprensibilita" value="5"><label for="cq5cl5">★</label>
-        <input type="radio" id="cq5cl4" name="CQ4_Comprensibilita" value="4"><label for="cq5cl4">★</label>
-        <input type="radio" id="cq5cl3" name="CQ4_Comprensibilita" value="3"><label for="cq5cl3">★</label>
-        <input type="radio" id="cq5cl2" name="CQ4_Comprensibilita" value="2"><label for="cq5cl2">★</label>
-        <input type="radio" id="cq5cl1" name="CQ4_Comprensibilita" value="1"><label for="cq5cl1">★</label>
+        <input type="radio" id="cq5cl5" name="CQ5_Comprensibilita" value="5" required><label for="cq5cl5">★</label>
+        <input type="radio" id="cq5cl4" name="CQ5_Comprensibilita" value="4"><label for="cq5cl4">★</label>
+        <input type="radio" id="cq5cl3" name="CQ5_Comprensibilita" value="3"><label for="cq5cl3">★</label>
+        <input type="radio" id="cq5cl2" name="CQ5_Comprensibilita" value="2"><label for="cq5cl2">★</label>
+        <input type="radio" id="cq5cl1" name="CQ5_Comprensibilita" value="1"><label for="cq5cl1">★</label>
       </div>
     </div>
   </div>
@@ -463,16 +350,23 @@
 <!-- CQ6 -->
 <section>
   <h2>CQ6. Frequenza di due proprietà contemporanee nei capi</h2>
+ <p>
+    Questo esempio di domanda analizza quanto spesso due caratteristiche specifiche compaiono contemporaneamente in uno stesso tipo di capo.
+    In particolare, si considerano i grembiuli arricciati che presentano un elemento di trasparenza.
+  </p>
   <div class="scrollable">
     <table>
-      <tr><th>Proprietà</th><th>Valore</th></tr>
+      <tr><th>Capi con caratteristiche specifiche</th><th>Valore</th></tr>
       <tr><td>Grembiule leggero, con arricciature</td><td>6 casi (3,4%)</td></tr>
     </table>
   </div>
+<p>
+    <strong>Risultati principali:</strong> Sei grembiuli arricciati presentano contemporaneamente la caratteristica di trasparenza, evidenziando che l’uso della trasparenza è presente ma non diffuso all’interno di questo tipo di capo.
+  </p>
 <div class="cq-ratings">
     <div><label>Rilevanza:</label>
       <div class="star-rating">
-        <input type="radio" id="cq6r5" name="CQ6_Rilevanza" value="5"><label for="cq6r5">★</label>
+        <input type="radio" id="cq6r5" name="CQ6_Rilevanza" value="5" required><label for="cq6r5">★</label>
         <input type="radio" id="cq6r4" name="CQ6_Rilevanza" value="4"><label for="cq6r4">★</label>
         <input type="radio" id="cq6r3" name="CQ6_Rilevanza" value="3"><label for="cq6r3">★</label>
         <input type="radio" id="cq6r2" name="CQ6_Rilevanza" value="2"><label for="cq6r2">★</label>
@@ -481,7 +375,7 @@
     </div>
     <div><label>Completezza:</label>
       <div class="star-rating">
-        <input type="radio" id="cq6c5" name="CQ6_Completezza" value="5"><label for="cq6c5">★</label>
+        <input type="radio" id="cq6c5" name="CQ6_Completezza" value="5" required><label for="cq6c5">★</label>
         <input type="radio" id="cq6c4" name="CQ6_Completezza" value="4"><label for="cq6c4">★</label>
         <input type="radio" id="cq6c3" name="CQ6_Completezza" value="3"><label for="cq6c3">★</label>
         <input type="radio" id="cq6c2" name="CQ6_Completezza" value="2"><label for="cq6c2">★</label>
@@ -490,7 +384,7 @@
     </div>
     <div><label>Comprensibilità:</label>
       <div class="star-rating">
-        <input type="radio" id="cq6cl5" name="CQ6_Comprensibilita" value="5"><label for="cq6cl5">★</label>
+        <input type="radio" id="cq6cl5" name="CQ6_Comprensibilita" value="5" required><label for="cq6cl5">★</label>
         <input type="radio" id="cq6cl4" name="CQ6_Comprensibilita" value="4"><label for="cq6cl4">★</label>
         <input type="radio" id="cq6cl3" name="CQ6_Comprensibilita" value="3"><label for="cq6cl3">★</label>
         <input type="radio" id="cq6cl2" name="CQ6_Comprensibilita" value="2"><label for="cq6cl2">★</label>
@@ -501,28 +395,62 @@
   <textarea name="CQ6_Note" class="note" placeholder="Note o commenti aggiuntivi (opzionale)"></textarea>
 </section>
 
-  <!-- ... -->
-  <button type="submit">Invia tutto</button>
+  <button type="submit">Invia feedback</button>
 </form>
+</section>
 
 <script>
+function showPage(pageId){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(pageId).classList.add('active');
+}
+
+function showPage(pageId){
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(pageId).classList.add('active');
+}
+
 document.getElementById('evaluationForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   const form = e.target;
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+
+  // Controllo manuale radio required
+  const requiredRadioGroups = ['CQ1_Rilevanza','CQ1_Completezza','CQ1_Comprensibilita',
+                               'CQ2_Rilevanza','CQ2_Completezza','CQ2_Comprensibilita',
+                               'CQ3_Rilevanza','CQ3_Completezza','CQ3_Comprensibilita',
+                               'CQ4_Rilevanza','CQ4_Completezza','CQ4_Comprensibilita',
+                               'CQ5_Rilevanza','CQ5_Completezza','CQ5_Comprensibilita',
+                               'CQ6_Rilevanza','CQ6_Completezza','CQ6_Comprensibilita'];
+  for (const group of requiredRadioGroups) {
+    if (!form.querySelector(`input[name="${group}"]:checked`)) {
+      alert('Seleziona tutte le stelle richieste prima di inviare.');
+      return;
+    }
+  }
+
   const data = new FormData(form);
-  const response = await fetch(form.action, {
-    method: 'POST',
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  });
-  if (response.ok) {
-    alert('Grazie! Tutte le valutazioni sono state inviate.');
-    form.reset();
-  } else {
-    alert('Errore nell\'invio. Riprova.');
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      alert('Grazie! I tuoi feedback sono stati inviati.');
+      form.reset();
+    } else {
+      alert('Errore invio dati. Controlla la connessione o l\'endpoint.');
+    }
+  } catch(err) {
+    alert('Errore di rete: ' + err.message);
   }
 });
 </script>
-
 </body>
 </html>
