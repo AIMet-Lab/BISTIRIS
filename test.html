@@ -18,7 +18,12 @@
   tr:nth-child(even) { background-color: #f7f7f7; }
   .scrollable { overflow-x: auto; }
   .star-rating { direction: rtl; display: inline-flex; font-size: 1.8em; }
-  .star-rating input[type="radio"] { display: none; }
+.star-rating input[type="radio"] {
+  opacity: 0;       /* invisibile ma presente nel DOM */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+}
   .star-rating label { color: #ccc; cursor: pointer; transition: color 0.2s; }
   .star-rating label:hover, .star-rating label:hover ~ label, .star-rating input[type="radio"]:checked ~ label { color: gold; }
   .cq-ratings { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
@@ -418,7 +423,40 @@ document.getElementById('evaluationForm').addEventListener('submit', async (e) =
     form.reportValidity();
     return;
   }
+document.getElementById('evaluationForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // blocca invio normale
+  const form = e.target;
+  let valid = true;
 
+  // Controlla tutti i gruppi di radio
+  form.querySelectorAll('.star-rating').forEach(group => {
+    const name = group.querySelector('input[type="radio"]').name;
+    const checked = form.querySelector(`input[name="${name}"]:checked`);
+    if (!checked) valid = false;
+  });
+
+  if (!form.checkValidity() || !valid) {
+    alert('Compila tutti i campi richiesti prima di inviare.');
+    return;
+  }
+
+  // Invio via Formspree
+  const data = new FormData(form);
+  fetch(form.action, {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      alert('Grazie! Feedback inviato.');
+      form.reset();
+    } else {
+      alert('Errore nell\'invio, riprova.');
+    }
+  }).catch(err => {
+    alert('Errore di rete: ' + err.message);
+  });
+});
   // Controllo manuale radio required
   const requiredRadioGroups = ['CQ1_Rilevanza','CQ1_Completezza','CQ1_Comprensibilita',
                                'CQ2_Rilevanza','CQ2_Completezza','CQ2_Comprensibilita',
