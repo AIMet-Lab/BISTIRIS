@@ -440,6 +440,7 @@ document.getElementById('evaluationForm').addEventListener('submit', async (e) =
     if (response.ok) {
       alert('Grazie per la partecipazione e per il prezioso contributo!');
       form.reset();
+      window.location.href = "https://aimet-lab.github.io/BISTIRIS/home/index.html#abstract";
     } else {
       alert('Errore nell’invio: server non disponibile o dati incompleti.');
     }
