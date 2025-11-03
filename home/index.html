@@ -304,14 +304,6 @@ Integrity constraints and recommended controlled vocabularies enhance data quali
       <div class="card pad">
         <h3>Geographical Patterns in Headwear Types</h3>
         <pre class="code" style="white-space: pre-wrap; word-wrap: break-word;">
-//SELECT ?category ?type (COUNT(?garment) AS ?count)
-//WHERE {
-//  ?garment a bst:M-Headwear ; a ?type ;
-//           schema:fromLocation ?place .
-//  ?place dbo:elevation ?elev .
-//  BIND(IF(?elev > 600, "Elevation > 600 m", "≤ 600 m") AS ?category)
-//}
-//GROUP BY ?category ?type
 
 PREFIX bst: <https://aimet-lab.github.io/BISTIRIS#>
 PREFIX dbo: <http://dbpedia.org/ontology/>
