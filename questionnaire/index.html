@@ -437,25 +437,9 @@ document.getElementById('evaluationForm').addEventListener('submit', async (e) =
       body: data,
       headers: { 'Accept': 'application/json' }
     });
-    // if (response.ok) {
-      // alert('Grazie per la partecipazione e per il prezioso contributo!');
-      // form.reset();
     if (response.ok) {
-      const msg = document.createElement('div');
-      msg.textContent = "Grazie per la partecipazione e per il prezioso contributo!";
-      msg.style.padding = "15px";
-      msg.style.background = "#d4edda";
-      msg.style.color = "#155724";
-      msg.style.border = "1px solid #c3e6cb";
-      msg.style.borderRadius = "5px";
-      msg.style.marginTop = "20px";
-      document.body.prepend(msg);
-  
-      setTimeout(() => {
-          window.location.href = "https://aimet-lab.github.io/BISTIRIS/home/index.html#abstract";
-      }, 1500); // 1,5 secondi di pausa prima del redirect
-    }
-      
+      alert('Grazie per la partecipazione e per il prezioso contributo!');
+      form.reset()      
     } else {
       alert('Errore nell’invio: server non disponibile o dati incompleti.');
     }
