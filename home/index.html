@@ -134,6 +134,19 @@ header {
   background: none;
   box-shadow: none;                /* senza ombra */
 }
+
+#queries .code{
+  font-size: .80rem;
+}
+#queries .card:nth-child(1) .code,
+#queries .card:nth-child(2) .code{
+  height: 340px;
+}
+
+#queries .card:nth-child(3) .code,
+#queries .card:nth-child(4) .code{
+  height: 380px;
+	
   </style>
 </head>
 <body>
@@ -309,13 +322,17 @@ Integrity constraints and recommended controlled vocabularies enhance data quali
       <div class="card pad">
         <h3>Geographical Patterns in Headwear Types</h3>
         <pre class="code" style="white-space: pre-wrap; word-wrap: break-word;">
-
+PREFIX bst: &lt;https://aimet-lab.github.io/BISTIRIS#&gt;
+PREFIX dbo: &lt;http://dbpedia.org/ontology/&gt;
+PREFIX schema: &lt;https://schema.org/&gt;
 SELECT ?category ?type (COUNT(?garment) AS ?count)
 WHERE {
   ?garment a bst:M-Headwear ; a ?type ;
            schema:fromLocation ?place .
-  ?place dbo:elevation ?elev .
-  BIND(IF(?elev > 600, "Elevation > 600 m", "≤ 600 m") AS ?category)
+  ?place a dbo:Place ;
+    dbo:elevation ?elev .
+  BIND(IF(?elev > 600, "Elevation > 600 m", 
+  	"Elevation ≤ 600 m") AS ?category)
 }
 GROUP BY ?category ?type
         </pre>
@@ -324,35 +341,59 @@ GROUP BY ?category ?type
       <div class="card pad">
         <h3>Colours by Period</h3>
         <pre class="code" style="white-space: pre-wrap; word-wrap: break-word;">
-SELECT ?period ?colourCat (COUNT(?colourCat) AS ?count)
+PREFIX a-lite: &lt;https://w3id.org/arco/ontology/arco-lite/&gt;
+PREFIX bst: &lt;https://aimet-lab.github.io/BISTIRIS#&gt;
+PREFIX schema: &lt;https://schema.org/&gt;
+SELECT ?colour (COUNT(*) AS ?colourCount)
 WHERE {
-  ?g a bst:Garment ; a-lite:hasColour ?c ; schema:dateCreated ?d .
-  ?c a ?colourCat ; rdfs:subClassOf dbo:Colour .
-  BIND(IF(STRSTARTS(STR(?d),"18"),"19th c.","20th c.") AS ?period)
+  ?g a bst:Garment ;
+     a-lite:hasColour ?colour ;
+     schema:dateCreated ?datation .
+  FILTER(
+    STRSTARTS(STR(?datation),"18") || 
+    STRSTARTS(STR(?datation),"../18"))
 }
+GROUP BY ?colour
+ORDER BY DESC(?colourCount)
         </pre>
       </div>
 
       <div class="card pad">
         <h3>Covering Garments by Location</h3>
         <pre class="code" style="white-space: pre-wrap; word-wrap: break-word;">
+PREFIX bst: &lt;https://aimet-lab.github.io/BISTIRIS#&gt;
+PREFIX dbo: &lt;http://dbpedia.org/ontology/&gt;
+PREFIX schema: &lt;https://schema.org/&gt;
 SELECT ?garment ?place
 WHERE {
   ?garment a bst:F-Bodice ;
            bst:covers ?otherGarment .
   ?otherGarment a bst:F-Jacket ;
-                schema:fromLocation ?place .
+           schema:fromLocation ?place .
+  ?place a dbo:Place .
 }
         </pre>
       </div>
       <div class="card pad">
         <h3>Layered Garments</h3>
         <pre class="code" style="white-space: pre-wrap; word-wrap: break-word;">
-SELECT ?garment ?type ?place
+PREFIX bst: &lt;https://aimet-lab.github.io/BISTIRIS#&gt;
+PREFIX dbo: &lt;http://dbpedia.org/ontology/&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX schema: &lt;https://schema.org/&gt;
+SELECT ?type ?place (COUNT(?garment) AS ?n)
 WHERE {
   ?garment bst:coversWithTransparency ?other ;
-           a ?type ; schema:fromLocation ?place .
+           a ?type ;
+           schema:fromLocation ?place .
+  ?place a dbo:Place .
+  FILTER(?type != owl:NamedIndividual)
+  FILTER NOT EXISTS {
+    ?garment a ?class . ?class rdfs:subClassOf ?type .
+  }
 }
+GROUP BY ?type ?place ORDER BY DESC(?n)
         </pre>
       </div>
 
