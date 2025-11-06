@@ -1,0 +1,2945 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://aimet-lab.github.io/BISTIRIS#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://aimet-lab.github.io/BISTIRIS#"
+     versionIRI="https://aimet-lab.github.io/BISTIRIS/bistiris.rdf">
+    <Prefix name="" IRI="https://aimet-lab.github.io/BISTIRIS#"/>
+    <Prefix name="po" IRI="http://www.essepuntato.it/2008/12/pattern#"/>
+    <Prefix name="aat" IRI="http://vocab.getty.edu/"/>
+    <Prefix name="bst" IRI="https://aimet-lab.github.io/BISTIRIS#"/>
+    <Prefix name="crm" IRI="http://www.cidoc-crm.org/cidoc-crm/"/>
+    <Prefix name="dbo" IRI="http://dbpedia.org/ontology/"/>
+    <Prefix name="dbp" IRI="http://dbpedia.org/property/"/>
+    <Prefix name="dbr" IRI="http://dbpedia.org/resource/"/>
+    <Prefix name="geo" IRI="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="a-dd" IRI="https://w3id.org/arco/ontology/denotative-description/"/>
+    <Prefix name="bibo" IRI="http://purl.org/ontology/bibo/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="swrla" IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
+    <Prefix name="a-lite" IRI="https://w3id.org/arco/ontology/arco-lite/"/>
+    <Prefix name="arkivo" IRI="http://purl.org/arkivo/ontology#"/>
+    <Prefix name="schema" IRI="https://schema.org/"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
+        <Literal>G. Corona, D. Guidotti, L. Pandolfo, L. Pulina</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:description"/>
+        <Literal xml:lang="en">BISTIRIS is an ontology for analytically describing Sardinian traditional costumes.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2025.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">BISTIRIS ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">3.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dbo:Place"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="arkivo:GlamThing"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="bibo:Book"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="bibo:Periodical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/spar/doco/Figure"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="crm:E22_Human-Made_Object"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="crm:E26_Physical_Feature"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="crm:E73_Information_Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://yago-knowledge.org/resource/Comune"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://yago-knowledge.org/resource/Provinces_of_Italy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Apron"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Bell-shaped_trousers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Belt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Berritta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Black_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Blue_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Bolero"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Brimmed_hat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Brown_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Corset_belt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Costume"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Curly_apron"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DVV"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Bodice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Cap"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Costume"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Garment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Giubbetto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Headwear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Jacket"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Kerchief"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Overgarment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Rigid_bodice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Shirt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Skirt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="F-Soft_bodice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Fan-shaped_apron"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Fez"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Fur_overcoat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Gaiters"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Garment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Gheroni_skirt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Giacchetta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Giacchino"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Gray_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Green_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Head_mantle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Head_shawl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Headscarf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Hose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IALZ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ICC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ICST"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IEC1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IRCR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Leather_overcoat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Long_coat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Long_skirt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Loose_trousers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Bodice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Cap"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Costume"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Garment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Giubbetto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Headwear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Jacket"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Kerchief"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Overgarment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Rigid_bodice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Shirt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Skirt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="M-Soft-bodice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Manticello"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Mantle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Metallic_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Neckerchief"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Orange_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Panel_apron"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Paperbag_skirt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Pink_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PrivateImage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Purple_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Red_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Shawl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Short_coat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Shoulder_scarf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Shoulder_veil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Skirt_hat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Skirt_trousers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Tongue_shaped_apron"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Triangle_shaped_apron"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Trousers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Tube_trousers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Veil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="White_category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Yellow_category"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:Place"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="schema:SocialMediaPosting"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="a-dd:TechnicalCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dbo:neighboringMunicipality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="crm:P46i_forms_part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="crm:P62i_is_depicted_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="crm:P89_falls_within"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="po:isContainedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="skos:exactMatch"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="colourThroughTransparency"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="coveredBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="coveredByTransparency"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="coveredColour"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="covers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="coversWithTransparency"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="sewn_togheter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="schema:fromLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="a-lite:hasColour"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dbo:elevation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dbp:name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dcterms:title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="geo:lat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="geo:long"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="BW"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="bow"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="checkered_panel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="curly"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="drawing"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="embroideries"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="flaps"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="floral_embroideries"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="fringes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="intended_use"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="lace"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="màsculas"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="open_slevees"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="ornamental_buttons"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="panel_buttons"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="pleating"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="points"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="skirt_panel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="sleeve_buttonholes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="sleeve_buttons"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="sleeve_ribbon"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="striped_panel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="tassels"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="technical_details"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="wrapping"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:author"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:dateCreated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:datePublished"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:publisher"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:issued"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="dbo:Colour"/>
+        <Class abbreviatedIRI="a-dd:TechnicalCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dbo:Place"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="arkivo:GlamThing"/>
+        <Class abbreviatedIRI="crm:E73_Information_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="bibo:Book"/>
+        <Class abbreviatedIRI="crm:E73_Information_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="bibo:Periodical"/>
+        <Class abbreviatedIRI="crm:E73_Information_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.org/spar/doco/Figure"/>
+        <Class abbreviatedIRI="crm:E73_Information_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://yago-knowledge.org/resource/Comune"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://yago-knowledge.org/resource/Provinces_of_Italy"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Apron"/>
+        <Class IRI="F-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Bell-shaped_trousers"/>
+        <Class IRI="M-Skirt"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Bell-shaped_trousers"/>
+        <Class IRI="Trousers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Belt"/>
+        <Class IRI="M-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Berritta"/>
+        <Class IRI="M-Headwear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Black_category"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Blue_category"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Bolero"/>
+        <Class IRI="F-Jacket"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Brimmed_hat"/>
+        <Class IRI="M-Headwear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Brown_category"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Corset_belt"/>
+        <Class IRI="F-Bodice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Costume"/>
+        <Class abbreviatedIRI="crm:E22_Human-Made_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Costume"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="crm:P62i_is_depicted_by"/>
+            <Class abbreviatedIRI="crm:E73_Information_Object"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Costume"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="schema:dateCreated"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Curly_apron"/>
+        <Class IRI="Apron"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Curly_apron"/>
+        <DataHasValue>
+            <DataProperty IRI="curly"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DVV"/>
+        <Class abbreviatedIRI="arkivo:GlamThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DVV"/>
+        <DataHasValue>
+            <DataProperty abbreviatedIRI="schema:publisher"/>
+            <Literal>Istituto Superiore Regionale Etnografico</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Bodice"/>
+        <Class IRI="F-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Cap"/>
+        <Class IRI="F-Headwear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Costume"/>
+        <Class IRI="Costume"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Costume"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Costume"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="F-Garment"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Costume"/>
+        <ObjectIntersectionOf>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="F-Headwear"/>
+            </ObjectMinCardinality>
+            <ObjectMaxCardinality cardinality="3">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="F-Headwear"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Costume"/>
+        <ObjectIntersectionOf>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="F-Skirt"/>
+            </ObjectMinCardinality>
+            <ObjectMaxCardinality cardinality="2">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="F-Skirt"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Costume"/>
+        <ObjectIntersectionOf>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="F-Bodice"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="F-Jacket"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="F-Shirt"/>
+            </ObjectExactCardinality>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="Apron"/>
+            </ObjectMaxCardinality>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="F-Overgarment"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Garment"/>
+        <Class IRI="Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Garment"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Garment"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46i_forms_part_of"/>
+                <Class IRI="F-Costume"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Giubbetto"/>
+        <Class IRI="F-Jacket"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Headwear"/>
+        <Class IRI="F-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Jacket"/>
+        <Class IRI="F-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Kerchief"/>
+        <Class IRI="F-Headwear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Overgarment"/>
+        <Class IRI="F-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Rigid_bodice"/>
+        <Class IRI="F-Bodice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Shirt"/>
+        <Class IRI="F-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Skirt"/>
+        <Class IRI="F-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="F-Soft_bodice"/>
+        <Class IRI="F-Bodice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Fan-shaped_apron"/>
+        <Class IRI="Apron"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Fez"/>
+        <Class IRI="M-Headwear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Fur_overcoat"/>
+        <Class IRI="M-Overgarment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Gaiters"/>
+        <Class IRI="M-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Garment"/>
+        <Class abbreviatedIRI="crm:E22_Human-Made_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Gheroni_skirt"/>
+        <Class IRI="F-Skirt"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Gheroni_skirt"/>
+        <DataHasValue>
+            <DataProperty IRI="màsculas"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Giacchetta"/>
+        <Class IRI="M-Jacket"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Giacchino"/>
+        <Class IRI="F-Jacket"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Gray_category"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Green_category"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Head_mantle"/>
+        <Class IRI="F-Headwear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Head_shawl"/>
+        <Class IRI="F-Headwear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Head_shawl"/>
+        <DataHasValue>
+            <DataProperty IRI="fringes"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Headscarf"/>
+        <Class IRI="F-Headwear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Hose"/>
+        <Class IRI="Trousers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IALZ"/>
+        <Class IRI="http://purl.org/spar/doco/Figure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ICC"/>
+        <Class abbreviatedIRI="arkivo:GlamThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ICC"/>
+        <DataHasValue>
+            <DataProperty abbreviatedIRI="schema:publisher"/>
+            <Literal>Istituto Centrale per il Catalogo e la Documentazione</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ICST"/>
+        <Class IRI="http://purl.org/spar/doco/Figure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IEC1"/>
+        <Class IRI="http://purl.org/spar/doco/Figure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IRCR"/>
+        <Class IRI="http://purl.org/spar/doco/Figure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Leather_overcoat"/>
+        <Class IRI="M-Overgarment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Long_coat"/>
+        <Class IRI="M-Overgarment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Long_skirt"/>
+        <Class IRI="F-Skirt"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Loose_trousers"/>
+        <Class IRI="Trousers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Loose_trousers"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="coveredBy"/>
+            <Class IRI="Gaiters"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Loose_trousers"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="coveredBy"/>
+            <Class IRI="M-Skirt"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Bodice"/>
+        <Class IRI="M-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Cap"/>
+        <Class IRI="M-Headwear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Costume"/>
+        <Class IRI="Costume"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Costume"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Costume"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="M-Garment"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Costume"/>
+        <ObjectIntersectionOf>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="M-Headwear"/>
+            </ObjectMinCardinality>
+            <ObjectMaxCardinality cardinality="2">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="M-Headwear"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Costume"/>
+        <ObjectIntersectionOf>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="M-Jacket"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="M-Shirt"/>
+            </ObjectExactCardinality>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="Belt"/>
+            </ObjectMaxCardinality>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="Gaiters"/>
+            </ObjectMaxCardinality>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="M-Soft-bodice"/>
+            </ObjectMaxCardinality>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="Neckerchief"/>
+            </ObjectMaxCardinality>
+            <ObjectMaxCardinality cardinality="2">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="M-Overgarment"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Costume"/>
+        <ObjectUnionOf>
+            <ObjectIntersectionOf>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                    <Class IRI="Loose_trousers"/>
+                </ObjectExactCardinality>
+                <ObjectMaxCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                    <Class IRI="M-Skirt"/>
+                </ObjectMaxCardinality>
+            </ObjectIntersectionOf>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Class IRI="Tube_trousers"/>
+            </ObjectExactCardinality>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Garment"/>
+        <Class IRI="Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Garment"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Garment"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty abbreviatedIRI="crm:P46i_forms_part_of"/>
+                <Class IRI="M-Costume"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Giubbetto"/>
+        <Class IRI="M-Jacket"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Headwear"/>
+        <Class IRI="M-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Jacket"/>
+        <Class IRI="M-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Kerchief"/>
+        <Class IRI="M-Headwear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Overgarment"/>
+        <Class IRI="M-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Rigid_bodice"/>
+        <Class IRI="M-Bodice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Shirt"/>
+        <Class IRI="M-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Skirt"/>
+        <Class IRI="M-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Skirt"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="covers"/>
+            <Class IRI="Loose_trousers"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="M-Soft-bodice"/>
+        <Class IRI="M-Bodice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Manticello"/>
+        <Class IRI="F-Headwear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Mantle"/>
+        <Class IRI="M-Overgarment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Metallic_category"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Neckerchief"/>
+        <Class IRI="M-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Orange_category"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Panel_apron"/>
+        <Class IRI="Apron"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Paperbag_skirt"/>
+        <Class IRI="F-Skirt"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Pink_category"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PrivateImage"/>
+        <Class abbreviatedIRI="crm:E73_Information_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Purple_category"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Red_category"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Shawl"/>
+        <Class IRI="F-Overgarment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Shawl"/>
+        <DataHasValue>
+            <DataProperty IRI="fringes"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Short_coat"/>
+        <Class IRI="M-Overgarment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Shoulder_scarf"/>
+        <Class IRI="F-Overgarment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Shoulder_veil"/>
+        <Class IRI="F-Overgarment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Shoulder_veil"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="coversWithTransparency"/>
+                <Class IRI="F-Garment"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="coversWithTransparency"/>
+                <Class IRI="F-Garment"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Skirt_hat"/>
+        <Class IRI="F-Headwear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Skirt_trousers"/>
+        <Class IRI="M-Skirt"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Skirt_trousers"/>
+        <Class IRI="Trousers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Skirt_trousers"/>
+        <DataHasValue>
+            <DataProperty IRI="curly"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Tongue_shaped_apron"/>
+        <Class IRI="Panel_apron"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Triangle_shaped_apron"/>
+        <Class IRI="Panel_apron"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Trousers"/>
+        <Class IRI="M-Garment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Tube_trousers"/>
+        <Class IRI="Trousers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Veil"/>
+        <Class IRI="F-Headwear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Veil"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="coversWithTransparency"/>
+                <Class IRI="F-Garment"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="coversWithTransparency"/>
+                <Class IRI="F-Garment"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="White_category"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Yellow_category"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="schema:SocialMediaPosting"/>
+        <Class abbreviatedIRI="crm:E73_Information_Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="a-dd:TechnicalCharacteristic"/>
+        <Class abbreviatedIRI="crm:E26_Physical_Feature"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="Apron"/>
+        <Class IRI="F-Bodice"/>
+        <Class IRI="F-Headwear"/>
+        <Class IRI="F-Jacket"/>
+        <Class IRI="F-Overgarment"/>
+        <Class IRI="F-Shirt"/>
+        <Class IRI="F-Skirt"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Bell-shaped_trousers"/>
+        <Class IRI="Hose"/>
+        <Class IRI="Loose_trousers"/>
+        <Class IRI="Skirt_trousers"/>
+        <Class IRI="Tube_trousers"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Berritta"/>
+        <Class IRI="Brimmed_hat"/>
+        <Class IRI="Fez"/>
+        <Class IRI="M-Cap"/>
+        <Class IRI="M-Kerchief"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Bolero"/>
+        <Class IRI="F-Giubbetto"/>
+        <Class IRI="Giacchino"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Corset_belt"/>
+        <Class IRI="F-Rigid_bodice"/>
+        <Class IRI="F-Soft_bodice"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Curly_apron"/>
+        <Class IRI="Fan-shaped_apron"/>
+        <Class IRI="Panel_apron"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="F-Cap"/>
+        <Class IRI="F-Kerchief"/>
+        <Class IRI="Head_mantle"/>
+        <Class IRI="Head_shawl"/>
+        <Class IRI="Headscarf"/>
+        <Class IRI="Manticello"/>
+        <Class IRI="Veil"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="F-Costume"/>
+        <Class IRI="M-Costume"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Fur_overcoat"/>
+        <Class IRI="Leather_overcoat"/>
+        <Class IRI="Long_coat"/>
+        <Class IRI="Mantle"/>
+        <Class IRI="Short_coat"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Gheroni_skirt"/>
+        <Class IRI="Long_skirt"/>
+        <Class IRI="Paperbag_skirt"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Giacchetta"/>
+        <Class IRI="M-Giubbetto"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="M-Rigid_bodice"/>
+        <Class IRI="M-Soft-bodice"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Shawl"/>
+        <Class IRI="Shoulder_scarf"/>
+        <Class IRI="Shoulder_veil"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Tongue_shaped_apron"/>
+        <Class IRI="Triangle_shaped_apron"/>
+    </DisjointClasses>
+    <DisjointUnion>
+        <Class IRI="Apron"/>
+        <Class IRI="Curly_apron"/>
+        <Class IRI="Fan-shaped_apron"/>
+        <Class IRI="Panel_apron"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="Costume"/>
+        <Class IRI="F-Costume"/>
+        <Class IRI="M-Costume"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="F-Bodice"/>
+        <Class IRI="Corset_belt"/>
+        <Class IRI="F-Rigid_bodice"/>
+        <Class IRI="F-Soft_bodice"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="F-Garment"/>
+        <Class IRI="Apron"/>
+        <Class IRI="F-Bodice"/>
+        <Class IRI="F-Headwear"/>
+        <Class IRI="F-Jacket"/>
+        <Class IRI="F-Overgarment"/>
+        <Class IRI="F-Shirt"/>
+        <Class IRI="F-Skirt"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="F-Headwear"/>
+        <Class IRI="F-Cap"/>
+        <Class IRI="F-Kerchief"/>
+        <Class IRI="Head_mantle"/>
+        <Class IRI="Head_shawl"/>
+        <Class IRI="Headscarf"/>
+        <Class IRI="Manticello"/>
+        <Class IRI="Veil"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="F-Jacket"/>
+        <Class IRI="Bolero"/>
+        <Class IRI="F-Giubbetto"/>
+        <Class IRI="Giacchino"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="F-Overgarment"/>
+        <Class IRI="Shawl"/>
+        <Class IRI="Shoulder_scarf"/>
+        <Class IRI="Shoulder_veil"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="F-Skirt"/>
+        <Class IRI="Gheroni_skirt"/>
+        <Class IRI="Long_skirt"/>
+        <Class IRI="Paperbag_skirt"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="Garment"/>
+        <Class IRI="F-Garment"/>
+        <Class IRI="M-Garment"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="M-Garment"/>
+        <Class IRI="Belt"/>
+        <Class IRI="Gaiters"/>
+        <Class IRI="M-Bodice"/>
+        <Class IRI="M-Headwear"/>
+        <Class IRI="M-Jacket"/>
+        <Class IRI="M-Overgarment"/>
+        <Class IRI="M-Shirt"/>
+        <Class IRI="Neckerchief"/>
+        <Class IRI="Trousers"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="M-Headwear"/>
+        <Class IRI="Berritta"/>
+        <Class IRI="Brimmed_hat"/>
+        <Class IRI="Fez"/>
+        <Class IRI="M-Cap"/>
+        <Class IRI="M-Kerchief"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="M-Jacket"/>
+        <Class IRI="Giacchetta"/>
+        <Class IRI="M-Giubbetto"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="M-Overgarment"/>
+        <Class IRI="Fur_overcoat"/>
+        <Class IRI="Leather_overcoat"/>
+        <Class IRI="Long_coat"/>
+        <Class IRI="Mantle"/>
+        <Class IRI="Short_coat"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="M-Skirt"/>
+        <Class IRI="Bell-shaped_trousers"/>
+        <Class IRI="Skirt_trousers"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="Trousers"/>
+        <Class IRI="Bell-shaped_trousers"/>
+        <Class IRI="Hose"/>
+        <Class IRI="Loose_trousers"/>
+        <Class IRI="Skirt_trousers"/>
+        <Class IRI="Tube_trousers"/>
+    </DisjointUnion>
+    <ClassAssertion>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+        <AnonymousIndividual nodeID="_:genid2147483956"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="crm:P62i_is_depicted_by"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="colourThroughTransparency"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="coveredBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="coveredByTransparency"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="coveredColour"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="covers"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="coversWithTransparency"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="sewn_togheter"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="dbo:neighboringMunicipality"/>
+        <ObjectProperty abbreviatedIRI="dbo:neighboringMunicipality"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+        <ObjectProperty abbreviatedIRI="crm:P46i_forms_part_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="skos:exactMatch"/>
+        <ObjectProperty abbreviatedIRI="skos:exactMatch"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="coveredBy"/>
+        <ObjectProperty IRI="covers"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="coveredByTransparency"/>
+        <ObjectProperty IRI="coversWithTransparency"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="sewn_togheter"/>
+        <ObjectProperty IRI="sewn_togheter"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="crm:P46i_forms_part_of"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="crm:P62i_is_depicted_by"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="schema:fromLocation"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+    </InverseFunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI="dbo:neighboringMunicipality"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI="skos:exactMatch"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="sewn_togheter"/>
+    </SymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="skos:exactMatch"/>
+    </TransitiveObjectProperty>
+    <ReflexiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </ReflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="dbo:neighboringMunicipality"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+        <Class IRI="Costume"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="crm:P46i_forms_part_of"/>
+        <Class IRI="Garment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="crm:P62i_is_depicted_by"/>
+        <ObjectUnionOf>
+            <Class IRI="Costume"/>
+            <Class IRI="Garment"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="crm:P89_falls_within"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="po:isContainedBy"/>
+        <Class IRI="http://purl.org/spar/doco/Figure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="skos:exactMatch"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="colourThroughTransparency"/>
+        <ObjectUnionOf>
+            <Class IRI="F-Costume"/>
+            <Class IRI="F-Garment"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="coveredBy"/>
+        <Class IRI="Garment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="coveredByTransparency"/>
+        <Class IRI="F-Garment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="coveredColour"/>
+        <Class IRI="Costume"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="covers"/>
+        <Class IRI="Garment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="coversWithTransparency"/>
+        <ObjectUnionOf>
+            <Class IRI="Curly_apron"/>
+            <Class IRI="Shoulder_veil"/>
+            <Class IRI="Veil"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="sewn_togheter"/>
+        <Class IRI="Garment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="schema:fromLocation"/>
+        <ObjectUnionOf>
+            <Class IRI="Costume"/>
+            <Class IRI="Garment"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="a-lite:hasColour"/>
+        <ObjectUnionOf>
+            <Class IRI="Costume"/>
+            <Class IRI="Garment"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="dbo:neighboringMunicipality"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+        <Class IRI="Garment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="crm:P46i_forms_part_of"/>
+        <Class IRI="Costume"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="crm:P62i_is_depicted_by"/>
+        <Class abbreviatedIRI="crm:E73_Information_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="crm:P89_falls_within"/>
+        <Class IRI="http://yago-knowledge.org/resource/Provinces_of_Italy"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="po:isContainedBy"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="bibo:Book"/>
+            <Class abbreviatedIRI="bibo:Periodical"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="skos:exactMatch"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="colourThroughTransparency"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="coveredBy"/>
+        <Class IRI="Garment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="coveredByTransparency"/>
+        <ObjectUnionOf>
+            <Class IRI="Curly_apron"/>
+            <Class IRI="Shoulder_veil"/>
+            <Class IRI="Veil"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="coveredColour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="covers"/>
+        <Class IRI="Garment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="coversWithTransparency"/>
+        <Class IRI="F-Garment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="sewn_togheter"/>
+        <Class IRI="Garment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="schema:fromLocation"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="a-lite:hasColour"/>
+        <Class abbreviatedIRI="dbo:Colour"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="bow"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="checkered_panel"/>
+        <DataProperty IRI="skirt_panel"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="curly"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="embroideries"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="flaps"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="floral_embroideries"/>
+        <DataProperty IRI="embroideries"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="fringes"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="lace"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="màsculas"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="open_slevees"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="ornamental_buttons"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="panel_buttons"/>
+        <DataProperty IRI="skirt_panel"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="pleating"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="points"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="skirt_panel"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="sleeve_buttonholes"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="sleeve_buttons"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="sleeve_ribbon"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="striped_panel"/>
+        <DataProperty IRI="skirt_panel"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="tassels"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="wrapping"/>
+        <DataProperty IRI="technical_details"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="schema:dateCreated"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="dbo:elevation"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="dbp:name"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="dcterms:title"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="bibo:Book"/>
+            <Class abbreviatedIRI="bibo:Periodical"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="geo:lat"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="geo:long"/>
+        <Class abbreviatedIRI="schema:Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="BW"/>
+        <Class abbreviatedIRI="crm:E73_Information_Object"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="bow"/>
+        <Class IRI="F-Garment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="checkered_panel"/>
+        <Class IRI="Long_skirt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="curly"/>
+        <ObjectUnionOf>
+            <Class IRI="Curly_apron"/>
+            <Class IRI="Giacchino"/>
+            <Class IRI="Long_skirt"/>
+            <Class IRI="Skirt_trousers"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="drawing"/>
+        <Class abbreviatedIRI="crm:E73_Information_Object"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="embroideries"/>
+        <Class IRI="Garment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="flaps"/>
+        <Class IRI="F-Jacket"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="floral_embroideries"/>
+        <Class IRI="F-Garment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="fringes"/>
+        <ObjectUnionOf>
+            <Class IRI="Head_shawl"/>
+            <Class IRI="Shawl"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="intended_use"/>
+        <Class IRI="Costume"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="lace"/>
+        <ObjectUnionOf>
+            <Class IRI="Curly_apron"/>
+            <Class IRI="Giacchino"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="màsculas"/>
+        <Class IRI="Gheroni_skirt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="open_slevees"/>
+        <ObjectUnionOf>
+            <Class IRI="F-Giubbetto"/>
+            <Class IRI="M-Giubbetto"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="ornamental_buttons"/>
+        <Class IRI="Costume"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="panel_buttons"/>
+        <Class IRI="Long_skirt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="pleating"/>
+        <ObjectUnionOf>
+            <Class IRI="Apron"/>
+            <Class IRI="F-Skirt"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="points"/>
+        <Class IRI="F-Bodice"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="skirt_panel"/>
+        <Class IRI="Long_skirt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="sleeve_buttonholes"/>
+        <ObjectUnionOf>
+            <Class IRI="F-Jacket"/>
+            <Class IRI="M-Jacket"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="sleeve_buttons"/>
+        <ObjectUnionOf>
+            <Class IRI="F-Jacket"/>
+            <Class IRI="M-Jacket"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="sleeve_ribbon"/>
+        <Class IRI="F-Jacket"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="striped_panel"/>
+        <Class IRI="Long_skirt"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="tassels"/>
+        <Class IRI="F-Headwear"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="technical_details"/>
+        <Class IRI="Garment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="wrapping"/>
+        <Class IRI="Panel_apron"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:author"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="bibo:Book"/>
+            <Class abbreviatedIRI="bibo:Periodical"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:dateCreated"/>
+        <ObjectUnionOf>
+            <Class IRI="Costume"/>
+            <Class IRI="Garment"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:datePublished"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="bibo:Book"/>
+            <Class abbreviatedIRI="bibo:Periodical"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:publisher"/>
+        <Class abbreviatedIRI="crm:E73_Information_Object"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="dbo:elevation"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="dbp:name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="dcterms:title"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="geo:lat"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="geo:long"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="BW"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="bow"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="checkered_panel"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="curly"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="drawing"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="embroideries"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="flaps"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="floral_embroideries"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="fringes"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="intended_use"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="lace"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="màsculas"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="open_slevees"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="ornamental_buttons"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="panel_buttons"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="pleating"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="points"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="skirt_panel"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="sleeve_buttonholes"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="sleeve_buttons"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="sleeve_ribbon"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="striped_panel"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="tassels"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="wrapping"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:author"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:dateCreated"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:datePublished"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:publisher"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>SourceRule</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="crm:P62i_is_depicted_by"/>
+                <Variable IRI="urn:swrl:var#costume"/>
+                <Variable IRI="urn:swrl:var#place"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Variable IRI="urn:swrl:var#costume"/>
+                <Variable IRI="urn:swrl:var#garment"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="crm:P62i_is_depicted_by"/>
+                <Variable IRI="urn:swrl:var#garment"/>
+                <Variable IRI="urn:swrl:var#place"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>TransparencyRule</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Variable IRI="urn:swrl:var#costume"/>
+                <Variable IRI="urn:swrl:var#garment"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="colourThroughTransparency"/>
+                <Variable IRI="urn:swrl:var#garment"/>
+                <Variable IRI="urn:swrl:var#color"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="colourThroughTransparency"/>
+                <Variable IRI="urn:swrl:var#costume"/>
+                <Variable IRI="urn:swrl:var#color"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>LocationRule</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="schema:fromLocation"/>
+                <Variable IRI="urn:swrl:var#costume"/>
+                <Variable IRI="urn:swrl:var#place"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Variable IRI="urn:swrl:var#costume"/>
+                <Variable IRI="urn:swrl:var#garment"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="schema:fromLocation"/>
+                <Variable IRI="urn:swrl:var#garment"/>
+                <Variable IRI="urn:swrl:var#place"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>ColorRule</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Variable IRI="urn:swrl:var#costume"/>
+                <Variable IRI="urn:swrl:var#garment"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="a-lite:hasColour"/>
+                <Variable IRI="urn:swrl:var#garment"/>
+                <Variable IRI="urn:swrl:var#color"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="a-lite:hasColour"/>
+                <Variable IRI="urn:swrl:var#costume"/>
+                <Variable IRI="urn:swrl:var#color"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>DatationRule</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="schema:dateCreated"/>
+                <Variable IRI="urn:swrl:var#costume"/>
+                <Variable IRI="urn:swrl:var#place"/>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="crm:P46_is_composed_of"/>
+                <Variable IRI="urn:swrl:var#costume"/>
+                <Variable IRI="urn:swrl:var#garment"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="schema:dateCreated"/>
+                <Variable IRI="urn:swrl:var#garment"/>
+                <Variable IRI="urn:swrl:var#place"/>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dbo:Colour</AbbreviatedIRI>
+        <Literal xml:lang="en">Colour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dbo:elevation</AbbreviatedIRI>
+        <Literal xml:lang="en">elevation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dbo:neighboringMunicipality</AbbreviatedIRI>
+        <Literal xml:lang="en">neighboring municipality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dbp:name</AbbreviatedIRI>
+        <Literal xml:lang="en">name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>arkivo:GlamThing</AbbreviatedIRI>
+        <Literal xml:lang="en">Glam Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dcterms:title</AbbreviatedIRI>
+        <Literal xml:lang="en">title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>bibo:Book</AbbreviatedIRI>
+        <Literal xml:lang="en">Book</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>bibo:Periodical</AbbreviatedIRI>
+        <Literal xml:lang="en">Periodical</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/spar/doco/Figure</IRI>
+        <Literal xml:lang="en">Figure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>crm:E22_Human-Made_Object</AbbreviatedIRI>
+        <Literal xml:lang="en">E22 Human-Made Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>crm:E26_Physical_Feature</AbbreviatedIRI>
+        <Literal xml:lang="en">E26 Physical Feature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>crm:E73_Information_Object</AbbreviatedIRI>
+        <Literal xml:lang="en">E73 Information Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>crm:P46_is_composed_of</AbbreviatedIRI>
+        <Literal xml:lang="en">P46 is composed of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>crm:P46i_forms_part_of</AbbreviatedIRI>
+        <Literal xml:lang="en">P46i forms part of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>crm:P62i_is_depicted_by</AbbreviatedIRI>
+        <Literal xml:lang="en">P62i is depicted by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>crm:P89_falls_within</AbbreviatedIRI>
+        <Literal xml:lang="en">P89 falls within</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>po:isContainedBy</AbbreviatedIRI>
+        <Literal xml:lang="en">is contained by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>owl:topObjectProperty</AbbreviatedIRI>
+        <Literal xml:lang="en">topObjectProperty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>geo:lat</AbbreviatedIRI>
+        <Literal xml:lang="en">lat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>geo:long</AbbreviatedIRI>
+        <Literal xml:lang="en">long</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>skos:exactMatch</AbbreviatedIRI>
+        <Literal xml:lang="en">exact match</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://yago-knowledge.org/resource/Provinces_of_Italy</IRI>
+        <Literal xml:lang="en">Provinces of Italy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Apron</IRI>
+        <Literal xml:lang="en">Apron</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BW</IRI>
+        <Literal xml:lang="en">BW</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Bell-shaped_trousers</IRI>
+        <Literal xml:lang="en">Bell-shaped trousers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Belt</IRI>
+        <Literal xml:lang="en">Belt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Berritta</IRI>
+        <Literal xml:lang="sc">Berritta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Black_category</IRI>
+        <Literal xml:lang="en">Black Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Blue_category</IRI>
+        <Literal xml:lang="en">Blue Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Bolero</IRI>
+        <Literal xml:lang="en">Bolero</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Brimmed_hat</IRI>
+        <Literal xml:lang="en">Brimmed hat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Brown_category</IRI>
+        <Literal xml:lang="en">Brown Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Corset_belt</IRI>
+        <Literal xml:lang="en">Corset belt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Costume</IRI>
+        <Literal xml:lang="en">Costume</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Curly_apron</IRI>
+        <Literal xml:lang="en">Curly apron</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DVV</IRI>
+        <Literal xml:lang="en">DVV</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F-Bodice</IRI>
+        <Literal xml:lang="en">F-Bodice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F-Cap</IRI>
+        <Literal xml:lang="en">F-Cap</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F-Costume</IRI>
+        <Literal xml:lang="en">F-Costume</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F-Garment</IRI>
+        <Literal xml:lang="en">F-Garment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F-Giubbetto</IRI>
+        <Literal xml:lang="it">F-Giubbetto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F-Headwear</IRI>
+        <Literal xml:lang="en">F-Headwear</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F-Jacket</IRI>
+        <Literal xml:lang="en">F-Jacket</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F-Kerchief</IRI>
+        <Literal xml:lang="en">F-Kerchief</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F-Overgarment</IRI>
+        <Literal xml:lang="en">F-Overgarment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F-Rigid_bodice</IRI>
+        <Literal xml:lang="en">F-Rigid bodice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F-Shirt</IRI>
+        <Literal xml:lang="en">F-Shirt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F-Skirt</IRI>
+        <Literal xml:lang="en">F-Skirt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>F-Soft_bodice</IRI>
+        <Literal xml:lang="en">F-Soft bodice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Fan-shaped_apron</IRI>
+        <Literal xml:lang="en">Fan-shaped apron</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Fez</IRI>
+        <Literal xml:lang="en">Fez</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Fur_overcoat</IRI>
+        <Literal xml:lang="en">Fur overcoat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Gaiters</IRI>
+        <Literal xml:lang="en">Gaiters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Garment</IRI>
+        <Literal xml:lang="en">Garment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Gheroni_skirt</IRI>
+        <Literal xml:lang="it">Gonna a gheroni</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Gheroni_skirt</IRI>
+        <Literal xml:lang="en">Gheroni skirt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Giacchetta</IRI>
+        <Literal xml:lang="it">Giacchetta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Giacchino</IRI>
+        <Literal xml:lang="it">Giacchino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Gray_category</IRI>
+        <Literal xml:lang="en">Gray Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Green_category</IRI>
+        <Literal xml:lang="en">Green Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Head_mantle</IRI>
+        <Literal xml:lang="en">Head mantle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Head_shawl</IRI>
+        <Literal xml:lang="en">Head shawl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Headscarf</IRI>
+        <Literal xml:lang="en">Headscarf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Hose</IRI>
+        <Literal xml:lang="en">Hose</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IALZ</IRI>
+        <Literal xml:lang="en">IALZ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ICC</IRI>
+        <Literal xml:lang="en">ICC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ICST</IRI>
+        <Literal xml:lang="en">ICST</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IEC1</IRI>
+        <Literal xml:lang="en">IEC1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IRCR</IRI>
+        <Literal xml:lang="en">IRCR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Leather_overcoat</IRI>
+        <Literal xml:lang="en">Leather overcoat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Long_coat</IRI>
+        <Literal xml:lang="en">Long coat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Long_skirt</IRI>
+        <Literal xml:lang="en">Long skirt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Loose_trousers</IRI>
+        <Literal xml:lang="en">Loose trousers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>M-Bodice</IRI>
+        <Literal xml:lang="en">M-Bodice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>M-Cap</IRI>
+        <Literal xml:lang="en">M-Cap</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>M-Costume</IRI>
+        <Literal xml:lang="en">M-Costume</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>M-Garment</IRI>
+        <Literal xml:lang="en">M-Garment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>M-Giubbetto</IRI>
+        <Literal xml:lang="it">M-Giubbetto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>M-Headwear</IRI>
+        <Literal xml:lang="en">M-Headwear</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>M-Jacket</IRI>
+        <Literal xml:lang="en">M-Jacket</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>M-Kerchief</IRI>
+        <Literal xml:lang="en">M-Kerchief</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>M-Overgarment</IRI>
+        <Literal xml:lang="en">M-Overgarment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>M-Rigid_bodice</IRI>
+        <Literal xml:lang="en">M-Rigid bodice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>M-Shirt</IRI>
+        <Literal xml:lang="en">M-Shirt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>M-Skirt</IRI>
+        <Literal xml:lang="en">M-Skirt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>M-Soft-bodice</IRI>
+        <Literal xml:lang="en">M-Soft-bodice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Manticello</IRI>
+        <Literal xml:lang="it">Manticello</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Mantle</IRI>
+        <Literal xml:lang="en">Mantle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Metallic_category</IRI>
+        <Literal xml:lang="en">Metallic Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Neckerchief</IRI>
+        <Literal xml:lang="en">Neckerchief</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Orange_category</IRI>
+        <Literal xml:lang="en">Orange Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Panel_apron</IRI>
+        <Literal xml:lang="en">Panel apron</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Paperbag_skirt</IRI>
+        <Literal xml:lang="en">Paperbag skirt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Pink_category</IRI>
+        <Literal xml:lang="en">Pink Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PrivateImage</IRI>
+        <Literal xml:lang="en">Private Image</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Purple_category</IRI>
+        <Literal xml:lang="en">Purple Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Red_category</IRI>
+        <Literal xml:lang="en">Red Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Shawl</IRI>
+        <Literal xml:lang="en">Shawl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Short_coat</IRI>
+        <Literal xml:lang="en">Short coat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Shoulder_scarf</IRI>
+        <Literal xml:lang="en">Shoulder scarf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Shoulder_veil</IRI>
+        <Literal xml:lang="en">Shoulder veil</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Skirt_hat</IRI>
+        <Literal xml:lang="en">Skirt hat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Skirt_trousers</IRI>
+        <Literal xml:lang="en">Skirt trousers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Tongue_shaped_apron</IRI>
+        <Literal xml:lang="en">Tongue shaped apron</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Triangle_shaped_apron</IRI>
+        <Literal xml:lang="en">Triangle shaped apron</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Trousers</IRI>
+        <Literal xml:lang="en">Trousers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Tube_trousers</IRI>
+        <Literal xml:lang="en">Tube trousers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Veil</IRI>
+        <Literal xml:lang="en">Veil</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>White_category</IRI>
+        <Literal xml:lang="en">White Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Yellow_category</IRI>
+        <Literal xml:lang="en">Yellow Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>bow</IRI>
+        <Literal xml:lang="en">bow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>checkered_panel</IRI>
+        <Literal xml:lang="en">checkered panel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>colourThroughTransparency</IRI>
+        <Literal xml:lang="en">colour through transparency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>coveredBy</IRI>
+        <Literal xml:lang="en">covered by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>coveredByTransparency</IRI>
+        <Literal xml:lang="en">covered by transparency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>coveredColour</IRI>
+        <Literal xml:lang="en">covered colour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>covers</IRI>
+        <Literal xml:lang="en">covers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>coversWithTransparency</IRI>
+        <Literal xml:lang="en">covers with transparency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>curly</IRI>
+        <Literal xml:lang="en">curly</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>drawing</IRI>
+        <Literal xml:lang="en">drawing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>embroideries</IRI>
+        <Literal xml:lang="en">embroideries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>flaps</IRI>
+        <Literal xml:lang="en">flaps</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>floral_embroideries</IRI>
+        <Literal xml:lang="en">floral embroideries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>fringes</IRI>
+        <Literal xml:lang="en">fringes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>intended_use</IRI>
+        <Literal xml:lang="en">intended use</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>lace</IRI>
+        <Literal xml:lang="en">lace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>màsculas</IRI>
+        <Literal xml:lang="sc">màsculas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>open_slevees</IRI>
+        <Literal xml:lang="en">open slevees</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ornamental_buttons</IRI>
+        <Literal xml:lang="en">ornamental buttons</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>panel_buttons</IRI>
+        <Literal xml:lang="en">panel buttons</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>pleating</IRI>
+        <Literal xml:lang="en">pleating</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>points</IRI>
+        <Literal xml:lang="en">points</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>sewn_togheter</IRI>
+        <Literal xml:lang="en">sewn togheter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>skirt_panel</IRI>
+        <Literal xml:lang="en">skirt panel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>sleeve_buttonholes</IRI>
+        <Literal xml:lang="en">sleeve buttonholes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>sleeve_buttons</IRI>
+        <Literal xml:lang="en">sleeve buttons</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>sleeve_ribbon</IRI>
+        <Literal xml:lang="en">sleeve ribbon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>striped_panel</IRI>
+        <Literal xml:lang="en">striped panel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>tassels</IRI>
+        <Literal xml:lang="en">tassels</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>technical_details</IRI>
+        <Literal xml:lang="en">technical details</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>wrapping</IRI>
+        <Literal xml:lang="en">wrapping</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>schema:Place</AbbreviatedIRI>
+        <Literal xml:lang="en">Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>schema:SocialMediaPosting</AbbreviatedIRI>
+        <Literal xml:lang="en">Social Media Posting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>schema:author</AbbreviatedIRI>
+        <Literal xml:lang="en">author</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>schema:dateCreated</AbbreviatedIRI>
+        <Literal>Extended Date/Time Format (EDTF).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>schema:dateCreated</AbbreviatedIRI>
+        <Literal xml:lang="en">date created</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>schema:datePublished</AbbreviatedIRI>
+        <Literal xml:lang="en">date published</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>schema:fromLocation</AbbreviatedIRI>
+        <Literal>Traditional of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>schema:fromLocation</AbbreviatedIRI>
+        <Literal xml:lang="en">from location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>schema:publisher</AbbreviatedIRI>
+        <Literal xml:lang="en">publisher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>a-lite:hasColour</AbbreviatedIRI>
+        <Literal xml:lang="en">has colour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>a-dd:TechnicalCharacteristic</AbbreviatedIRI>
+        <Literal xml:lang="en">Technical Characteristic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
+        <AnonymousIndividual nodeID="_:genid2147483951"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
+        <AnonymousIndividual nodeID="_:genid2147483952"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
+        <AnonymousIndividual nodeID="_:genid2147483953"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
+        <AnonymousIndividual nodeID="_:genid2147483954"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
+        <AnonymousIndividual nodeID="_:genid2147483955"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
