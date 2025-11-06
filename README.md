@@ -29,17 +29,16 @@
 ## Example of SPARQL queries addressed
 - Which garments are typically worn over others? For example, in which costumes is the bodice worn over the jacket?
 ```
-PREFIX schema: <https://schema.org/>
 PREFIX bst: <https://aimet-lab.github.io/BISTIRIS#>
-PREFIX dbr: <http://dbpedia.org/resource/>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX schema: <https://schema.org/>
 SELECT ?garment ?place
 WHERE {
     ?garment a bst:F-Bodice ;
         bst:covers ?otherGarment .  
     ?otherGarment a bst:F-Jacket ;
       schema:fromLocation ?place .
+      ?place a dbo:Place .
   }
 ```
 For additional query examples, see [here](https://github.com/AIMet-Lab/BISTIRIS/tree/main/query).
