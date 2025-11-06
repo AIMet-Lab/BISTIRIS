@@ -11,7 +11,7 @@
         foaf:name "AIMET Lab, Università di Sassari"
     ] ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    void:uriSpace "https://aimet-lab.github.io/BISTIRIS/" ;
+    void:uriSpace "https://aimet-lab.github.io/BISTIRIS" ;
     void:triples 26769 ;
-    void:vocabulary <https://aimet-lab.github.io/BISTIRIS/bistiris.owl> ;
-    void:dataDump <https://aimet-lab.github.io/BISTIRIS/bistiris-data.ttl> .
+    void:vocabulary <https://aimet-lab.github.io/BISTIRIS/bistiris_model.owl> ;
+    void:dataDump <https://aimet-lab.github.io/BISTIRIS/bistiris_data.rdf> .
