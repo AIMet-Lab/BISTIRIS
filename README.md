@@ -37,8 +37,8 @@ WHERE {
     ?garment a bst:F-Bodice ;
         bst:covers ?otherGarment .  
     ?otherGarment a bst:F-Jacket ;
-      schema:fromLocation ?place .
-      ?place a dbo:Place .
+        schema:fromLocation ?place .
+    ?place a dbo:Place .
   }
 ```
 For additional query examples, see [here](https://github.com/AIMet-Lab/BISTIRIS/tree/main/query).
