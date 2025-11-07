@@ -389,8 +389,8 @@ WHERE {
            schema:fromLocation ?place .
   ?place a dbo:Place .
   FILTER(?type != owl:NamedIndividual)
-  FILTER NOT EXISTS {
-    ?garment a ?class . ?class rdfs:subClassOf ?type .
+  FILTER NOT EXISTS { 
+    ?otherType rdfs:subClassOf ?type .
   }
 }
 GROUP BY ?type ?place ORDER BY DESC(?n)
