@@ -1,18 +1,18 @@
-PREFIX schema: <https://schema.org/>
 PREFIX bst: <https://aimet-lab.github.io/BISTIRIS#>
-PREFIX dbr: <http://dbpedia.org/resource/>
 PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
 
-    SELECT ?garment ?type ?place
-    WHERE {
-      ?garment bst:coversWithTransparency ?OtherGarment ;
-          a ?type ;
-          schema:fromLocation ?place .
-        
-    FILTER NOT EXISTS {
-        ?OtherClass rdfs:subClassOf ?type }
-    FILTER ( ?type != owl:NamedIndividual )
-    
-    }
+SELECT ?garment ?type ?place
+WHERE {
+  ?garment bst:coversWithTransparency ?OtherGarment ;
+      a ?type ;
+      schema:fromLocation ?place .
+  ?place a dbo:Place .
+
+FILTER ( ?type != owl:NamedIndividual )
+FILTER NOT EXISTS {
+    ?OtherClass rdfs:subClassOf ?type }
+  }
