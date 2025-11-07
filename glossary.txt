@@ -1,0 +1,60 @@
+### FEMALE GARMENTS ###
+
+Cap: a soft, close-fitting head covering.
+Apron_hat: head-covering apron; a apron worn on the head resembling a headwear.
+Bolero: Bolero jacket; a short, open-fronted jacket short characterized by very limited length.
+Corset_belt: a structured garment worn around the waist to shape the torso.
+Curly_apron: a simple, lightweight apron with a gathered or wavy shape.
+Fan-shaped_apron: an apron featuring a central group of pleats, that spread downward like a fan.
+Gheroni_skirt: a skirt made of trapezoidal panels joined to form pleats, and with a decorated front panel featuring vertical openings (màsculas).
+Giacchino: a short jacket of various styles, with a straight or pointed lower edge, and a front closed by buttons or hooks.
+Giubbetto: a short jacket, typically decorated and often featuring sleeves with longitudinal openings through which the shirt sleeves emerge.
+Head_mantle: a mantle draped over the head and shoulders, extending down to cover the torso, often reaching the waist.
+Head_shawl: shawl worn as head covering.
+Headscarf: a band wrapped or draped over the head.
+Kerchief: a square or triangular piece of cloth worn on the head.
+Long_skirt: a full-length skirt, often pleated.
+Manticello: a shorter version of the traditional mantle, covering the head and sides of the face, reaching only to the shoulders at the front.
+Panel_apron: flat panel apron.
+Paperbag_skirt: a simple skirt made by joining fabric panels into a sack-like shape, secured by ties at the front and back.
+Rigid_bodice: a stiff, structured bodice providing firm shaping of the torso, reinforced with metal or vegetal stays.
+Shawl: shawl worn over the shoulders.
+Shirt: female shirt.
+Shoulder_scarf: a large square or triangular piece of fabric worn draped over the shoulders.
+Shoulder_veil: veil worn over the shoulders.
+Skirt_hat: head-covering skirt; a skirt worn on the head resembling a headwear.
+Soft_bodice: a flexible bodice without rigid structure.
+Tongue_shaped_apron: narrow, long apron with rounded end.
+Triangle_shaped_apron: an apron with a triangular shape.
+Veil: Light, white and transparent head veil.
+
+
+### MALE GARMENTS ###
+
+Berritta: a tubular cap folded into a sack-like shape.
+Bell-shaped_trousers: skirt trousers, wide at the waist and slightly gathered, extending below the knee.
+Belt: male belt.
+Brimmed_hat: a hat with a brim.
+Cap: a soft, close-fitting head covering.
+Fez: a tall, rigid, truncated-cone hat without a brim.
+Fur_overcoat: a sleeveless overcoat made of fur.
+Gaiters: garments that cover the lower leg and reach the knee or occasionally the thigh.
+Giacchetta: a short jacket with narrow sleeves, front buttons, horizontal pockets.
+Giubbetto: a short jacket often featuring sleeves with longitudinal openings through which the shirt sleeves emerge.
+Hose: fitted trousers with narrow legs.
+Kerchief: a square or triangular piece of cloth worn on the head.
+Leather_overcoat: a sleeveless overcoat made of leather.
+Long_coat: a coat covering the body to mid-calf.
+Loose_trousers: trousers made from rectangular, unshaped fabric panels, typically reaching mid-calf.
+Mantle: a large rectangular cloak.
+Neckerchief: a small kerchief worn around the neck.
+Rigid_bodice: a front-buttoned traditional bodice, often ornamental with carefully applied trims and embroidery.
+Shirt: male shirt.
+Short_coat: a short coat.
+Skirt_trousers: trousers resembling a short gathered skirt.
+Soft_bodice: a flexible bodice without rigid structure.
+Soft_bodice: a soft front-buttoned bodice, single or double-breasted with lapels.
+Tongue_shaped_apron: narrow, long apron with rounded end.
+Triangle_shaped_apron: an apron with a triangular shape.
+Tube_trousers: long, narrow trousers with vertical pockets, tapering toward the hem.
+Veil: Light, white and transparent head veil.
