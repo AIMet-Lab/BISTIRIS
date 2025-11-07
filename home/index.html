@@ -278,34 +278,34 @@ Integrity constraints and recommended controlled vocabularies enhance data quali
           <details>
             <summary>Example fragment (Turtle)</summary>
             <pre class="code">
-@prefix bistiris: &lt;https://aimet-lab.github.io/BISTIRIS#> .
-@prefix dcterms: &lt;http://purl.org/dc/terms/> .
-@prefix schema: &lt;http://schema.org/> .
-@prefix dbpedia: &lt;http://dbpedia.org/resource/> .
-@prefix yago: &lt;http://yago-knowledge.org/resource/> .
 @prefix a-lite: &lt;https://aimet-lab.github.io/BISTIRIS#a-lite/> .
-@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#> .
+@prefix bst: &lt;https://aimet-lab.github.io/BISTIRIS#> .
+@prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dbr: &lt;http://dbpedia.org/resource/> .
 @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: &lt;http://schema.org/> .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#> .
+@prefix yago: &lt;http://yago-knowledge.org/resource/> .
 
-&lt;https://aimet-lab.github.io/BISTIRIS#DVV0056>
-  a bistiris:"F-Garment",
-    bistiris:"F-Skirt",
-    bistiris:Garment,
-    bistiris:Gheroni_skirt ;
-  dcterms:source &lt;https://aimet-lab.github.io/BISTIRIS#IDVV0052> ;
-  schema:fromLocation dbpedia:Bitti ;
-  schema:fromLocation yago:Bitti ;
-  schema:isPartOf &lt;https://aimet-lab.github.io/BISTIRIS#DVV0052> ;
-  a-lite:hasColour dbpedia:Black,
-                   dbpedia:Blue,
-                   dbpedia:Green,
-                   dbpedia:Purple,
-                   dbpedia:Red,
-                   dbpedia:Yellow ;
-  bistiris:embroideries "true"^^xsd:boolean ;
-  bistiris:floral_embroideries "true"^^xsd:boolean ;
-  bistiris:màsculas "true"^^xsd:boolean ;
-  bistiris:technical_details "true"^^xsd:boolean ;
+bst:DVV0056
+  a bst:F-Garment ,
+    bst:F-Skirt ,
+    bst:Garment ,
+    bst:Gheroni_skirt ;
+  crm:P62i_is_depicted_by bst:IDVV0052 ;
+  schema:fromLocation dbr:Bitti ,
+  					  yago:Bitti ;
+  crm:P46i_forms_part_of bst:DVV0052 ;
+  a-lite:hasColour dbr:Black,
+                   dbr:Blue,
+                   dbr:Green,
+                   dbr:Purple,
+                   dbr:Red,
+                   dbr:Yellow ;
+  bst:embroideries "true"^^xsd:boolean ;
+  bst:floral_embroideries "true"^^xsd:boolean ;
+  bst:màsculas "true"^^xsd:boolean ;
+  bst:technical_details "true"^^xsd:boolean ;
   schema:dateCreated "1900/.." .
             </pre>
           </details>
