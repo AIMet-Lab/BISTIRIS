@@ -26,7 +26,7 @@
 @base <https://aimet-lab.github.io/BISTIRIS#> .
 
 <https://aimet-lab.github.io/BISTIRIS#> rdf:type owl:Ontology ;
-                                         owl:versionIRI <https://aimet-lab.github.io/BISTIRIS/bistiris.rdf> ;
+                                         owl:versionIRI <https://aimet-lab.github.io/BISTIRIS/bistiris.ttl> ;
                                          dcterms:creator "G. Corona, D. Guidotti, L. Pandolfo, L. Pulina" ;
                                          dcterms:description "BISTIRIS is an ontology for analytically describing Sardinian traditional costumes."@en ;
                                          dcterms:issued "2025.0"^^xsd:float ;
@@ -1415,10 +1415,7 @@ a-dd:TechnicalCharacteristic rdf:type owl:Class ;
                              rdfs:label "Technical Characteristic"@en .
 
 
-[ rdf:type [ rdf:type owl:Restriction ;
-             owl:onProperty owl:topDataProperty ;
-             owl:someValuesFrom xsd:boolean
-           ]
+[ swrl:isRuleEnabled "true"^^xsd:boolean
 ] .
 
 [ swrl:isRuleEnabled "true"^^xsd:boolean
@@ -1433,7 +1430,10 @@ a-dd:TechnicalCharacteristic rdf:type owl:Class ;
 [ swrl:isRuleEnabled "true"^^xsd:boolean
  ] .
 
-[ swrl:isRuleEnabled "true"^^xsd:boolean
+[ rdf:type [ rdf:type owl:Restriction ;
+              owl:onProperty owl:topDataProperty ;
+              owl:someValuesFrom xsd:boolean
+            ]
  ] .
 
 #################################################################

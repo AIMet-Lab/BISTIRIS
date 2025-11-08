@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://aimet-lab.github.io/BISTIRIS#"
-     versionIRI="https://aimet-lab.github.io/BISTIRIS/bistiris.rdf">
+     versionIRI="https://aimet-lab.github.io/BISTIRIS/bistiris.owl">
     <Prefix name="" IRI="https://aimet-lab.github.io/BISTIRIS#"/>
     <Prefix name="po" IRI="http://www.essepuntato.it/2008/12/pattern#"/>
     <Prefix name="aat" IRI="http://vocab.getty.edu/"/>
