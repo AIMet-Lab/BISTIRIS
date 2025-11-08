@@ -8,8 +8,8 @@
 
 ## Resources
 - 🌐 [BISTÌRIS landing page](https://aimet-lab.github.io/BISTIRIS/home/index.html)
-- 🌐 [Ontology Documentation](https://aimet-lab.github.io/BISTIRIS/docs/index-en.html)
-- 📄 [Ontology file in OWL format](https://aimet-lab.github.io/BISTIRIS/bistiris_model.owl)
+- 🌐 [Ontology Documentation](https://aimet-lab.github.io/BISTIRIS/index.html)
+- 📄 [Ontology file in OWL format](https://aimet-lab.github.io/BISTIRIS/bistiris.owl)
 - 📄 [Data in RDF format](https://aimet-lab.github.io/BISTIRIS/bistiris_data.rdf)
 - 📄 [VOID metadata file](https://aimet-lab.github.io/BISTIRIS/well-known/void.ttl)
 
