@@ -25,6 +25,7 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
     <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="yago" IRI="http://yago-knowledge.org/resource/"/>
     <Prefix name="swrla" IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"/>
     <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
     <Prefix name="a-lite" IRI="https://w3id.org/arco/ontology/arco-lite/"/>
@@ -79,10 +80,10 @@
         <Class abbreviatedIRI="crm:E73_Information_Object"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://yago-knowledge.org/resource/Comune"/>
+        <Class abbreviatedIRI="yago:Comune"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://yago-knowledge.org/resource/Provinces_of_Italy"/>
+        <Class abbreviatedIRI="yago:Provinces_of_Italy"/>
     </Declaration>
     <Declaration>
         <Class IRI="Apron"/>
@@ -119,9 +120,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="Curly_apron"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DVV"/>
     </Declaration>
     <Declaration>
         <Class IRI="F-Bodice"/>
@@ -203,21 +201,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="Hose"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="IALZ"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ICC"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ICST"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="IEC1"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="IRCR"/>
     </Declaration>
     <Declaration>
         <Class IRI="Leather_overcoat"/>
@@ -544,11 +527,11 @@
         <Class abbreviatedIRI="crm:E73_Information_Object"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://yago-knowledge.org/resource/Comune"/>
+        <Class abbreviatedIRI="yago:Comune"/>
         <Class abbreviatedIRI="schema:Place"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://yago-knowledge.org/resource/Provinces_of_Italy"/>
+        <Class abbreviatedIRI="yago:Provinces_of_Italy"/>
         <Class abbreviatedIRI="schema:Place"/>
     </SubClassOf>
     <SubClassOf>
@@ -621,17 +604,6 @@
         <DataHasValue>
             <DataProperty IRI="curly"/>
             <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-        </DataHasValue>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DVV"/>
-        <Class abbreviatedIRI="arkivo:GlamThing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DVV"/>
-        <DataHasValue>
-            <DataProperty abbreviatedIRI="schema:publisher"/>
-            <Literal>Istituto Superiore Regionale Etnografico</Literal>
         </DataHasValue>
     </SubClassOf>
     <SubClassOf>
@@ -826,33 +798,6 @@
     <SubClassOf>
         <Class IRI="Hose"/>
         <Class IRI="Trousers"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="IALZ"/>
-        <Class IRI="http://purl.org/spar/doco/Figure"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="ICC"/>
-        <Class abbreviatedIRI="arkivo:GlamThing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="ICC"/>
-        <DataHasValue>
-            <DataProperty abbreviatedIRI="schema:publisher"/>
-            <Literal>Istituto Centrale per il Catalogo e la Documentazione</Literal>
-        </DataHasValue>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="ICST"/>
-        <Class IRI="http://purl.org/spar/doco/Figure"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="IEC1"/>
-        <Class IRI="http://purl.org/spar/doco/Figure"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="IRCR"/>
-        <Class IRI="http://purl.org/spar/doco/Figure"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Leather_overcoat"/>
@@ -1367,7 +1312,7 @@
             <DataProperty abbreviatedIRI="owl:topDataProperty"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
-        <AnonymousIndividual nodeID="_:genid2147483956"/>
+        <AnonymousIndividual nodeID="_:genid2147483648"/>
     </ClassAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="crm:P62i_is_depicted_by"/>
@@ -1556,7 +1501,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="crm:P89_falls_within"/>
-        <Class IRI="http://yago-knowledge.org/resource/Provinces_of_Italy"/>
+        <Class abbreviatedIRI="yago:Provinces_of_Italy"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="po:isContainedBy"/>
@@ -2259,7 +2204,7 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://yago-knowledge.org/resource/Provinces_of_Italy</IRI>
+        <AbbreviatedIRI>yago:Provinces_of_Italy</AbbreviatedIRI>
         <Literal xml:lang="en">Provinces of Italy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -2326,11 +2271,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Curly_apron</IRI>
         <Literal xml:lang="en">Curly apron</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DVV</IRI>
-        <Literal xml:lang="en">DVV</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2471,31 +2411,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Hose</IRI>
         <Literal xml:lang="en">Hose</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>IALZ</IRI>
-        <Literal xml:lang="en">IALZ</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ICC</IRI>
-        <Literal xml:lang="en">ICC</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ICST</IRI>
-        <Literal xml:lang="en">ICST</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>IEC1</IRI>
-        <Literal xml:lang="en">IEC1</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>IRCR</IRI>
-        <Literal xml:lang="en">IRCR</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2914,27 +2829,27 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
-        <AnonymousIndividual nodeID="_:genid2147483951"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
-        <AnonymousIndividual nodeID="_:genid2147483952"/>
+        <AnonymousIndividual nodeID="_:genid2147483650"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
-        <AnonymousIndividual nodeID="_:genid2147483953"/>
+        <AnonymousIndividual nodeID="_:genid2147483651"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
-        <AnonymousIndividual nodeID="_:genid2147483954"/>
+        <AnonymousIndividual nodeID="_:genid2147483652"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="swrl:isRuleEnabled"/>
-        <AnonymousIndividual nodeID="_:genid2147483955"/>
+        <AnonymousIndividual nodeID="_:genid2147483653"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
 </Ontology>
