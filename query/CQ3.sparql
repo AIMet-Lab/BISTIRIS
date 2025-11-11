@@ -6,27 +6,29 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 
-SELECT DISTINCT ?garmentType ?colour (COUNT(DISTINCT ?neighbor) AS ?NeighborCount) 
-                ?characteristic
+SELECT DISTINCT ?garmentType ?colour (COUNT(DISTINCT ?place) AS ?frequency)
+       (GROUP_CONCAT(DISTINCT STRAFTER(STR(?place), "http://dbpedia.org/resource/"); separator=", ") AS ?places) 
+        ?characteristic
 WHERE {
-      ?garment1 a bst:F-Garment ;
-          schema:fromLocation dbr:Galtellì ;
-          a ?garmentType ;
-          a-lite:hasColour ?colour .
-          ?characteristic rdfs:subPropertyOf bst:technical_details .
-          ?garment1 ?characteristic ?value .
-      
-      ?garment2 a bst:F-Garment ;
-          a ?garmentType ;
-          schema:fromLocation ?neighbor ;
-          a-lite:hasColour ?colour .
-          ?garment2 ?characteristic ?value .
-      
-      ?neighbor dbo:neighboringMunicipality dbr:Galtellì .
+    ?garment1 a bst:F-Garment ;
+              schema:fromLocation dbr:Galtellì ;
+              a ?garmentType ;
+              a-lite:hasColour ?colour .
+              
+    ?characteristic rdfs:subPropertyOf bst:technical_details .
+    ?garment1 ?characteristic ?value .
 
-      FILTER ( ?garmentType != owl:NamedIndividual )
-      FILTER NOT EXISTS { ?OtherClass rdfs:subClassOf ?garmentType }      
-  }
+    ?place dbo:neighboringMunicipality dbr:Galtellì ;
+           a dbo:Place .
 
+    ?garment2 a bst:F-Garment ;
+              schema:fromLocation ?place ;
+              a ?garmentType ;
+              a-lite:hasColour ?colour ;
+              ?characteristic ?value .
+
+    FILTER ( ?garmentType != owl:NamedIndividual )
+    FILTER NOT EXISTS { ?OtherClass rdfs:subClassOf ?garmentType }
+}
 GROUP BY ?garmentType ?colour ?characteristic
-ORDER BY DESC(?NeighborCount)
+ORDER BY DESC(?frequency)
