@@ -5,14 +5,21 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 
-SELECT ?garment ?type ?place
+SELECT (?garment_type AS ?garment_with_transparency) 
+       (COUNT(DISTINCT ?garment) AS ?frequency)
 WHERE {
-  ?garment bst:coversWithTransparency ?OtherGarment ;
-      a ?type ;
-      schema:fromLocation ?place .
-  ?place a dbo:Place .
-
-FILTER ( ?type != owl:NamedIndividual )
-FILTER NOT EXISTS {
-    ?OtherClass rdfs:subClassOf ?type }
+  {
+    ?garment bst:coversWithTransparency ?OtherGarment ;
+             a ?garment_type .
   }
+  UNION
+  {
+    ?garment a ?garment_type .
+    FILTER (?garment_type IN (bst:Veil, bst:Shoulder_veil))
+  }
+
+  FILTER ( ?garment_type != owl:NamedIndividual )
+  FILTER NOT EXISTS { ?OtherClass rdfs:subClassOf ?garment_type }
+}
+GROUP BY ?garment_type
+ORDER BY DESC(?frequency)
