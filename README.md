@@ -4,7 +4,7 @@
 <p align="justify"><strong>BISTÌRIS</strong> is a domain ontology and a curated knowledge graph designed to describe, compare, and analyse <strong>Sardinian traditional costumes</strong> and their parts, materials, colours, and provenance. The project supports cultural heritage documentation, enables semantic search and reasoning on costume‑features across regions and eras, and opens new avenues for education, tourism and heritage valorisation.</p>
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15310350.svg)](https://doi.org/10.5281/zenodo.15310350)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 ## Resources
 - 🌐 [BISTÌRIS landing page](https://aimet-lab.github.io/BISTIRIS/home/index.html)
