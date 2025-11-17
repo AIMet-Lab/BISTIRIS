@@ -9,6 +9,7 @@
 ## Resources
 - 🌐 [BISTÌRIS landing page](https://aimet-lab.github.io/BISTIRIS/home/index.html)
 - 🌐 [Ontology Documentation](https://aimet-lab.github.io/BISTIRIS/index.html)
+- 📄 [Usage Examples - Booklet](https://aimet-lab.github.io/BISTIRIS/booklet.pdf)
 - 📄 [Ontology file in OWL format](https://aimet-lab.github.io/BISTIRIS/bistiris.owl)
 - 📄 [Data in RDF format](https://aimet-lab.github.io/BISTIRIS/bistiris_data.rdf)
 - 📄 [VOID metadata file](https://aimet-lab.github.io/BISTIRIS/well-known/void.ttl)
